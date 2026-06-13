@@ -15,7 +15,7 @@ import qualified XMonad.StackSet as W
 
 import XMonad.Hooks.EwmhDesktops (ewmh, ewmhFullscreen)
 import XMonad.Hooks.ManageDocks (avoidStruts)
-import XMonad.Hooks.ManageHelpers (isDialog, isFullscreen, doCenterFloat, doFullFloat)
+import XMonad.Hooks.ManageHelpers (isDialog, doCenterFloat)
 import XMonad.Hooks.StatusBar (statusBarProp, withEasySB, defToggleStrutsKey)
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Hooks.UrgencyHook (withUrgencyHook, NoUrgencyHook(..))
@@ -70,7 +70,6 @@ myLayout = avoidStruts . smartBorders . gaps $ (tall ||| wide ||| full)
 -- ---- where windows go ------------------------------------------------------
 myManageHook = composeAll
   [ isDialog              --> doCenterFloat
-  , isFullscreen          --> doFullFloat
   , className =? "Blossom"        --> doCenterFloat   -- the control GUI
   , className =? "Blossom-control.py" --> doCenterFloat
   , className =? "Gpick"          --> doCenterFloat
