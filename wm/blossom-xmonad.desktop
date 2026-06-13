@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Blossom (xmonad)
+Comment=AMOLED pink tiling — xmonad with the Blossom palette
+Exec=xmonad
+TryExec=xmonad
+Type=Application
+DesktopNames=xmonad
+Keywords=tiling;xmonad;blossom;

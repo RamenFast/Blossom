@@ -1,0 +1,30 @@
+-- Blossom — xmobar
+-- Reads xmonad's log from the _XMONAD_LOG property (statusBarProp / XMonadLog).
+-- AMOLED black, light-blue text, pink/gold accents.
+
+Config { font            = "monospace 10"
+       , additionalFonts = []
+       , bgColor         = "#000000"
+       , fgColor         = "#eaf6ff"
+       , position        = TopH 28
+       , border          = BottomB
+       , borderColor     = "#16181d"
+       , alpha           = 255
+       , textOffset      = -1
+       , iconRoot        = "."
+
+       , commands =
+           [ -- workspaces / layout / window title (sent by xmonad)
+             Run XMonadLog
+
+           , Run Cpu     [ "-t", "<fc=#f060a0>cpu</fc> <total>%"
+                         , "-H", "70", "--high", "#ec4e53" ] 30
+           , Run Memory  [ "-t", "<fc=#f060a0>mem</fc> <usedratio>%" ] 30
+           , Run Date    "<fc=#9fb3c2>%a %d %b</fc>  <fc=#eaf6ff>%H:%M</fc>" "date" 600
+           ]
+
+       , sepChar  = "%"
+       , alignSep = "}{"
+       , template = " %XMonadLog% }\
+                    \{ %cpu%  <fc=#2a2e37>·</fc>  %memory%  <fc=#2a2e37>·</fc>  %date%  "
+       }

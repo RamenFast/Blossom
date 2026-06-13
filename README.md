@@ -165,6 +165,45 @@ It auto-discovers the icon themes you already have installed; edit
 `~/.local/share/blossom-rotate/state.json` to curate the rotation. `install` is
 opt-in — nothing changes your icons on a schedule until you ask for it.
 
+## xmonad — Blossom as a tiling session
+
+The thesis, made *structural*: in a tiling WM the accent isn't paint on a widget —
+it's the **focused window's border**, and the gaps are the void showing through.
+`wm/` is a complete Blossom xmonad session you can hop into alongside Cinnamon (it
+touches nothing in your current setup — it's just a second door at the login screen).
+
+![Blossom xmonad — mockup](docs/xmonad-mockup.png)
+
+*A mockup (rendered from the real palette + the actual folder icons). The live
+session looks the same: pink border = focused, gold = a window that wants you,
+true-black gaps, xmobar up top.*
+
+**Install** — needs sudo for `apt` + the session file:
+
+```bash
+bash wm/install.sh        # installs xmonad/xmobar/dmenu/…, links the config, registers the session
+```
+
+Then log out → pick **Blossom (xmonad)** from the session menu → log in. Cinnamon
+stays exactly as it was.
+
+**Keys** — mostly xmonad's defaults, which are already vim-shaped (Super = mod):
+
+| key | action | | key | action |
+|---|---|---|---|---|
+| `Super+Return` | terminal | | `Super+j` / `k` | focus down / up |
+| `Super+d` | app launcher | | `Super+h` / `l` | shrink / grow master |
+| `Super+w` / `e` | browser / files | | `Super+Shift+j` / `k` | move in stack |
+| `Super+c` | Blossom Control | | `Super+Shift+Return` | promote to master |
+| `Super+Space` | next layout | | `Super+1..9` | switch workspace |
+| `Super+f` | fullscreen | | `Super+Shift+1..9` | send to workspace |
+| `Super+b` | toggle bar | | `Super+Shift+c` | close window |
+
+New windows join the **stack** to the right of the master — predictable, every
+time. Config: `wm/xmonad/xmonad.hs` · bar: `wm/xmobar/xmobarrc` · compositor:
+`wm/picom.conf`. The palette lives at the top of `xmonad.hs`.
+
 ## Environment
 
 Built and tested on Linux Mint · Cinnamon 6.6.7 · X11 · 40 px panel.
+The xmonad session targets xmonad 0.17 (Mint/Ubuntu `apt`).
