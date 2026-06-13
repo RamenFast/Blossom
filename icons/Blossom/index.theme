@@ -1,0 +1,20 @@
+[Icon Theme]
+Name=Blossom
+Comment=AMOLED pink — void-dark folders with a pink header and light-blue glyphs
+Inherits=Papirus-Dark,Mint-Y,Adwaita,gnome,hicolor
+
+Directories=places/scalable,devices/scalable
+
+[places/scalable]
+MinSize=8
+MaxSize=512
+Size=48
+Context=Places
+Type=Scalable
+
+[devices/scalable]
+MinSize=8
+MaxSize=512
+Size=48
+Context=Devices
+Type=Scalable

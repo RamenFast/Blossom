@@ -1,3 +1,6 @@
 # Python bytecode from the build engine
 __pycache__/
 *.pyc
+
+# regenerable icon cache (gtk-update-icon-cache)
+icons/*/icon-theme.cache
