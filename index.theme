@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Blossom
+Comment=AMOLED true-black with soft pink & gold — importance through colour
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Blossom
+MetacityTheme=Blossom
+IconTheme=Mint-Y-Sand
+CursorTheme=Bibata-Modern-Classic
+ButtonLayout=:minimize,maximize,close
