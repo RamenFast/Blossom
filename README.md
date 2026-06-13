@@ -60,7 +60,13 @@ ramp `DARK_KNEE`/`DARK_SLOPE`, …). Want a softer, more pastel pink? Nudge
 
 ## Install & apply
 
-Lives in `~/.themes/Blossom/` so Cinnamon loads it directly. Apply with:
+Clone into your user themes dir so Cinnamon loads it directly:
+
+```bash
+git clone https://github.com/RamenFast/Blossom.git ~/.themes/Blossom
+```
+
+Then apply with:
 
 ```bash
 gsettings set org.cinnamon.theme name 'Blossom'                    # shell
