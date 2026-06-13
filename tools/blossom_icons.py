@@ -141,10 +141,11 @@ def make_logo(apps_dir: Path) -> None:
     if not src.exists():
         return
     t = src.read_text()
+    # brightened, luminous palette for the logo specifically
     grad = ('<linearGradient id="blossomRing" x1="0" y1="0" x2="1" y2="1">'
-            f'<stop offset="0" stop-color="{PINK}"/>'
-            f'<stop offset="0.5" stop-color="{GOLD}"/>'
-            '<stop offset="1" stop-color="#8fd4ff"/></linearGradient>')
+            '<stop offset="0" stop-color="#ff5ea0"/>'
+            '<stop offset="0.5" stop-color="#ffcf5a"/>'
+            '<stop offset="1" stop-color="#a6e3ff"/></linearGradient>')
     t = t.replace('<defs\n     id="defs2" />', f'<defs id="defs2">{grad}</defs>')
 
     def set_fill(text, pid, fill):
@@ -155,22 +156,18 @@ def make_logo(apps_dir: Path) -> None:
         return text[:m.start()] + el + text[m.end():]
 
     t = set_fill(t, "path1374-2-6", "url(#blossomRing)")   # ring
-    t = set_fill(t, "path4193-1-9", "#5fd39c")             # LM monogram -> mint
+    t = set_fill(t, "path4193-1-9", "#5fe6a6")             # LM monogram -> bright mint
     out.write_text(t)
 
 
 def make_flower(apps_dir: Path) -> None:
-    """The Blossom mark — a five-petal flower (pink petals, gold centre, light-blue
-    heart). Used as the app icon for Blossom Control, distinct from the menu's LM ring."""
-    petals = "".join(
-        f'<ellipse cx="24" cy="12.5" rx="6.6" ry="11" fill="{PINK}" '
-        f'transform="rotate({k*72} 24 24)"/>' for k in range(5))
-    inner = "".join(
-        f'<ellipse cx="24" cy="16" rx="3.4" ry="7" fill="#b32f63" opacity="0.55" '
-        f'transform="rotate({k*72+36} 24 24)"/>' for k in range(5))
-    svg = (_svg(f'<g>{petals}</g><g>{inner}</g>'
-                f'<circle cx="24" cy="24" r="6.2" fill="{GOLD}"/>'
-                f'<circle cx="24" cy="24" r="2.4" fill="{LB}"/>'))
+    """The Blossom mark — a clean, flat cherry-blossom (notched sakura petals, a
+    small gold centre). The app icon for Blossom Control, distinct from the LM ring."""
+    petal = ("M24 21 C 18 21, 14.5 15.5, 17 9.5 C 18.2 6.6, 21 6, 22.6 8.4 "
+             "L 24 10.6 L 25.4 8.4 C 27 6, 29.8 6.6, 31 9.5 C 33.5 15.5, 30 21, 24 21 Z")
+    petals = "".join(f'<path d="{petal}" fill="#f060a0" '
+                     f'transform="rotate({k*72} 24 24)"/>' for k in range(5))
+    svg = _svg(f'<g>{petals}</g><circle cx="24" cy="24" r="3.2" fill="#ffcf5a"/>')
     (apps_dir / "blossom-flower.svg").write_text(svg)
 
 
