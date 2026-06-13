@@ -132,6 +132,48 @@ def computer() -> str:
     )
 
 
+def make_logo(apps_dir: Path) -> None:
+    """Recolour the Linux Mint ring logo: gradient ring (pink->gold->light-blue) +
+    mint-green LM monogram. Falls back to any existing file if the source is gone."""
+    import re
+    src = Path("/usr/share/icons/hicolor/scalable/apps/linuxmint-logo-ring.svg")
+    out = apps_dir / "blossom-logo.svg"
+    if not src.exists():
+        return
+    t = src.read_text()
+    grad = ('<linearGradient id="blossomRing" x1="0" y1="0" x2="1" y2="1">'
+            f'<stop offset="0" stop-color="{PINK}"/>'
+            f'<stop offset="0.5" stop-color="{GOLD}"/>'
+            '<stop offset="1" stop-color="#8fd4ff"/></linearGradient>')
+    t = t.replace('<defs\n     id="defs2" />', f'<defs id="defs2">{grad}</defs>')
+
+    def set_fill(text, pid, fill):
+        m = re.search(r'<path\b[^>]*?id="' + re.escape(pid) + r'"[^>]*?>', text, re.S)
+        if not m:
+            return text
+        el = re.sub(r'fill:#[0-9a-fA-F]+', 'fill:' + fill, m.group(0), count=1)
+        return text[:m.start()] + el + text[m.end():]
+
+    t = set_fill(t, "path1374-2-6", "url(#blossomRing)")   # ring
+    t = set_fill(t, "path4193-1-9", "#5fd39c")             # LM monogram -> mint
+    out.write_text(t)
+
+
+def make_flower(apps_dir: Path) -> None:
+    """The Blossom mark — a five-petal flower (pink petals, gold centre, light-blue
+    heart). Used as the app icon for Blossom Control, distinct from the menu's LM ring."""
+    petals = "".join(
+        f'<ellipse cx="24" cy="12.5" rx="6.6" ry="11" fill="{PINK}" '
+        f'transform="rotate({k*72} 24 24)"/>' for k in range(5))
+    inner = "".join(
+        f'<ellipse cx="24" cy="16" rx="3.4" ry="7" fill="#b32f63" opacity="0.55" '
+        f'transform="rotate({k*72+36} 24 24)"/>' for k in range(5))
+    svg = (_svg(f'<g>{petals}</g><g>{inner}</g>'
+                f'<circle cx="24" cy="24" r="6.2" fill="{GOLD}"/>'
+                f'<circle cx="24" cy="24" r="2.4" fill="{LB}"/>'))
+    (apps_dir / "blossom-flower.svg").write_text(svg)
+
+
 def network() -> str:
     return _svg(
         f'<g fill="{BODY}" stroke="{LB}" stroke-width="1.6">'
@@ -146,10 +188,13 @@ def network() -> str:
 def build():
     places = OUT / "places" / "scalable"
     devices = OUT / "devices" / "scalable"
-    for d in (places, devices):
+    apps = OUT / "apps" / "scalable"
+    for d in (places, devices, apps):
         if d.exists():
             shutil.rmtree(d)
         d.mkdir(parents=True)
+    make_logo(apps)
+    make_flower(apps)
 
     # folders (Places)
     folders = {
@@ -205,7 +250,7 @@ Name=Blossom
 Comment=AMOLED pink — void-dark folders with a pink header and light-blue glyphs
 Inherits=Papirus-Dark,Mint-Y,Adwaita,gnome,hicolor
 
-Directories=places/scalable,devices/scalable
+Directories=places/scalable,devices/scalable,apps/scalable
 
 [places/scalable]
 MinSize=8
@@ -219,6 +264,13 @@ MinSize=8
 MaxSize=512
 Size=48
 Context=Devices
+Type=Scalable
+
+[apps/scalable]
+MinSize=8
+MaxSize=512
+Size=48
+Context=Applications
 Type=Scalable
 """
     (OUT / "index.theme").write_text(index)

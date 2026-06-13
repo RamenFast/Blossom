@@ -106,6 +106,47 @@ gsettings set org.cinnamon.desktop.interface icon-theme 'Blossom'    # icons
 Iterate live: edit → re-run the engine → re-select the theme (or `Ctrl+Alt+Esc`
 to reload Cinnamon).
 
+## Control GUI & the panel
+
+Two panel touches tie the look together:
+
+- The **menu button** is a recoloured Linux Mint logo — a pink → gold → light-blue
+  gradient ring around a **mint-green LM** monogram
+  (`icons/Blossom/apps/scalable/blossom-logo.svg`).
+- A **Blossom Control** button — the pink flower — opens a small GTK app: apply
+  the look, and rotate / like icon packs, in one window. Being a GTK app it's
+  themed by Blossom itself, so the control surface looks like what it controls.
+  It's the pattern for any future one-off Blossom UI.
+
+![Blossom Control](docs/control-gui.png)
+
+![panel: LM-ring menu + flower control](docs/panel-buttons.png)
+
+```bash
+# recoloured menu logo (per-applet setting wins over the global one):
+python3 - <<'PY'
+import json, glob
+for f in glob.glob(__import__("os").path.expanduser(
+        "~/.config/cinnamon/spices/menu@cinnamon.org/*.json")):
+    d = json.load(open(f)); d["menu-icon"]["value"] = "blossom-logo"
+    json.dump(d, open(f, "w"), indent=4)
+PY
+# launcher for the control app (flower icon):
+cat > ~/.local/share/applications/blossom-control.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Name=Blossom Control
+Exec=python3 $HOME/.themes/Blossom/tools/blossom-control.py
+Icon=blossom-flower
+Terminal=false
+Categories=Settings;Utility;
+EOF
+```
+
+Then right-click the panel → *Add applets* → **Panel launchers**, or drag the
+menu entry onto the panel, to pin the flower. Remove any time with right-click →
+*Remove*. (Both need a Cinnamon reload — `Ctrl+Alt+Esc` — to repaint.)
+
 ## Daily rotation — find your taste
 
 `tools/blossom-rotate.py` cycles the *icon* theme through a curated list of packs,

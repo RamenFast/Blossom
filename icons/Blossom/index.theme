@@ -3,7 +3,7 @@ Name=Blossom
 Comment=AMOLED pink — void-dark folders with a pink header and light-blue glyphs
 Inherits=Papirus-Dark,Mint-Y,Adwaita,gnome,hicolor
 
-Directories=places/scalable,devices/scalable
+Directories=places/scalable,devices/scalable,apps/scalable
 
 [places/scalable]
 MinSize=8
@@ -17,4 +17,11 @@ MinSize=8
 MaxSize=512
 Size=48
 Context=Devices
+Type=Scalable
+
+[apps/scalable]
+MinSize=8
+MaxSize=512
+Size=48
+Context=Applications
 Type=Scalable
