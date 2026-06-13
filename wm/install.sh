@@ -10,7 +10,9 @@ set -euo pipefail
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo "==> Installing xmonad + tools (apt)…"
-sudo apt update
+# A failing third-party repo (e.g. an expired Spotify key) must not abort us —
+# apt still refreshed every other list, so just continue.
+sudo apt update || echo "  (apt update reported a warning from some repo — continuing)"
 sudo apt install -y \
   xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev \
   xmobar suckless-tools picom feh x11-xserver-utils \

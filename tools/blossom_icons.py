@@ -141,11 +141,11 @@ def make_logo(apps_dir: Path) -> None:
     if not src.exists():
         return
     t = src.read_text()
-    # brightened, luminous palette for the logo specifically
+    # vivid, poppy palette for the logo specifically
     grad = ('<linearGradient id="blossomRing" x1="0" y1="0" x2="1" y2="1">'
-            '<stop offset="0" stop-color="#ff5ea0"/>'
-            '<stop offset="0.5" stop-color="#ffcf5a"/>'
-            '<stop offset="1" stop-color="#a6e3ff"/></linearGradient>')
+            '<stop offset="0" stop-color="#ff3d97"/>'
+            '<stop offset="0.5" stop-color="#ffe23d"/>'
+            '<stop offset="1" stop-color="#4dc4ff"/></linearGradient>')
     t = t.replace('<defs\n     id="defs2" />', f'<defs id="defs2">{grad}</defs>')
 
     def set_fill(text, pid, fill):
@@ -156,7 +156,7 @@ def make_logo(apps_dir: Path) -> None:
         return text[:m.start()] + el + text[m.end():]
 
     t = set_fill(t, "path1374-2-6", "url(#blossomRing)")   # ring
-    t = set_fill(t, "path4193-1-9", "#5fe6a6")             # LM monogram -> bright mint
+    t = set_fill(t, "path4193-1-9", "#37ffa0")             # LM monogram -> electric mint
     out.write_text(t)
 
 
