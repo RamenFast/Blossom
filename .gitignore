@@ -4,3 +4,6 @@ __pycache__/
 
 # regenerable icon cache (gtk-update-icon-cache)
 icons/*/icon-theme.cache
+
+# Rust build artifacts for the Steam tool (cargo build --release regenerates)
+steam/blossom-steam/target/

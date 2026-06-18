@@ -203,6 +203,28 @@ New windows join the **stack** to the right of the master — predictable, every
 time. Config: `wm/xmonad/xmonad.hs` · bar: `wm/xmobar/xmobarrc` · compositor:
 `wm/picom.conf`. The palette lives at the top of `xmonad.hs`.
 
+## Steam — the look, inside the client
+
+`steam/` carries Blossom into the **Steam client**: AMOLED true-black, pink
+accent (the blue Steam paints everywhere becomes pink), gold/red/green semantics
+kept — and **game art is never recoloured**.
+
+![Blossom Steam — library](docs/steam-library.png)
+
+Modern Steam is a Chromium app that restores its own CSS on every launch, so the
+skin is **injected at runtime over Steam's built-in CEF debugger** — *no sudo, no
+Millennium*. A small **Rust** binary (`steam/blossom-steam/`) paints every window
+in <0.2 s and re-applies at login; the colour remap is **generated** from Steam's
+live stylesheets (`blossom-steam gen`) and committed, exactly like the rest of
+Blossom. A Millennium path is provided too.
+
+```bash
+cd steam && ./install.sh        # builds the binary, themes Steam now + at every login
+```
+
+See `steam/README.md` for the palette mapping, the generator, and the Millennium
+option.
+
 ## Environment
 
 Built and tested on Linux Mint · Cinnamon 6.6.7 · X11 · 40 px panel.

@@ -1,0 +1,386 @@
+/* ============================================================================
+ *  Blossom — a Steam skin (Millennium / webkit injection)
+ *
+ *  AMOLED true-black base · pink #db3776 primary · gold #f1bf40 secondary ·
+ *  light-blue #eaf6ff text · red #ec4e53 critical · green #52a462 success.
+ *
+ *  Design rule (from the Blossom desktop theme): pink is what you're acting on,
+ *  gold is the reference you're acting against (today / warnings), red is danger.
+ *  Importance reads through colour; everything else stays black & light-blue and
+ *  recedes. Game cover art is NEVER recoloured.
+ *
+ *  Steam's content uses churning hashed class names, so this targets Steam's
+ *  STABLE design-system classes (Dialog*, Modal*, *Button, title-bar-*, gpfocus,
+ *  friendsui-*) and its real CSS variables — the parts that survive client
+ *  updates — plus the literal accent blue where it must be reached.
+ * ========================================================================== */
+
+:root {
+  --blossom-black:    #000000;
+  --blossom-raise-1:  #0a0a0a;   /* panels lifted off the void */
+  --blossom-raise-2:  #141414;   /* secondary surface */
+  --blossom-raise-3:  #1c1c1c;   /* cards, inputs */
+  --blossom-raise-4:  #2a2a2a;   /* borders, hover fills */
+  --blossom-raise-5:  #3a3a3a;   /* strong border / pressed */
+
+  --blossom-pink:     #db3776;   /* primary accent */
+  --blossom-pink-hi:  #e85a92;   /* hover / brighter */
+  --blossom-pink-dim: #a8265a;   /* pressed / deep */
+  --blossom-pink-rgb: 219, 55, 118;
+
+  --blossom-gold:     #f1bf40;   /* secondary / today / warning */
+  --blossom-gold-rgb: 241, 191, 64;
+
+  --blossom-text:     #eaf6ff;   /* primary text / icons */
+  --blossom-text-dim: #9fb3c2;   /* secondary text */
+  --blossom-text-faint:#6d7d89;  /* tertiary / placeholder */
+
+  --blossom-red:      #ec4e53;   /* critical / destructive / close */
+  --blossom-green:    #52a462;   /* success / online */
+
+  /* ---- Steam's own variables (these reach menus, sliders, gradients) ---- */
+  --main-text-color: var(--blossom-text) !important;
+  --color-text-secondary: var(--blossom-text-dim) !important;
+  --menu-background: var(--blossom-raise-2) !important;
+  --left-track-color: var(--blossom-pink) !important;     /* slider fill */
+  --virtualmenu-accent: var(--blossom-pink) !important;
+  --virtualmenupointer-color: var(--blossom-pink) !important;
+  --virtualmenu-bg: var(--blossom-raise-2) !important;
+  --virtualmenu-bg-hover: rgba(var(--blossom-pink-rgb), 0.22) !important;
+  --indicatorColor: var(--blossom-gold) !important;       /* "new" indicators */
+  --main-top-image-bg: var(--blossom-black) !important;
+  --main-editor-bg-color: var(--blossom-raise-2) !important;
+  --main-editor-input-bg-color: var(--blossom-raise-3) !important;
+  --main-editor-text-color: var(--blossom-text) !important;
+  --gpSystemLightColor: var(--blossom-pink) !important;
+  --GradientColor1: var(--blossom-pink-dim) !important;
+  --GradientColor2: var(--blossom-pink) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  1. The void — true-black base on the root surfaces
+ * ------------------------------------------------------------------------- */
+html, body,
+.DesktopUI,
+#root,
+[class*="rootmenu"],
+[class*="ContextMenu"] {
+  background-color: var(--blossom-black) !important;
+  color: var(--blossom-text);
+}
+
+/* Steam's two dark structural greys -> black ramp.
+ * #0e141b (dark bg) and #171d25 (header) appear as inline/atomic backgrounds. */
+[style*="rgb(14, 20, 27)"],
+[style*="#0e141b"]            { background-color: var(--blossom-black) !important; }
+[style*="rgb(23, 29, 37)"],
+[style*="#171d25"]            { background-color: var(--blossom-raise-1) !important; }
+
+/* ---------------------------------------------------------------------------
+ *  2. Title bar (the custom window chrome) + window controls
+ * ------------------------------------------------------------------------- */
+.title-bar-actions,
+[class*="titlebar"],
+[class*="TitleBar"] {
+  background-color: var(--blossom-black) !important;
+}
+.title-area-icon:hover,
+.title-bar-actions .closeButton:hover {
+  background-color: var(--blossom-red) !important;   /* close = danger */
+}
+.title-bar-actions .minimizeButton:hover,
+.title-bar-actions .maximizeButton:hover,
+.title-area-icon-inner:hover {
+  background-color: var(--blossom-raise-4) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  3. The accent — Steam blue (#1a9fff / rgb 26,159,255) becomes pink.
+ *     Reachable hardcoded usages: fills, text, borders, backgrounds.
+ * ------------------------------------------------------------------------- */
+[style*="rgb(26, 159, 255)"],
+[style*="#1a9fff"]                 { color: var(--blossom-pink) !important; }
+[style*="background-color: rgb(26, 159, 255)"],
+[style*="background: rgb(26, 159, 255)"],
+[style*="background-color:#1a9fff"]{ background-color: var(--blossom-pink) !important; }
+[style*="border-color: rgb(26, 159, 255)"] { border-color: var(--blossom-pink) !important; }
+
+/* Links / clickable accent text */
+a, a:visited { color: var(--blossom-pink); }
+a:hover      { color: var(--blossom-pink-hi); }
+
+/* ---------------------------------------------------------------------------
+ *  4. Buttons (Steam design system — stable classes)
+ * ------------------------------------------------------------------------- */
+.DialogButton,
+.basicdialogbutton {
+  background: var(--blossom-raise-3);
+  color: var(--blossom-text);
+  border: 1px solid var(--blossom-raise-4);
+  transition: background-color .12s ease, border-color .12s ease;
+}
+.DialogButton:hover,
+.basicdialogbutton:hover {
+  background: var(--blossom-raise-4);
+  border-color: var(--blossom-raise-5);
+}
+/* The suggested / primary action -> solid pink (matches the desktop theme) */
+.DialogButton.Primary,
+button.DialogButton.Primary,
+.basicdialogbutton.Primary {
+  background: var(--blossom-pink) !important;
+  color: #ffffff !important;
+  border-color: var(--blossom-pink) !important;
+}
+.DialogButton.Primary:hover,
+button.DialogButton.Primary:hover {
+  background: var(--blossom-pink-hi) !important;
+}
+/* Destructive buttons -> red */
+.DialogButton.Destructive,
+.DialogButton.destructive,
+[class*="Destructive"] .DialogButton {
+  background: var(--blossom-red) !important;
+  color: #fff !important;
+  border-color: var(--blossom-red) !important;
+}
+.TextButton { color: var(--blossom-pink); }
+
+/* ---------------------------------------------------------------------------
+ *  5. Focus ring — the gamepad / keyboard focus highlight
+ * ------------------------------------------------------------------------- */
+.gpfocus,
+.gpfocuswithin,
+*:focus-visible {
+  outline-color: var(--blossom-pink) !important;
+  box-shadow: 0 0 0 2px var(--blossom-pink) !important;
+}
+.DialogButton.gpfocus,
+button.DialogButton.gpfocus.Primary {
+  background: var(--blossom-pink) !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  6. Dialogs, modals, popups, context menus
+ * ------------------------------------------------------------------------- */
+.ModalDialogPopup,
+.ModalDialogBackground .DialogContent,
+.DialogContent,
+.PopupFullWindow,
+.contextMenuPopup,
+[class*="contextmenu"],
+[class*="ContextMenuItems"] {
+  background-color: var(--blossom-raise-1) !important;
+  color: var(--blossom-text) !important;
+  border-color: var(--blossom-raise-4) !important;
+}
+.ModalDialogBackground {
+  background-color: rgba(0, 0, 0, 0.7) !important;   /* dim the void behind */
+}
+/* context-menu hover / selected row -> pink wash */
+[class*="contextMenuItem"]:hover,
+[class*="ContextMenuItem"]:hover,
+[class*="selectableItem"]:hover,
+[class*="MenuItem"]:hover {
+  background-color: rgba(var(--blossom-pink-rgb), 0.20) !important;
+  color: var(--blossom-text) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  7. Inputs, checkboxes, toggles, dropdowns, sliders
+ * ------------------------------------------------------------------------- */
+.DialogInput,
+.DialogTextInputBase,
+.DialogInputContainer,
+.gamepaddialog_Field input,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"] {
+  background-color: var(--blossom-raise-3) !important;
+  color: var(--blossom-text) !important;
+  border: 1px solid var(--blossom-raise-4) !important;
+}
+.DialogInput:focus,
+.DialogTextInputBase:focus,
+input:focus, textarea:focus {
+  border-color: var(--blossom-pink) !important;
+  box-shadow: 0 0 0 1px var(--blossom-pink) !important;
+}
+::placeholder { color: var(--blossom-text-faint) !important; }
+
+/* Checked checkboxes / radios / toggles -> pink */
+.DialogCheckbox:checked,
+.DialogCheckbox.Checked,
+[class*="Checkbox"][class*="Checked"],
+[class*="Toggle"][class*="On"],
+[class*="toggle"][class*="on"] {
+  background-color: var(--blossom-pink) !important;
+  border-color: var(--blossom-pink) !important;
+}
+
+/* Slider track fill + thumb */
+[class*="SliderControlAndNotches"] [class*="Fill"],
+[class*="sliderfill"],
+[class*="SliderHandle"],
+[class*="sliderhandle"] {
+  background-color: var(--blossom-pink) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  8. Scrollbars
+ * ------------------------------------------------------------------------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--blossom-black); }
+::-webkit-scrollbar-thumb {
+  background: var(--blossom-raise-4);
+  border-radius: 6px;
+  border: 2px solid var(--blossom-black);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--blossom-pink); }
+
+/* ---------------------------------------------------------------------------
+ *  8b. Static panel titles must RECEDE, not wear the action accent.
+ *      Steam colours the settings/page-list title with its accent blue; the
+ *      generated remap then turns it pink, but a bold uppercase saturated-pink
+ *      title on true black both fights for attention (against Blossom's rule:
+ *      the accent is for what you act on) and shimmers (chromostereopsis).
+ *      Pull it back to light-blue, like the library section headers.
+ *      Higher specificity than the generated single-class rule, so it wins.
+ * ------------------------------------------------------------------------- */
+.PageListColumn > :first-child,
+.PageListColumn > .Panel > :first-child,
+[class*="PagedSettings"] [class*="Title"],
+[class*="SettingsTitle"] {
+  color: var(--blossom-text) !important;
+  -webkit-text-fill-color: var(--blossom-text) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  9. Semantics — today / online / success.
+ *     NOTE: broad [class*="online"] etc. misfire (they hit the header persona
+ *     name). Friend-state and "today" colours are handled by the generated
+ *     remap (blossom-steamize) against Steam's real rules instead.
+ * ------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------
+ *  10. Friends & chat (separate friendsui surface)
+ * ------------------------------------------------------------------------- */
+.friendsui-container,
+[class*="FriendsList"],
+[class*="ChatRoom"],
+.ChatRoomGroup_Main,
+.client_chat,
+.web_chat_frame {
+  background-color: var(--blossom-black) !important;
+  color: var(--blossom-text) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  11. Bottom status bar (Add a Game / Downloads / Friends & Chat)
+ * ------------------------------------------------------------------------- */
+[class*="footer" i],
+[class*="StatusBar"],
+[class*="statusbar"] {
+  background-color: var(--blossom-raise-1) !important;
+  border-top: 1px solid var(--blossom-raise-4) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  11b. Blossom polish — small, safe touches that make it feel intentional.
+ *       (Creative liberties: text selection, soft corners, smooth hovers, a
+ *        pink focus glow, themed tooltips. All on stable selectors.)
+ * ------------------------------------------------------------------------- */
+
+/* Text selection — pink wash, the Blossom signature */
+::selection { background: rgba(var(--blossom-pink-rgb), 0.85); color: #fff; }
+
+/* Soft, modern corners on the design-system primitives */
+.DialogButton, .basicdialogbutton, .TextButton,
+.DialogInput, .DialogTextInputBase, .DialogDropDown,
+.ModalDialogPopup, .DialogContent, .contextMenuPopup {
+  border-radius: 9px !important;
+}
+
+/* Buttons ease on hover instead of snapping */
+.DialogButton, .basicdialogbutton {
+  transition: background-color .14s ease, border-color .14s ease,
+              box-shadow .14s ease, transform .06s ease !important;
+}
+.DialogButton.Primary:hover {
+  box-shadow: 0 0 0 1px var(--blossom-pink),
+              0 6px 18px -6px rgba(var(--blossom-pink-rgb), 0.7) !important;  /* a soft bloom */
+}
+.DialogButton:active, .basicdialogbutton:active { transform: translateY(1px); }
+
+/* Focus ring: a clean pink halo (gentler than a hard 2px line) */
+.gpfocus, .gpfocuswithin, *:focus-visible {
+  box-shadow: 0 0 0 2px rgba(var(--blossom-pink-rgb), 0.9),
+              0 0 12px -2px rgba(var(--blossom-pink-rgb), 0.55) !important;
+  border-radius: 6px;
+}
+
+/* Tooltips / hover cards — black with a hairline pink edge */
+.hovermenu, [class*="Tooltip"], [class*="tooltip"], [class*="HoverPosition"] {
+  background-color: var(--blossom-raise-1) !important;
+  border: 1px solid rgba(var(--blossom-pink-rgb), 0.35) !important;
+  color: var(--blossom-text) !important;
+  border-radius: 8px !important;
+}
+
+/* Progress / loading bars -> pink fill on a dim track */
+[class*="ProgressBar"] [class*="Fill"], progress::-webkit-progress-value,
+[class*="loadingProgress"], [class*="LoadingBar"] {
+  background: linear-gradient(90deg, var(--blossom-pink), var(--blossom-pink-hi)) !important;
+}
+
+/* ---------------------------------------------------------------------------
+ *  11c. Going farther — signature flourishes
+ * ------------------------------------------------------------------------- */
+
+/* Loading throbbers / spinners bloom pink instead of Steam blue */
+.SVGIcon_Throbber, [class*="Throbber"], [class*="throbber"],
+[class*="Spinner"], [class*="LoadingThrobber"] {
+  color: var(--blossom-pink) !important;
+  fill: var(--blossom-pink) !important;
+}
+.SVGIcon_Throbber *, [class*="Throbber"] * { stroke: var(--blossom-pink) !important; }
+
+/* Scrollbar: a slim pink-gradient thumb on the void */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--blossom-pink-dim), var(--blossom-pink)) !important;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--blossom-pink), var(--blossom-pink-hi)) !important;
+}
+
+/* Primary action: a soft pink gradient, lit from above */
+.DialogButton.Primary, button.DialogButton.Primary, .basicdialogbutton.Primary {
+  background: linear-gradient(180deg, var(--blossom-pink-hi), var(--blossom-pink)) !important;
+  border-color: var(--blossom-pink-dim) !important;
+}
+
+/* Links: a quiet pink underline that lights up on hover */
+a:hover { box-shadow: inset 0 -1px 0 0 var(--blossom-pink-hi); }
+
+/* Everything interactive eases rather than snaps */
+.DialogButton, .basicdialogbutton, .TextButton, a, .gpfocus,
+[class*="Button"], [class*="Tab" i], [class*="tab" i] {
+  transition: color .12s ease, background-color .12s ease,
+              box-shadow .14s ease, border-color .12s ease;
+}
+
+/* A hairline pink seam under the title-bar/header, tying the window together */
+.title-bar-actions { box-shadow: inset 0 -1px 0 0 rgba(var(--blossom-pink-rgb), 0.22); }
+
+/* ---------------------------------------------------------------------------
+ *  12. Legibility safeguards — never recolour game art or media
+ * ------------------------------------------------------------------------- */
+img, video, canvas, svg image,
+[class*="capsule" i], [class*="Capsule"],
+[class*="appcover" i], [class*="GameArt"],
+[style*="background-image"] {
+  filter: none !important;
+}

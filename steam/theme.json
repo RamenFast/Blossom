@@ -1,0 +1,16 @@
+{
+  "name": "Blossom",
+  "author": "RamenFast",
+  "version": "1.0.0",
+  "manifest_version": 8,
+  "description": "AMOLED true-black, pink primary + gold secondary — the Blossom desktop look, carried into the Steam client. Game art is never recoloured.",
+  "source": "https://github.com/RamenFast/Blossom",
+  "target": "Desktop",
+  "tabs": {
+    "all": ["Steam|SteamLibraryWindow", "desktopchat", "desktopcontextmenu", "desktopoverlay"]
+  },
+  "inject": {
+    "webkit.css": ["all"],
+    "generated.css": ["all"]
+  }
+}

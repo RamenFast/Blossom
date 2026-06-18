@@ -1,0 +1,21 @@
+[package]
+name = "blossom-steam"
+version = "1.0.0"
+edition = "2021"
+description = "Apply the Blossom skin to the Steam client over its CEF debugger — no sudo, no Millennium."
+
+[[bin]]
+name = "blossom-steam"
+path = "src/main.rs"
+
+[dependencies]
+# ws:// only (localhost CEF debugger) — default features give the handshake
+# without pulling any TLS stack, so the build stays small and fast.
+tungstenite = { version = "0.23", default-features = false, features = ["handshake"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+panic = "abort"
