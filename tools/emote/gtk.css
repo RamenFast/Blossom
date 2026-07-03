@@ -1,0 +1,132 @@
+/* ============================================================
+   Blossom theme for Emote (com.tomjwatson.Emote)
+   ------------------------------------------------------------
+   Emote is a flatpak GTK3 app: inside its sandbox it falls back to
+   the runtime's Adwaita theme, so it ignores the system Blossom look.
+   GTK always loads $XDG_CONFIG_HOME/gtk-3.0/gtk.css, which for this
+   flatpak maps to:
+     ~/.var/app/com.tomjwatson.Emote/config/gtk-3.0/gtk.css
+   Dropping this file there themes only Emote, without touching the app.
+   Node names come from Emote's own widgets (#emote_window, #header,
+   #emoji_button, #category_selector_button, …).
+   ============================================================ */
+
+/* AMOLED void base — incl. :backdrop (unfocused) so the titlebar never goes
+   white when the window loses focus, which is Adwaita's default behaviour. */
+#emote_window,
+#emote_window:backdrop,
+#emote_window .background,
+window, window:backdrop, .background, .background:backdrop,
+decoration, decoration:backdrop {
+  background-color: #000000;
+  background-image: none;
+  color: #eaf6ff;
+}
+
+/* The titlebar IS a HeaderBar (set_titlebar), node #header / headerbar / .titlebar */
+headerbar, #header, .titlebar,
+headerbar:backdrop, #header:backdrop, .titlebar:backdrop,
+.titlebar:not(headerbar), window.csd > .titlebar {
+  background-color: #000000;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  color: #eaf6ff;
+}
+#header {
+  border-bottom: 1px solid rgba(234, 246, 255, 0.08);
+}
+/* window-control + headerbar buttons stay flat on the void */
+headerbar button, #header button, .titlebar button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  color: #eaf6ff;
+}
+headerbar button:hover, #header button:hover {
+  background-color: rgba(219, 55, 118, 0.22);
+}
+
+/* Search field — dark well, pink focus ring */
+entry, .search-entry {
+  background-color: #0e1014;
+  background-image: none;
+  color: #eaf6ff;
+  border: 1px solid rgba(234, 246, 255, 0.14);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+entry:focus, .search-entry:focus {
+  border-color: #db3776;
+}
+entry image, entry > image {
+  color: #8a93a0;
+}
+
+/* Emoji grid + category buttons — flat, with a pink wash on hover/active */
+#emoji_button,
+#category_selector_button,
+button {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: #eaf6ff;
+  border-radius: 8px;
+}
+#emoji_button:hover,
+#category_selector_button:hover,
+button:hover {
+  background-color: rgba(219, 55, 118, 0.22);
+}
+#emoji_button:active,
+#category_selector_button:active,
+#category_selector_button:checked,
+button:checked {
+  background-color: rgba(219, 55, 118, 0.42);
+  color: #ffffff;
+}
+
+/* Labels / previews */
+#category_label,
+#previewed_emoji_name_label,
+#emoji_append_list_preview_label {
+  color: #f3b5cf;
+  font-weight: bold;
+}
+#previewed_emoji_shortcode_label {
+  color: #f1bf40;
+}
+
+/* Scrollbars — thin pink slider on the void */
+scrollbar {
+  background-color: transparent;
+  border: none;
+}
+scrollbar slider {
+  background-color: rgba(219, 55, 118, 0.5);
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 6px;
+}
+scrollbar slider:hover {
+  background-color: #db3776;
+}
+
+/* Frames / separators */
+frame, frame > border, separator {
+  border-color: rgba(234, 246, 255, 0.08);
+  background-color: rgba(234, 246, 255, 0.08);
+}
+
+/* Selection + tooltips on-brand */
+*:selected, *:selected:focus {
+  background-color: #db3776;
+  color: #ffffff;
+}
+tooltip {
+  background-color: #14161b;
+  color: #eaf6ff;
+}

@@ -10,6 +10,7 @@ Cinnamon look stays put.
 Usage:
   blossom-rotate daily        # advance only if the day changed (the cron/login entry)
   blossom-rotate next         # force-advance to the next pack now
+  blossom-rotate shuffle      # jump to a random different pack now
   blossom-rotate set NAME     # jump to a specific installed icon theme
   blossom-rotate like [note]  # mark today's pack as liked (optionally why)
   blossom-rotate dislike      # mark today's pack as disliked (deprioritised later)
@@ -100,6 +101,20 @@ def cmd_next(s):
     print(f"rotated to {advance(s)}")
 
 
+def cmd_shuffle(s):
+    import random
+    rot = s["rotation"]
+    cur = subprocess.run(["gsettings", "get", *GSETTING], capture_output=True,
+                         text=True).stdout.strip().strip("'")
+    # jump to a random pack that isn't the current one
+    choices = [t for t in rot if t != cur] or rot
+    theme = random.choice(choices)
+    if theme in rot:
+        s["index"] = rot.index(theme)
+    apply_theme(theme); record(s, theme)
+    print(f"shuffled to {theme}")
+
+
 def cmd_set(s, name):
     if not name:
         sys.exit("usage: blossom-rotate set NAME")
@@ -176,6 +191,7 @@ def main():
     {
         "daily": lambda: cmd_daily(s),
         "next": lambda: cmd_next(s),
+        "shuffle": lambda: cmd_shuffle(s),
         "set": lambda: cmd_set(s, rest[0] if rest else ""),
         "like": lambda: cmd_mark(s, True, " ".join(rest)),
         "dislike": lambda: cmd_mark(s, False, " ".join(rest)),

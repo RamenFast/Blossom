@@ -29,18 +29,29 @@ RED  = "#ec4e53"
 
 # ---- folder template -------------------------------------------------------
 # back panel (incl. tab) + front pocket + pocket highlight + defining edge.
-_BACK = ("M8 10 h10 a2 2 0 0 1 1.7 1 l1.3 2.2 h18 a3 3 0 0 1 3 3 v20 "
-         "a3 3 0 0 1 -3 3 H8 a3 3 0 0 1 -3 -3 V13 a3 3 0 0 1 3 -3 z")
-_POCK = "M5 19 H43 V37 a3 3 0 0 1 -3 3 H8 a3 3 0 0 1 -3 -3 z"
+# Corners are squared off (small radii) per Ben's preference for square > round,
+# and the pocket carries a vertical light→dark gradient + a top highlight line so
+# the folder reads with a layer of depth instead of looking flat.
+_BACK = ("M7 10 h11 a1.4 1.4 0 0 1 1.2 0.8 l1.4 2.4 h18.6 a1.4 1.4 0 0 1 1.4 1.4 v20.8 "
+         "a1.4 1.4 0 0 1 -1.4 1.4 H7 a1.4 1.4 0 0 1 -1.4 -1.4 V11.4 a1.4 1.4 0 0 1 1.4 -1.4 z")
+_POCK = "M5 19 H43 V37.4 a1.4 1.4 0 0 1 -1.4 1.4 H6.4 a1.4 1.4 0 0 1 -1.4 -1.4 z"
 
 
 def folder(glyph: str = "", top: str = PINK) -> str:
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">'
+        '<defs>'
+        '<linearGradient id="fdepth" x1="0" y1="0" x2="0" y2="1">'
+        '<stop offset="0" stop-color="#1b1e25"/>'
+        '<stop offset="1" stop-color="#0c0e12"/></linearGradient>'
+        '</defs>'
+        # back panel + a thin top gloss so the coloured header has dimension
         f'<path d="{_BACK}" fill="{top}"/>'
-        f'<path d="{_POCK}" fill="{BODY}"/>'
-        f'<rect x="5" y="19" width="38" height="1.1" fill="{LB}" opacity="0.14"/>'
-        f'<path d="{_BACK}" fill="none" stroke="{EDGE}" stroke-width="0.7"/>'
+        f'<rect x="7" y="10" width="35" height="2.4" fill="#ffffff" opacity="0.16"/>'
+        # front pocket with depth gradient
+        f'<path d="{_POCK}" fill="url(#fdepth)"/>'
+        f'<rect x="5" y="19" width="38" height="1.2" fill="{LB}" opacity="0.20"/>'
+        f'<path d="{_POCK}" fill="none" stroke="{EDGE}" stroke-width="0.7"/>'
         f'{glyph}</svg>'
     )
 
@@ -97,7 +108,7 @@ def trash(full: bool = False) -> str:
 
 def harddisk() -> str:
     return _svg(
-        f'<rect x="9" y="18" width="30" height="13" rx="3" fill="{BODY}" stroke="{EDGE}" stroke-width="0.8"/>'
+        f'<rect x="9" y="18" width="30" height="13" rx="1.4" fill="{BODY}" stroke="{EDGE}" stroke-width="0.8"/>'
         f'<circle cx="32" cy="24.5" r="2.2" fill="none" stroke="{LB}" stroke-width="1.6" opacity="0.9"/>'
         f'<circle cx="32" cy="24.5" r="0.6" fill="{LB}"/>'
         f'<rect x="13" y="22.5" width="10" height="1.7" rx="0.85" fill="{LB}" opacity="0.8"/>'
@@ -108,7 +119,7 @@ def harddisk() -> str:
 
 def usb() -> str:
     return _svg(
-        f'<rect x="20" y="22" width="8" height="16" rx="2" fill="{BODY}" stroke="{EDGE}" stroke-width="0.8"/>'
+        f'<rect x="20" y="22" width="8" height="16" rx="1.2" fill="{BODY}" stroke="{EDGE}" stroke-width="0.8"/>'
         f'<path d="M22 22v-3.5a2 2 0 0 1 4 0V22" fill="none" stroke="{LB}" stroke-width="1.6"/>'
         f'<rect x="22" y="26" width="4" height="2" fill="{PINK}"/>'
         f'<rect x="22" y="30" width="4" height="2" fill="{LB}" opacity="0.6"/>'
@@ -126,27 +137,64 @@ def optical() -> str:
 
 def computer() -> str:
     return _svg(
-        f'<rect x="11" y="14" width="26" height="17" rx="2.5" fill="{BODY}" stroke="{EDGE}" stroke-width="0.8"/>'
+        f'<rect x="11" y="14" width="26" height="17" rx="1.5" fill="{BODY}" stroke="{EDGE}" stroke-width="0.8"/>'
         f'<rect x="13.5" y="16.5" width="21" height="12" rx="1" fill="none" stroke="{PINK}" stroke-width="1.4" opacity="0.8"/>'
         f'<path d="M20 31l-1.2 4h10.4l-1.2-4M16 35h16" fill="none" stroke="{LB}" stroke-width="1.7" stroke-linecap="round"/>'
     )
 
 
-def make_logo(apps_dir: Path) -> None:
-    """Recolour the Linux Mint ring logo: gradient ring (pink->gold->light-blue) +
-    mint-green LM monogram. Falls back to any existing file if the source is gone."""
+def editor() -> str:
+    """A text-editor mark for xed: a little scene — a brick house (front wall +
+    chimney) on a green lawn with a tree, and a glowing text-input cursor (I-beam)
+    in a lit window on the wall. The 'document' becomes the house wall facing you."""
+    BRICK = "#c25a4f"   # warm brick red, readable on the void
+    MORTAR = "#34251f"  # dark mortar between bricks
+    ROOF = "#8f4a39"    # darker clay roof
+    GRASS = "#3fbf63"   # lawn green
+    GRASSH = "#5fe089"  # lawn highlight
+    LEAF = "#37c46a"    # tree canopy
+    TRUNK = "#7a5a36"   # tree trunk
+    return _svg(
+        # ---- lawn (wavy-topped green strip) ----
+        f'<path d="M2 39 q7 -3 12 0 t12 0 t12 0 t10 0 V46 H2 Z" fill="{GRASS}"/>'
+        f'<path d="M2 39 q7 -3 12 0 t12 0 t12 0 t10 0" fill="none" '
+        f'stroke="{GRASSH}" stroke-width="1.1" opacity="0.8"/>'
+        # ---- tree (left) ----
+        f'<rect x="7.2" y="33" width="2.6" height="9" rx="1" fill="{TRUNK}"/>'
+        f'<circle cx="8.5" cy="30" r="5.2" fill="{LEAF}"/>'
+        f'<circle cx="5.4" cy="32" r="3.4" fill="{LEAF}"/>'
+        f'<circle cx="11.6" cy="32" r="3.4" fill="{LEAF}"/>'
+        f'<circle cx="7" cy="28.5" r="1.2" fill="{GRASSH}" opacity="0.7"/>'
+        # ---- house: roof + chimney + brick wall ----
+        f'<rect x="33" y="9" width="4.2" height="8" fill="{BRICK}" stroke="{MORTAR}" stroke-width="0.6"/>'
+        f'<path d="M15 19 L28 10.5 L41 19 Z" fill="{ROOF}" stroke="{MORTAR}" stroke-width="0.7" stroke-linejoin="round"/>'
+        f'<rect x="17" y="19" width="22" height="21" fill="{BRICK}" stroke="{MORTAR}" stroke-width="0.7"/>'
+        # brick courses (mortar lines) + staggered head joints
+        f'<g stroke="{MORTAR}" stroke-width="0.8">'
+        f'<path d="M17 24.2h22M17 29.4h22M17 34.6h22"/>'
+        f'<path d="M22 19v5.2M28 19v5.2M34 19v5.2"/>'
+        f'<path d="M19.4 24.2v5.2M25 24.2v5.2M31 24.2v5.2M36.5 24.2v5.2"/>'
+        f'<path d="M22 29.4v5.2M28 29.4v5.2M34 29.4v5.2"/>'
+        f'<path d="M19.4 34.6v5.4M25 34.6v5.4M31 34.6v5.4M36.5 34.6v5.4"/></g>'
+        # ---- lit window with a glowing text-input cursor (I-beam) ----
+        f'<rect x="20.5" y="26" width="11" height="12" rx="0.6" fill="#0c0f14" stroke="{MORTAR}" stroke-width="0.7"/>'
+        f'<g stroke="{PINK}" stroke-width="2.6" stroke-linecap="round" opacity="0.35">'
+        f'<path d="M26 28.4v7.2"/></g>'   # cursor glow
+        f'<g stroke="{LB}" stroke-width="1.3" stroke-linecap="round">'
+        f'<path d="M26 28.4v7.2"/><path d="M24.3 28.4h3.4"/><path d="M24.3 35.6h3.4"/></g>'
+    )
+
+
+_RING_SRC = Path("/usr/share/icons/hicolor/scalable/apps/linuxmint-logo-ring.svg")
+
+
+def _logo_svg(ring_fill: str = None, overlay: str = "", defs: str = "") -> str:
+    """Compose an LM logo from the Mint ring source: green monogram, and either a
+    recoloured ring (ring_fill) or a voided ring with an `overlay` painted on top."""
     import re
-    src = Path("/usr/share/icons/hicolor/scalable/apps/linuxmint-logo-ring.svg")
-    out = apps_dir / "blossom-logo.svg"
-    if not src.exists():
-        return
-    t = src.read_text()
-    # vivid, poppy palette for the logo specifically
-    grad = ('<linearGradient id="blossomRing" x1="0" y1="0" x2="1" y2="1">'
-            '<stop offset="0" stop-color="#ff3d97"/>'
-            '<stop offset="0.5" stop-color="#ffe23d"/>'
-            '<stop offset="1" stop-color="#4dc4ff"/></linearGradient>')
-    t = t.replace('<defs\n     id="defs2" />', f'<defs id="defs2">{grad}</defs>')
+    if not _RING_SRC.exists():
+        return None
+    t = _RING_SRC.read_text()
 
     def set_fill(text, pid, fill):
         m = re.search(r'<path\b[^>]*?id="' + re.escape(pid) + r'"[^>]*?>', text, re.S)
@@ -155,20 +203,90 @@ def make_logo(apps_dir: Path) -> None:
         el = re.sub(r'fill:#[0-9a-fA-F]+', 'fill:' + fill, m.group(0), count=1)
         return text[:m.start()] + el + text[m.end():]
 
-    t = set_fill(t, "path1374-2-6", "url(#blossomRing)")   # ring
-    t = set_fill(t, "path4193-1-9", "#37ffa0")             # LM monogram -> electric mint
-    out.write_text(t)
+    t = set_fill(t, "path4193-1-9", "#37ffa0")              # LM monogram -> mint
+    t = set_fill(t, "path1374-2-6", ring_fill or "#0c0e12")  # ring fill or void
+    if defs:
+        t = t.replace('<defs\n     id="defs2" />', f'<defs id="defs2">{defs}</defs>')
+    if overlay:
+        t = t.replace('</svg>', overlay + '</svg>')
+    return t
+
+
+def _arc_ring(colors=("#ff5aa8", "#ffd24d", "#36c8ff", "#9b6cf2")) -> str:
+    """Four hard-edged 90° arcs (each hue once, crisp boundaries) on the ring."""
+    import math
+    cx, cy, R, Wd, o = 12.634, 12.634, 11.62, 2.3, 1.5
+
+    def pt(a):
+        a = math.radians(a)
+        return cx + R * math.sin(a), cy - R * math.cos(a)
+
+    def arc(a1, a2, c):
+        x1, y1 = pt(a1)
+        x2, y2 = pt(a2)
+        return (f'<path d="M {x1:.3f} {y1:.3f} A {R} {R} 0 0 1 {x2:.3f} {y2:.3f}" '
+                f'fill="none" stroke="{c}" stroke-width="{Wd}" stroke-linecap="butt"/>')
+    bounds = [(-45 - o, 45 + o), (45 - o, 135 + o), (135 - o, 225 + o), (225 - o, 315 + o)]
+    return '<g>' + ''.join(arc(a, b, c) for (a, b), c in zip(bounds, colors)) + '</g>'
+
+
+def logo_variants() -> dict:
+    """Named LM-logo variants for the in-app gallery (all keep the green monogram)."""
+    grad = ('<linearGradient id="g" x1="0" y1="0" x2="0" y2="1">'
+            '<stop offset="0" stop-color="#ff5aa8"/>'
+            '<stop offset="0.5" stop-color="#9b6cf2"/>'
+            '<stop offset="1" stop-color="#36c8ff"/></linearGradient>')
+    return {
+        "aurora": _logo_svg(overlay=_arc_ring()),                       # pink/yellow/blue/violet arcs
+        "gradient": _logo_svg(ring_fill="url(#g)", defs=grad),          # smooth pink->violet->blue
+        "pink": _logo_svg(ring_fill=PINK),                             # solid pink
+        "gold": _logo_svg(ring_fill=GOLD),                             # solid gold
+        "ice": _logo_svg(ring_fill=LB),                                # light-blue
+        "sunset": _logo_svg(overlay=_arc_ring(("#ff5aa8", "#ff8a4d", "#f1bf40", "#db3776"))),  # warm
+    }
+
+
+def make_logo(apps_dir: Path) -> None:
+    """The default LM logo: the four-colour aurora ring + mint-green monogram."""
+    t = _logo_svg(overlay=_arc_ring())
+    if t:
+        (apps_dir / "blossom-logo.svg").write_text(t)
+
+
+def _flower_svg(petal_color: str, center_color: str, n: int = 5) -> str:
+    petal = ("M24 21 C 18 21, 14.5 15.5, 17 9.5 C 18.2 6.6, 21 6, 22.6 8.4 "
+             "L 24 10.6 L 25.4 8.4 C 27 6, 29.8 6.6, 31 9.5 C 33.5 15.5, 30 21, 24 21 Z")
+    step = 360.0 / n
+    petals = "".join(f'<path d="{petal}" fill="{petal_color}" '
+                     f'transform="rotate({k*step:.2f} 24 24)"/>' for k in range(n))
+    return _svg(f'<g>{petals}</g><circle cx="24" cy="24" r="3.2" fill="{center_color}"/>')
+
+
+def flower_variants() -> dict:
+    """Named bloom-button variants for the in-app gallery."""
+    return {
+        "sakura": _flower_svg("#f060a0", "#ffcf5a", 5),   # pink + gold (default)
+        "sky": _flower_svg("#5bc8ff", "#eaf6ff", 5),      # blue + light
+        "sun": _flower_svg("#f1bf40", "#db3776", 6),      # gold + pink, 6 petals
+        "violet": _flower_svg("#9b6cf2", "#ffcf5a", 5),   # violet + gold
+        "rose": _flower_svg("#db3776", "#f1bf40", 6),     # deep pink, 6 petals
+        "frost": _flower_svg("#eaf6ff", "#9b6cf2", 8),    # white, 8 petals
+    }
 
 
 def make_flower(apps_dir: Path) -> None:
-    """The Blossom mark — a clean, flat cherry-blossom (notched sakura petals, a
-    small gold centre). The app icon for Blossom Control, distinct from the LM ring."""
-    petal = ("M24 21 C 18 21, 14.5 15.5, 17 9.5 C 18.2 6.6, 21 6, 22.6 8.4 "
-             "L 24 10.6 L 25.4 8.4 C 27 6, 29.8 6.6, 31 9.5 C 33.5 15.5, 30 21, 24 21 Z")
-    petals = "".join(f'<path d="{petal}" fill="#f060a0" '
-                     f'transform="rotate({k*72} 24 24)"/>' for k in range(5))
-    svg = _svg(f'<g>{petals}</g><circle cx="24" cy="24" r="3.2" fill="#ffcf5a"/>')
-    (apps_dir / "blossom-flower.svg").write_text(svg)
+    """The default Blossom mark — a pink sakura with a gold centre."""
+    (apps_dir / "blossom-flower.svg").write_text(_flower_svg("#f060a0", "#ffcf5a", 5))
+
+
+def make_gallery(root: Path) -> None:
+    """Write all logo + bloom-button variants under <repo>/gallery/ for the picker."""
+    for kind, variants in (("logos", logo_variants()), ("flowers", flower_variants())):
+        d = root / "gallery" / kind
+        d.mkdir(parents=True, exist_ok=True)
+        for name, svg in variants.items():
+            if svg:
+                (d / f"{name}.svg").write_text(svg)
 
 
 def network() -> str:
@@ -192,6 +310,17 @@ def build():
         d.mkdir(parents=True)
     make_logo(apps)
     make_flower(apps)
+    make_gallery(OUT.parent.parent)   # gallery/logos + gallery/flowers variants
+
+    # app icons we override (the rest inherit from Papirus-Dark)
+    apps_icons = {
+        "accessories-text-editor": editor(),   # xed
+        "org.x.editor": editor(),
+        "xed": editor(),
+        "text-editor": editor(),
+    }
+    for name, svg in apps_icons.items():
+        (apps / f"{name}.svg").write_text(svg)
 
     # folders (Places)
     folders = {

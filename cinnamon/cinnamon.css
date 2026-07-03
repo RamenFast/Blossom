@@ -2147,3 +2147,30 @@ On-Screen Keyboard (<= Cinnamon 6.4)
   color: #eaf6ff;
   background-color: #db3776;
   border-radius: 6px; }
+
+/* BLOSSOM-ACCENT:top */
+/* Managed by Blossom Control (Taskbar accent). Appended last so it
+   overrides the panel-position rules; grouped + plain applets. */
+.grouped-window-list-item-box.top, .grouped-window-list-item-box.bottom,
+.grouped-window-list-item-box.left, .grouped-window-list-item-box.right,
+.window-list-item-box.top, .window-list-item-box.bottom,
+.window-list-item-box.left, .window-list-item-box.right {
+  border-top-width: 2px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  background-image: none; }
+.grouped-window-list-item-box:active, .grouped-window-list-item-box:checked,
+.grouped-window-list-item-box:focus,
+.window-list-item-box:active, .window-list-item-box:checked,
+.window-list-item-box:focus, .window-list-item-box:running { background-image: none; }
+/* BLOSSOM-ACCENT-END */
+
+/* BLOSSOM-PANEL-GLOW */
+/* Four LM-logo colours glowing from the panel's corners (managed asset). */
+.panel-bottom {
+  background-image: url("common-assets/panel/blossom-corner-glow.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+/* BLOSSOM-PANEL-GLOW-END */

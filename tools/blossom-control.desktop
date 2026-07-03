@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Blossom Control
+Comment=Rotate icon packs, apply the Blossom theme, tweak the look
+Exec=python3 /home/ben/.themes/Blossom/tools/blossom-control.py
+Icon=blossom-flower
+Terminal=false
+Categories=Settings;Utility;
+StartupWMClass=blossom-control
+StartupNotify=false
