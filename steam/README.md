@@ -34,7 +34,8 @@ file). This skin uses the debugger — **no sudo, no Millennium**.
 blossom-steam live     enable debugging if needed, then keep every window themed
 blossom-steam once     inject into the open windows once and exit
 blossom-steam gen      regenerate generated.css from Steam's live stylesheets
-blossom-steam enable    turn on CEF debugging + restart Steam
+blossom-steam enable   turn on CEF debugging + restart Steam
+blossom-steam eval     run JS in a page (debug aid; default target: the web store)
 ```
 
 It connects to each CEF page over the debugger and injects two stylesheets:
@@ -48,6 +49,12 @@ It connects to each CEF page over the debugger and injects two stylesheets:
   rather than chase them by hand, `blossom-steam gen` walks the *live* stylesheets
   and re-emits each of those rules in the Blossom palette. Committed, like the
   rest of Blossom — re-run only after a Steam **client** update changes the hashes.
+- **`store.css`** — the same idea for the **web** pages the client embeds
+  (store.steampowered.com, steamcommunity.com). Their CSS comes from the
+  steamstatic CDN — cross-origin, so the in-page walk can't read it. Instead
+  `gen-store.py` downloads the CSS those pages reference and re-emits every rule
+  that paints a Steam blue / slate grey in the Blossom palette. The store's class
+  names are old and stable; regenerate only if store accents revert to blue.
 
 Injection is fast: ~15 windows themed in **<0.2 s** from a 600 KB native binary.
 
@@ -98,7 +105,9 @@ blossom-steam gen        # re-derives generated.css from the running client
 ```
 webkit.css            hand-written foundation + Blossom polish (stable selectors)
 generated.css         committed colour remap (regenerate with `blossom-steam gen`)
+store.css             committed remap for the web store/community pages
+gen-store.py          regenerates store.css from the CDN stylesheets
 theme.json            Millennium manifest
 install.sh            native (no-sudo) installer · --millennium · --uninstall
-blossom-steam/        the Rust tool (live / once / gen / enable)
+blossom-steam/        the Rust tool (live / once / gen / enable / eval)
 ```

@@ -1,11 +1,16 @@
-/* blossom-steam: 1392 rules (341 accent, 834 surface, 947 hover decls). Regenerate after Steam updates. */
+/* blossom-steam gen: 1318 rules across all open pages. Regenerate after Steam updates. */
+
+/* == 1318 rules from about:blank?createflags=4538378&pid=0&browser=-1&screenavailwidth=2560&screenavailheight=1399&openerid=3 == */
 button.DialogButton{background-color:rgb(28, 28, 28) !important}
 .DeckVerifiedModalDialogClient .DialogContent, .DeckVerifiedModalDialog .DialogContent{background-color:rgb(0, 0, 0) !important}
 .DialogTextInputBase:focus, .DialogTextInputBase:focus-within{background-color: rgba(219, 55, 118, 0.16) !important}
 .DialogTextInputBase:not(:disabled):hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .DesktopUI .DialogTextInputBase:focus, .DialogTextInputBase:focus-within{background-color: rgba(219, 55, 118, 0.16) !important}
 .DialogTextInputBase:disabled:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+button.DialogButton.Primary{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 button.DialogButton:enabled:active, button.DialogButton:enabled:active:hover, button.DialogButton:enabled:active.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
+button.DialogButton.Primary:hover, button.DialogButton.Primary.gpfocus{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
+button.DialogButton.Primary:enabled:active, button.DialogButton.Primary:enabled:hover:active, button.DialogButton.Primary:enabled:active.gpfocus{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 button.DialogButton:hover, button.DialogButton.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
 button.DialogButton:disabled, button.DialogButton:disabled:hover, button.DialogButton.Disabled, button.DialogButton.Disabled:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .DialogToggleField_Option:hover:not(.Active){background-color: rgba(219, 55, 118, 0.16) !important}
@@ -120,10 +125,18 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton.Disabled.gpfocus, button.cXzBZxhPBl7fZ
 .lat0M-V5X4uYd6Mpm1DJ1 ._2GBWeup5cttgbTw8FM3tfx:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 .XrYgea66b38RASmbI3PJo._12zBmIktqPpcwJXItTb8f9{color:rgb(219, 55, 118) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 .LBS7IDpob52Sb4ZoKobh0:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 .LBS7IDpob52Sb4ZoKobh0:focus{outline-color:rgb(232, 90, 146) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 ._1Qku5jMXBi5-wawzqY1kzG:hover .LBS7IDpob52Sb4ZoKobh0{background-color: rgba(219, 55, 118, 0.16) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 ._9Ig1o0jVRia2uf_FKR3rs, .lat0M-V5X4uYd6Mpm1DJ1 ._2Z68vjdOnUDA2ULQG41JVV, .lat0M-V5X4uYd6Mpm1DJ1 ._25eT23F0cV5lmT3tXAIA56{background-color:rgb(28, 28, 28) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 ._9Ig1o0jVRia2uf_FKR3rs:hover, .lat0M-V5X4uYd6Mpm1DJ1 ._2Z68vjdOnUDA2ULQG41JVV:hover, .lat0M-V5X4uYd6Mpm1DJ1 ._25eT23F0cV5lmT3tXAIA56:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 ._3t6QgWQmijDfZziPq3q3aQ{background-color:rgb(219, 55, 118) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 ._3t6QgWQmijDfZziPq3q3aQ:hover{background-image:linear-gradient(90deg, rgb(232, 90, 146) 30%, rgb(45, 115, 255) 100%) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 ._3t6QgWQmijDfZziPq3q3aQ:active{background-image:linear-gradient(90deg, rgb(232, 90, 146) 50%, rgb(45, 115, 255) 100%) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 ._3t6QgWQmijDfZziPq3q3aQ:focus{outline-color:rgb(232, 90, 146) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 .DjSvCZoKKfoNSmarsEcTS{background-image:linear-gradient(90deg, rgb(232, 90, 146) 0%, rgb(45, 115, 255) 100%) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 .DjSvCZoKKfoNSmarsEcTS:hover{background-image:linear-gradient(90deg, rgb(232, 90, 146) 30%, rgb(45, 115, 255) 100%) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 .DjSvCZoKKfoNSmarsEcTS:active{background-image:linear-gradient(90deg, rgb(232, 90, 146) 50%, rgb(45, 115, 255) 100%) !important}
+.lat0M-V5X4uYd6Mpm1DJ1 .DjSvCZoKKfoNSmarsEcTS:focus{outline-color:rgb(232, 90, 146) !important}
 .lat0M-V5X4uYd6Mpm1DJ1 .DdK_Fpa32ezl3qzyYJ85d ._1rEWOv1g1uTXNhoWiJLQZs ._3BKzb-aGSLOjp5jsQ8wwXK, .lat0M-V5X4uYd6Mpm1DJ1 .DdK_Fpa32ezl3qzyYJ85d ._3aMbj3PT-p1yxEt98UM56K ._3BKzb-aGSLOjp5jsQ8wwXK, .lat0M-V5X4uYd6Mpm1DJ1 ._2Io_Jc8M4cRHn9cU4vHcqW ._1rEWOv1g1uTXNhoWiJLQZs ._3BKzb-aGSLOjp5jsQ8wwXK, .lat0M-V5X4uYd6Mpm1DJ1 ._2Io_Jc8M4cRHn9cU4vHcqW ._3aMbj3PT-p1yxEt98UM56K ._3BKzb-aGSLOjp5jsQ8wwXK, .lat0M-V5X4uYd6Mpm1DJ1 ._1YQZI88vD5NCUw4u35tB0m ._1rEWOv1g1uTXNhoWiJLQZs ._3BKzb-aGSLOjp5jsQ8wwXK, .lat0M-V5X4uYd6Mpm1DJ1 ._1YQZI88vD5NCUw4u35tB0m ._3aMbj3PT-p1yxEt98UM56K ._3BKzb-aGSLOjp5jsQ8wwXK{color:rgb(219, 55, 118) !important}
 ._464mFQmvIW2e9TQypXX7W ._2ltn2BK4fnrPEGzNwxx6bx button.DialogButton:enabled:active.gpfocus{background-color:rgb(28, 28, 28) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 a._3TN0uESBGJ-kUDPWWX2YWz:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -297,6 +310,8 @@ button.DialogButton._3Cdin80d-hVsakHUZboheb.SLpyhiN-Dagi3V8ZKukaK:hover{backgrou
 ._1cpd2EVhu3enwXF7ZaEIuE{background-color:rgb(219, 55, 118) !important}
 ._2SNqCkeOL0u8yOzul4tJuI{background-color:rgb(0, 0, 0) !important;box-shadow:rgba(219, 55, 118, 0) 0px 0px 0px 0px inset !important}
 ._2hegSJLw7cDEDv9fKZj8xS ._2SNqCkeOL0u8yOzul4tJuI, ._2hegSJLw7cDEDv9fKZj8xS ._2SNqCkeOL0u8yOzul4tJuI:hover{box-shadow:rgb(219, 55, 118) 0px 0px 0px 6px inset !important;background-color: rgba(219, 55, 118, 0.16) !important}
+._33bWWYKdaxI_uMvK0TPjm4 ._3vDq3loNLE6O8iHtj6rOfX ._25n_zgE_sgrYzl4G-YE8VN{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
+._33bWWYKdaxI_uMvK0TPjm4 ._3vDq3loNLE6O8iHtj6rOfX ._25n_zgE_sgrYzl4G-YE8VN:focus{border-top-color:rgb(232, 90, 146) !important;border-right-color:rgb(232, 90, 146) !important;border-bottom-color:rgb(232, 90, 146) !important;border-left-color:rgb(232, 90, 146) !important}
 ._20QAC4WMXm8qFE8waUT5oo ._12vo5L1hsNGdao6_ssuirS .DialogTextInputBase:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._20QAC4WMXm8qFE8waUT5oo .vCCmYvn9yQ_V8CpKupllU._31r1_h2SmzwQtP9ZLLyA0I, ._20QAC4WMXm8qFE8waUT5oo .vCCmYvn9yQ_V8CpKupllU:not(._1Gjk27xaRIzt2zOSwOSP0N):hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._172OFJhtx4Jt2ydY6-9IUm ._3gzh_NvTKey56JeHY7Q1WW:focus{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -640,7 +655,7 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover{background-color: rgb
 ._1TV2TLk7RNa3PqD1_WKqfs{background-image:radial-gradient(rgb(0, 41, 70), rgb(0, 0, 0)) !important}
 ._2iUUMqGBsJmkgjGawC2D5V._15j4pWRFyU5WgC_jBDPDCD{background-color:rgba(0, 0, 0, 0.97) !important}
 ._3PNcafjxtKT6ibV6WLYw2N:not(._1xiapv0vZ3tza8JyUryZ6R) > div:not(:focus) + div:not(:focus)::before, ._3PNcafjxtKT6ibV6WLYw2N > div:not(:hover) + div:not(:hover)::before, ._3PNcafjxtKT6ibV6WLYw2N > div:not(:hover) + div._1hU5W0b0mhPMIq3FfDCSuK::before{border-bottom-color:rgb(28, 28, 28) !important}
-._3BHpvcaTkSz05vH5Q5DsIB{background-color:rgba(0, 0, 0, 0.98) !important}
+._3BHpvcaTkSz05vH5Q5DsIB{background-color:rgb(0, 0, 0) !important}
 .XlWw9erk4MU5NVejdrd_7.bMtzoBRiT4I2mYF1RWsZO._2s3ctUGG3Gu9mgJM5KIi_7:hover ._359ci7I4O_8aSv_LmfFlSf::before{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3eJZ4fur1aqy1ebzHlGfaW{--badge-border-color:#000000 !important}
 ._3eJZ4fur1aqy1ebzHlGfaW:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -712,12 +727,14 @@ button.O5IopE9S2tZ4CgKGn9YWh._1JjlCEet0U46IH_bumoD0j:hover{background-color: rgb
 ._1WVYDQv_srgKP95rVG1cX-.gpfocus._3vjBUK7Fcah-oXzIxcxadz{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1WVYDQv_srgKP95rVG1cX-:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1I-5YnIcfTZ3hNgBuIz9u-{border-top-color:rgb(219, 55, 118) !important;border-left-color:rgb(219, 55, 118) !important}
+._2AzIX5kl9k6JnxLfR5H4kX{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX._2q-gZ3XJzlvSGHSF-GvSmi:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX.Focusable:focus{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX.Focusable:focus::after{background-image:linear-gradient(75deg, rgba(219, 55, 118, 0) 33%, rgb(179, 223, 255) 50%, rgba(219, 55, 118, 0) 66%) !important}
 .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX.Focusable:focus._2q-gZ3XJzlvSGHSF-GvSmi{background-color: rgba(219, 55, 118, 0.16) !important}
 :not(._1Pb6PMh_3L5p5NzuUz0Pp9) > .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX:hover{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 :not(._1Pb6PMh_3L5p5NzuUz0Pp9) > .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX:hover::after{background-image:linear-gradient(75deg, rgba(219, 55, 118, 0) 33%, rgb(179, 223, 255) 50%, rgba(219, 55, 118, 0) 66%) !important}
+:not(._1Pb6PMh_3L5p5NzuUz0Pp9) > ._2AzIX5kl9k6JnxLfR5H4kX:hover{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 .BasicUI ._3cI5TXsFX3bvpR-7EBOtxq ._2AzIX5kl9k6JnxLfR5H4kX:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._3cI5TXsFX3bvpR-7EBOtxq ._2AzIX5kl9k6JnxLfR5H4kX._2q-gZ3XJzlvSGHSF-GvSmi:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._3cI5TXsFX3bvpR-7EBOtxq ._2AzIX5kl9k6JnxLfR5H4kX.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -736,15 +753,19 @@ button.DialogButton._1qG6xUlNu-qvdhpSxwed5:hover{background-color: rgba(219, 55,
 .fUTblKw-DF3ph-FUGHA1d ._2QVGKFXgbKWshQ9KbbXqpb, .fUTblKw-DF3ph-FUGHA1d ._1QqBvPhXFxnS3S0ay1fn_k{color:rgb(219, 55, 118) !important}
 ._2bzio1wm1zWNDGZdaQ2qHo.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
 .QvHky2-yJGOkPJG16qeRL::before, .QvHky2-yJGOkPJG16qeRL::after{background-color:rgba(28, 28, 28, 0.54) !important}
+._14LCw9xDY_zO1iEK07vkRg{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 .BasicUI ._14LCw9xDY_zO1iEK07vkRg.Focusable:focus{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._14LCw9xDY_zO1iEK07vkRg.Focusable:focus::after{background-image:linear-gradient(75deg, rgba(219, 55, 118, 0) 33%, rgb(179, 223, 255) 50%, rgba(219, 55, 118, 0) 66%) !important}
 :not(._2L_o4bH4BMiXc3lAxC8u29) > .BasicUI ._14LCw9xDY_zO1iEK07vkRg:hover{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 :not(._2L_o4bH4BMiXc3lAxC8u29) > .BasicUI ._14LCw9xDY_zO1iEK07vkRg:hover::after{background-image:linear-gradient(75deg, rgba(219, 55, 118, 0) 33%, rgb(179, 223, 255) 50%, rgba(219, 55, 118, 0) 66%) !important}
+:not(._2L_o4bH4BMiXc3lAxC8u29) > ._14LCw9xDY_zO1iEK07vkRg:hover{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 ._3x31AgESSlUqX3D4MTHv2m ._1JlC29Ic6L-QvL-39X_d-X:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._3x31AgESSlUqX3D4MTHv2m ._1JlC29Ic6L-QvL-39X_d-X:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3x31AgESSlUqX3D4MTHv2m ._37e7DrDNmf1FmsMGA5y0A0 button.bACIuqv-b_9TztCczFK19:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._3x31AgESSlUqX3D4MTHv2m ._37e7DrDNmf1FmsMGA5y0A0 .bACIuqv-b_9TztCczFK19{background-color:rgb(28, 28, 28) !important}
 .BasicUI ._3x31AgESSlUqX3D4MTHv2m ._37e7DrDNmf1FmsMGA5y0A0 ._2JSyABqFEh-v_dwaTnBydR{background-color:rgb(28, 28, 28) !important}
+._3x31AgESSlUqX3D4MTHv2m ._37e7DrDNmf1FmsMGA5y0A0 ._2JSyABqFEh-v_dwaTnBydR.bGfjajFo4DI-ULSQxw1KY{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
+._3x31AgESSlUqX3D4MTHv2m ._37e7DrDNmf1FmsMGA5y0A0 ._2JSyABqFEh-v_dwaTnBydR.bGfjajFo4DI-ULSQxw1KY:hover{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 ._2ilpH-HpvuSm6s5MWX5bA- ._2_vbZB-J_M1GH9js-PXnEj ._16dREqlIrGflPfbNtLGdJh{color:rgb(232, 90, 146) !important}
 ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu:hover, ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu.Efo_8muMPNLjjSbObMuDq, ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu:hover, .BasicUI ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu.Efo_8muMPNLjjSbObMuDq, .BasicUI ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -771,6 +792,8 @@ button.DialogButton._1qG6xUlNu-qvdhpSxwed5:hover{background-color: rgba(219, 55,
 .BasicUI ._1aP1bu_l_kDbKMN7XDNmzg ._3uabislt81gdMksbxzc-iN{background-color:rgba(0, 0, 0, 0.72) !important}
 .CwZqp0ZwInfY8H9jUO4Xy:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._2RSxEUPGL8Bj016q0Sp3Hx:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+._2H1MiFt6wMYuJDB8kZElFs._3B2sObZhhTufiroTCP3vxn{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
+._2H1MiFt6wMYuJDB8kZElFs._2JMEE2dz_3JMJg5pNiinj5{color:rgb(232, 90, 146) !important}
 ._3yTl3RiWfo-Itg-xp967wP ._39ZurKJQex6v69aXzvc_nj:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1HHZQHn8xe900jZYphjUlF button._2Whi7Nrn2fmTSPtrf9jNFV:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1EC1xjjUGqI7fqX6PVzJA3:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -787,7 +810,10 @@ button._1iFnR7cGRa1kepep433pGx.gpfocus, button._1iFnR7cGRa1kepep433pGx:active{ba
 ._14twsfFmb2daghAWWJgFRG{fill:rgb(232, 90, 146) !important}
 ._35_OgqfHHZfSzTYfv367K6{background-color:rgba(232, 90, 146, 0.2) !important;color:rgb(232, 90, 146) !important}
 ._1kCN0pAntrcGCSmcc-vYdk{background-color:rgba(232, 90, 146, 0.2) !important;color:rgb(232, 90, 146) !important}
-._1kCN0pAntrcGCSmcc-vYdk:not(.Z3L6KGVxi4ZjGUzbYUjBC):hover{background-image:linear-gradient(-60deg, rgb(65, 122, 155) 5%, rgb(232, 90, 146) 95%) !important}
+._1kCN0pAntrcGCSmcc-vYdk.Z3L6KGVxi4ZjGUzbYUjBC{background-image:linear-gradient(to right, rgb(232, 90, 146), rgb(45, 115, 255)) !important}
+._2gJ9F_Ox8xa-jD-JD0eNrB:hover{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
+._1kCN0pAntrcGCSmcc-vYdk:not(.Z3L6KGVxi4ZjGUzbYUjBC):hover{background-image:linear-gradient(-60deg, rgb(159, 179, 194) 5%, rgb(232, 90, 146) 95%) !important}
+.lNPFwADeWOcU-YOPlwMzV ._2gJ9F_Ox8xa-jD-JD0eNrB{background-image:linear-gradient(to right, rgb(232, 90, 146), rgb(45, 115, 255)) !important}
 ._3v2Gg_GCpLHpHQDLFQ7cvI ._3f3VJUtyLXUf_JDFE-BaQ6{background-color:rgb(28, 28, 28) !important}
 ._3v2Gg_GCpLHpHQDLFQ7cvI ._3f3VJUtyLXUf_JDFE-BaQ6.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3v2Gg_GCpLHpHQDLFQ7cvI ._3f3VJUtyLXUf_JDFE-BaQ6.gpfocuswithin:not(.gpfocus){background-color: rgba(219, 55, 118, 0.16) !important}
@@ -798,6 +824,7 @@ button._1iFnR7cGRa1kepep433pGx.gpfocus, button._1iFnR7cGRa1kepep433pGx:active{ba
 ._2NqVq4PVcmWt9enYtvzRf-:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._1bIMOmWaxKrMdVMWU21ku.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._322wB1UQPdladoadh6Ac_b.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
+._1W34WpqfvufNgueNdZozwC .qAIK8FN-klfB_C6klw2R7{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 .ut0YcLYGAoSTz2Dnjw9U1:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1dq9vBNujFmK1CJvR7nWhX:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._5wiyzqah2DBIbGO1nWzR_ .iLdNr1mzRTAyghyY8i3YA .AHLW3of586RTwBHaRT3eC:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -820,11 +847,13 @@ button._1iFnR7cGRa1kepep433pGx.gpfocus, button._1iFnR7cGRa1kepep433pGx:active{ba
 ._1bq4x9pa4-9RLY-dXWUZTp{background-image:radial-gradient(at 0px 0px, rgb(28, 28, 28) 0%, rgb(35, 38, 46) 90%) !important}
 .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp{background-image:radial-gradient(155.42% 100% at 0% 0%, rgb(6, 10, 14) 0px, rgb(6, 10, 14) 0%, rgb(0, 0, 0) 100%) !important}
 ._1bZTWHCV-uVaS5pEQLn-0Z{color:rgb(219, 55, 118) !important}
+._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a{background-color:rgb(28, 28, 28) !important}
 .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a.Focusable:focus{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a.Focusable:focus::after{background-image:linear-gradient(75deg, rgba(219, 55, 118, 0) 33%, rgb(179, 223, 255) 50%, rgba(219, 55, 118, 0) 66%) !important}
 :not(._1z325vU83sYraLYJ00JlPq) > .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a:hover{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 :not(._1z325vU83sYraLYJ00JlPq) > .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a:hover::after{background-image:linear-gradient(75deg, rgba(219, 55, 118, 0) 33%, rgb(179, 223, 255) 50%, rgba(219, 55, 118, 0) 66%) !important}
+:not(._1z325vU83sYraLYJ00JlPq) > ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a:hover{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl-.MAz4a5CbYdLofX51lonjn .FmfZJt_PKB2p0mdDnNZ1a{background-color:rgb(28, 28, 28) !important}
 ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl-.MAz4a5CbYdLofX51lonjn .FmfZJt_PKB2p0mdDnNZ1a:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl-.MAz4a5CbYdLofX51lonjn .FmfZJt_PKB2p0mdDnNZ1a.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -879,12 +908,12 @@ button._1iFnR7cGRa1kepep433pGx.gpfocus, button._1iFnR7cGRa1kepep433pGx:active{ba
 ._2kzMb_F7UTOEdecAFftN-l svg.f6-7-5CWFxNqF2BycKWlb.f6-7-5CWFxNqF2BycKWlb.f6-7-5CWFxNqF2BycKWlb:hover, ._2kzMb_F7UTOEdecAFftN-l svg.f6-7-5CWFxNqF2BycKWlb.f6-7-5CWFxNqF2BycKWlb.f6-7-5CWFxNqF2BycKWlb._2-O4ZG0KrnSrzISHBKctFQ._3cMVyOc-9F9Jvp3uKF7_xj{background-color: rgba(219, 55, 118, 0.16) !important}
 .EZCFRJog9Fh3885Q-xI4N{background-color:rgba(0, 0, 0, 0.95) !important}
 ._3Mp8R2wnoCl6ko0HAX8IHE.Yk-I2az42lZgbInNlu06r{background-color:rgb(28, 28, 28) !important}
-._7hpoObJpodmdkeMPu8n6W ._2xvQHP425lbmgQGhn6FkJ0 ._1oapPF49WpZLd9zsUETMnP:hover:not(:active), ._7hpoObJpodmdkeMPu8n6W ._2xvQHP425lbmgQGhn6FkJ0 ._1oapPF49WpZLd9zsUETMnP.gpfocus{background-image:linear-gradient(-60deg, rgb(65, 122, 155) 5%, rgb(232, 90, 146) 95%) !important}
+._7hpoObJpodmdkeMPu8n6W ._2xvQHP425lbmgQGhn6FkJ0 ._1oapPF49WpZLd9zsUETMnP:hover:not(:active), ._7hpoObJpodmdkeMPu8n6W ._2xvQHP425lbmgQGhn6FkJ0 ._1oapPF49WpZLd9zsUETMnP.gpfocus{background-image:linear-gradient(-60deg, rgb(159, 179, 194) 5%, rgb(232, 90, 146) 95%) !important}
 ._3LyF6X2UzrKOnCPSpoVFeT{background-color:rgba(28, 28, 28, 0.5) !important}
 ._3FJnZuxmPA_MjxsF8BQQ5L:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BasicUI ._3FJnZuxmPA_MjxsF8BQQ5L:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._2gxv9cF-4n9wq4yxruOTNl._2o-5t6bgEJxfbWVSmxT88V{background-color:rgb(232, 90, 146) !important}
-._2Vu78ZkZCgLm-FV4KStixO .-VlK4AN84fDgapWwCDax2:hover{background-image:linear-gradient(-60deg, rgb(65, 122, 155) 5%, rgb(232, 90, 146) 95%) !important}
+._2Vu78ZkZCgLm-FV4KStixO .-VlK4AN84fDgapWwCDax2:hover{background-image:linear-gradient(-60deg, rgb(159, 179, 194) 5%, rgb(232, 90, 146) 95%) !important}
 ._1f0dZzzkepidbFYKDYcvUS{color:rgb(219, 55, 118) !important}
 ._10b1V_COhwm4jnw1Lz73CJ._3DpEz3_OoDaQqIxOWkZzZe:hover ._6TGe7-X6PrRRyqOPxNwRd, .gpfocus ._6TGe7-X6PrRRyqOPxNwRd{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3u1HeR7JRPiiuKIT78j2Cc{background-color:rgb(219, 55, 118) !important}
@@ -892,22 +921,30 @@ button._1iFnR7cGRa1kepep433pGx.gpfocus, button._1iFnR7cGRa1kepep433pGx:active{ba
 .KLo2nZeTMZykCUGVlKsab:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3yc1HWeo3r0NEKZDWLfK95._3dgLyDGvg0Xifttzo46wAK{background-color:rgb(219, 55, 118) !important}
 ._3jVF1K6rjo9QNtGDM4j_L_{color:rgb(219, 55, 118) !important}
+._3GFvYifYf8qRn14X1Zyg77{color:rgb(219, 55, 118) !important}
+._1HmENbYCKiAliTrvcRPgEa{color:rgb(219, 55, 118) !important}
+._12cAC29RrLapdVbXiJoquT button.DialogButton._1IuSGQRRzkH2FI6vPSeQjF, ._12cAC29RrLapdVbXiJoquT button.DialogButton._1IuSGQRRzkH2FI6vPSeQjF:active, ._12cAC29RrLapdVbXiJoquT button.DialogButton._1IuSGQRRzkH2FI6vPSeQjF:hover{background-color:rgb(219, 55, 118) !important;background-color: rgba(219, 55, 118, 0.16) !important}
+._153LMgo6I3oU1FBYfvXNOR button.DialogButton._21kxLhOa-E8amdNn4Q_zBY{background-color:rgb(219, 55, 118) !important}
 .ZBBhezbBR4VJYysmVhF3_{background-image:radial-gradient(155.42% 100% at 0% 0%, rgb(6, 10, 14) 0px, rgb(6, 10, 14) 0%, rgb(0, 0, 0) 100%) !important}
 ._2tDpuEAMQ-sl7qad0cUdMQ.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._2r0g_abfETLTgl3xmIedxJ [aria-checked="true"], ._2r0g_abfETLTgl3xmIedxJ [aria-checked="true"]:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .Q83j8-ExqHj9u0nqaWvQR:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .KTKZNhGr2va8c2tqKUcHH{background-color:rgb(28, 28, 28) !important}
 .KTKZNhGr2va8c2tqKUcHH.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._1sc-BFvGe6huemAE5yVozQ .pPqm0Cd3nTDM56emaoNIW ._1NaHmfjaZE79y_QkdOATIe ._11rvbhmzxd98nsRtYKNg58 ._1zPEmUpnj5uN_s1mkw5os0 button.DialogButton:enabled:active.gpfocus, ._1sc-BFvGe6huemAE5yVozQ .HdqevXhfe5oON8S7byE-A ._1NaHmfjaZE79y_QkdOATIe ._11rvbhmzxd98nsRtYKNg58 ._1zPEmUpnj5uN_s1mkw5os0 button.DialogButton:enabled:active.gpfocus{background-color:rgb(28, 28, 28) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._3qmSyGsE3lUbQ3I6EupEkL{background-color:rgb(0, 0, 0) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._3qmSyGsE3lUbQ3I6EupEkL:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._3qmSyGsE3lUbQ3I6EupEkL{border-top-color:rgb(0, 0, 0) !important;border-right-color:rgb(0, 0, 0) !important;border-bottom-color:rgb(0, 0, 0) !important;border-left-color:rgb(0, 0, 0) !important}
 ._1sc-BFvGe6huemAE5yVozQ .mzaiXpVN6CA3ShKkuc-Kp._3-UE4mB4gOy3AWNuY8o1qm{color:rgb(219, 55, 118) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._133lDyNuBy35wBkBuuiS1p{background-color:rgb(0, 0, 0) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._133lDyNuBy35wBkBuuiS1p:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+._1sc-BFvGe6huemAE5yVozQ ._133lDyNuBy35wBkBuuiS1p:focus{outline-color:rgb(232, 90, 146) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._2AlNWsiWh5iXv257uFU8Ea:hover ._133lDyNuBy35wBkBuuiS1p{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._2qrpvdd7QiVVxRK8LdZuvx, ._1sc-BFvGe6huemAE5yVozQ ._1gtKGJKNF7LePYMj1G0thY, ._1sc-BFvGe6huemAE5yVozQ ._322VIQXfS-i4Kb7g2Wvsuq{background-color:rgb(28, 28, 28) !important}
 ._1sc-BFvGe6huemAE5yVozQ ._2qrpvdd7QiVVxRK8LdZuvx:hover, ._1sc-BFvGe6huemAE5yVozQ ._1gtKGJKNF7LePYMj1G0thY:hover, ._1sc-BFvGe6huemAE5yVozQ ._322VIQXfS-i4Kb7g2Wvsuq:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+._1sc-BFvGe6huemAE5yVozQ ._1iV-SYZJ3fUTepUJrqIiDi{background-image:linear-gradient(90deg, rgb(232, 90, 146) 0%, rgb(45, 115, 255) 100%) !important}
+._1sc-BFvGe6huemAE5yVozQ ._1iV-SYZJ3fUTepUJrqIiDi:hover{background-image:linear-gradient(90deg, rgb(232, 90, 146) 30%, rgb(45, 115, 255) 100%) !important}
+._1sc-BFvGe6huemAE5yVozQ ._1iV-SYZJ3fUTepUJrqIiDi:active{background-image:linear-gradient(90deg, rgb(232, 90, 146) 50%, rgb(45, 115, 255) 100%) !important}
+._1sc-BFvGe6huemAE5yVozQ ._1iV-SYZJ3fUTepUJrqIiDi:focus{outline-color:rgb(232, 90, 146) !important}
 ._1sc-BFvGe6huemAE5yVozQ .okyqmFwlkGa6yRjHW3UHJ{background-color:rgb(0, 0, 0) !important}
 ._1sc-BFvGe6huemAE5yVozQ .m2VgtZeJcvehep30isy8j .WtpDvanEO43IdhGSDMDRL ._3iLN2XZ6xTrLxQJPJmHCdu, ._1sc-BFvGe6huemAE5yVozQ .m2VgtZeJcvehep30isy8j ._3KMXbPXzteROdlMdQG0avJ ._3iLN2XZ6xTrLxQJPJmHCdu, ._1sc-BFvGe6huemAE5yVozQ ._2qg_JbiUIJLmDxFmyDsns6 .WtpDvanEO43IdhGSDMDRL ._3iLN2XZ6xTrLxQJPJmHCdu, ._1sc-BFvGe6huemAE5yVozQ ._2qg_JbiUIJLmDxFmyDsns6 ._3KMXbPXzteROdlMdQG0avJ ._3iLN2XZ6xTrLxQJPJmHCdu, ._1sc-BFvGe6huemAE5yVozQ ._1e5Io3Rqwe_szDrwOPVAlP .WtpDvanEO43IdhGSDMDRL ._3iLN2XZ6xTrLxQJPJmHCdu, ._1sc-BFvGe6huemAE5yVozQ ._1e5Io3Rqwe_szDrwOPVAlP ._3KMXbPXzteROdlMdQG0avJ ._3iLN2XZ6xTrLxQJPJmHCdu{color:rgb(219, 55, 118) !important}
 .MbyhbxIetM7FOAmCQSW83:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -927,6 +964,7 @@ button._1iFnR7cGRa1kepep433pGx.gpfocus, button._1iFnR7cGRa1kepep433pGx:active{ba
 ._3ub8asusiEC9WIdLh7pGDd ::-webkit-scrollbar-thumb:hover, .l8b-x9NgpeVwwlEG9W_C0::-webkit-scrollbar-thumb:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._2sl_ld4h49_4MhwbZsqG5Y._1fn9cBVE8vtlKR4cGUNx2a:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._298_NBin_2wV9a3P1Smj5i:not(:hover) ::-webkit-scrollbar-thumb{background-color: rgba(219, 55, 118, 0.16) !important}
+._1Fx8AZlgJVycK0GigbHdw2.Download, ._1Fx8AZlgJVycK0GigbHdw2.Update, ._1Fx8AZlgJVycK0GigbHdw2.PreLoad, ._1Fx8AZlgJVycK0GigbHdw2.Resume, ._1Fx8AZlgJVycK0GigbHdw2.Pause, ._1Fx8AZlgJVycK0GigbHdw2.BorrowApp, ._1Fx8AZlgJVycK0GigbHdw2.Stop, ._1Fx8AZlgJVycK0GigbHdw2.Cancel, ._1Fx8AZlgJVycK0GigbHdw2.Install, ._1Fx8AZlgJVycK0GigbHdw2.PurchaseApp{background-image:linear-gradient(to right, rgba(232, 90, 146, 0.25) 0%, rgba(26, 67, 192, 0.25) 160%) !important}
 ._2hXAZhNKvdw-5H57oRlnpB:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1IT6pERIqQmv4UaQa-ut7T:not(._16m0EGwc82PTIzxo0uOgu7){background-color:rgb(0, 0, 0) !important}
 ._3nhqvf7qE_N7PxSZgwvc9t{background-color:rgb(0, 0, 0) !important}
@@ -951,7 +989,6 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G{outline-colo
 .zzXtdadESGEkT4IFqLvjm:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .gpfocus ._36hXJP5iajg_X9dNZyh94i, ._36hXJP5iajg_X9dNZyh94i.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
 ._36hXJP5iajg_X9dNZyh94i:focus-within, ._36hXJP5iajg_X9dNZyh94i:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._153LMgo6I3oU1FBYfvXNOR button.DialogButton._21kxLhOa-E8amdNn4Q_zBY{background-color:rgb(219, 55, 118) !important}
 ._3M3KN_jO-QdsB9OW-LjQ3h button._3djHJMevUMVySLrFHvmcY0{border-top-color:rgb(219, 55, 118) !important;border-right-color:rgb(219, 55, 118) !important;border-bottom-color:rgb(219, 55, 118) !important;border-left-color:rgb(219, 55, 118) !important}
 .xhCrB_Km7HXttO9PAnOY0{fill:rgb(0, 0, 0) !important}
 .xhCrB_Km7HXttO9PAnOY0.f00xYxwXsUvBUBYZ32tLW{fill:rgb(219, 55, 118) !important}
@@ -962,10 +999,11 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G{outline-colo
 .qexk-JocS7jjDM31IcGZn .S9cqDrgEIhtUE6pU3-2iQ:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1t_97P9KMsEBaPq9y-6OUl:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1_vCR1dPfyJ7_yukwDqblf:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3eCVbMRawBIqtu1HpE7qJR:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+._1HwWXjF06mJ9sG_9KXlgA-{background-color:rgb(232, 90, 146) !important}
+._3eCVbMRawBIqtu1HpE7qJR:hover{background-color:rgb(232, 90, 146) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 ._6ctF1zf2MKZRofZdWQXqG .XwgGstGDpIVOjAfg3pK1e._2Mc-wW0wAsgehC46aTwBVa{color:rgb(232, 90, 146) !important}
 ._2-dSBTJ6PQzCGvK48gjCCf ._3h6sHYHa8EFm2_xoGiVAnh{background-color:rgba(232, 90, 146, 0.9) !important}
-._2-dSBTJ6PQzCGvK48gjCCf ._3h6sHYHa8EFm2_xoGiVAnh:hover{background-image:linear-gradient(-60deg, rgb(65, 122, 155) 5%, rgb(232, 90, 146) 95%) !important}
+._2-dSBTJ6PQzCGvK48gjCCf ._3h6sHYHa8EFm2_xoGiVAnh:hover{background-image:linear-gradient(-60deg, rgb(159, 179, 194) 5%, rgb(232, 90, 146) 95%) !important}
 ._2dBAh0VOfhvgWv2ck8hp7n .eOemW7abP9ncGnYuKqjCO:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .bE2EA4JB9SDa1PZ7HSFL- ._17Fnl-wNZIrLjca5rOwwlT:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3KO7Yj0s2ECNBrnZ3x6jIy ._DialogInputContainer .GiTJlPmmuQyCr-OSCN08c:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -973,11 +1011,16 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G{outline-colo
 ._2Qusm1gosCAtAqLKo5hioQ ._2_Obm3_emYUZKMgT1bdKgG ._2nVaF4foORFEq78yZ3A7yA{background-image:linear-gradient(rgba(232, 90, 146, 0.2) 5%, rgba(47, 137, 188, 0.2) 95%) !important}
 ._2Qusm1gosCAtAqLKo5hioQ ._2_Obm3_emYUZKMgT1bdKgG ._2nVaF4foORFEq78yZ3A7yA:hover{background-image:linear-gradient(rgb(232, 90, 146) 5%, rgb(47, 137, 188) 95%) !important}
 ._28CiBI8NLjLb6f6rlg_Ymg{background-color:rgb(28, 28, 28) !important}
+._14GZWzJgooP0mbfTvEQnjA > span{background-image:linear-gradient(to right, rgb(232, 90, 146) 5%, rgb(142, 33, 72) 60%) !important}
+._14GZWzJgooP0mbfTvEQnjA:hover > span{background-image:linear-gradient(to right, rgb(232, 90, 146) 5%, rgb(142, 33, 72) 60%) !important}
+.td3x9QaINc75mi2ppkGoF, ._1D1F4nOnNKanKGRqRk3pWr, ._2jcdQDeozlBYhg3waCH-Dr, .twKyIz0VYgtl76vlWI0Xn{border-top-color:rgb(232, 90, 146) !important;border-right-color:rgb(232, 90, 146) !important;border-bottom-color:rgb(232, 90, 146) !important;border-left-color:rgb(232, 90, 146) !important}
+.td3x9QaINc75mi2ppkGoF ._33Gk1SfpMTUWDOWksSxEtX span, ._1D1F4nOnNKanKGRqRk3pWr ._33Gk1SfpMTUWDOWksSxEtX span, ._2jcdQDeozlBYhg3waCH-Dr ._33Gk1SfpMTUWDOWksSxEtX span, .twKyIz0VYgtl76vlWI0Xn ._33Gk1SfpMTUWDOWksSxEtX span{background-color:rgb(232, 90, 146) !important}
 .rFDt7lDfNBv3BUjppBm9i:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._2FFH3ZhSGGItb8Z61CSGfe:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3hNd0q0tYO12nPDCPsT8sm:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3hNd0q0tYO12nPDCPsT8sm._1bO8azG0-IqxQ3AQbWtCxx:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ::-webkit-scrollbar-thumb:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+::selection{background-color:rgb(232, 90, 146) !important}
 .cNMZ-dcMVhaQJFes_Ivwo:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 .react-select-container .react-select__control:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .Oo5JPcEk_erKEYAzYp2nY:hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -1089,6 +1132,7 @@ svg._2Hphxk564S5yQHog-MFXfN .Outline{stroke:rgb(0, 0, 0) !important;fill:rgb(0, 
 .NightShift ._3YpL9Gmf8RDdBRfwyhGWtp:focus{background-color: rgba(219, 55, 118, 0.16) !important}
 .Candy ._2X0mo7FJPZrJiuGf6atrf_{color:rgb(219, 55, 118) !important;box-shadow:rgba(219, 55, 118, 0.56) 0px 0px 8px 0px inset !important}
 ._3rFFUJJVlS0W9hEA3hVEUa{background-image:radial-gradient(155.42% 100% at 0% 0%, rgb(6, 10, 14) 0px, rgb(6, 10, 14) 0%, rgb(0, 0, 0) 100%) !important}
+._2c4Hz8Y8kYqeq1W1Jeq52q:active, ._2c4Hz8Y8kYqeq1W1Jeq52q._3PNis7MJ6TWtfExKn0hZZ6:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._17M8gvakqjyaw_cLo6ntdl input[type="search"]::-webkit-search-cancel-button:hover{background-color:rgb(28, 28, 28) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 ._17M8gvakqjyaw_cLo6ntdl.NMb_F0Q2lf6akyzaZBfLt:not(._35hhe3ow23zhqPpjIeJczx):hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._17M8gvakqjyaw_cLo6ntdl._1bmuJRkMBGcApfJwlj_k-F:not(.gpfocuswithin) ._3F4YRi5x8CjExTV0rOdSL-._1l8jsSJRozEnzlhm5Q2m7U{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -1106,7 +1150,6 @@ svg._2Hphxk564S5yQHog-MFXfN .Outline{stroke:rgb(0, 0, 0) !important;fill:rgb(0, 
 ._38XWp_hYqddiIdAOIcWiBK{background-color:rgb(0, 0, 0) !important}
 ._1c0u5zo_wZGsAM08nfEEKu:hover, ._1c0u5zo_wZGsAM08nfEEKu._2BMRaClxLpIT5YJoDcejhm{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1c0u5zo_wZGsAM08nfEEKu._2vVKhV_YC031wyUrFu6vJx:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._1c0u5zo_wZGsAM08nfEEKu.KA8f-sx_XEMnp78-pwZgl:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 .BRmrC-jnwpXqye4oYB21C button.DialogButton{color:rgb(219, 55, 118) !important}
 .BRmrC-jnwpXqye4oYB21C button.DialogButton:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._1AbErMQt3j46sNGHR3IoCb{--left-track-color:#db3776 !important}
@@ -1201,9 +1244,11 @@ svg._2Hphxk564S5yQHog-MFXfN .Outline{stroke:rgb(0, 0, 0) !important;fill:rgb(0, 
 ._2gSXCB6PbOlMxslr8hm6dm{background-image:linear-gradient(rgb(45, 51, 60) 0%, rgb(35, 39, 45) 20%, rgb(10, 10, 10) 60%) !important}
 ._2sdvic79rOzTYDZw2nrgmL:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._17uEBe5Ri8TMsnfELvs8-N{background-image:linear-gradient(to top, rgb(10, 10, 10) 0%, rgb(45, 51, 60) 80%) !important}
+.oo2nrd4lEaP0P5bxO355t ._1VMqytvnRAjWpWim66U9bW{background-image:linear-gradient(to right, rgb(232, 90, 146) 0%, rgb(142, 33, 72) 60%) !important}
 ._2-p7shAZYrRijpaTU9bAFR:hover > div{background-color:rgb(232, 90, 146) !important;background-color: rgba(219, 55, 118, 0.16) !important}
 .B-vCdL38RiJlhfSRgZv78._278jFDApipeB4kFsi44_F5:hover ._3Rb_j3lgHaVVIud4Gla7_m, .gpfocus > .B-vCdL38RiJlhfSRgZv78._278jFDApipeB4kFsi44_F5 ._3Rb_j3lgHaVVIud4Gla7_m{background-color: rgba(219, 55, 118, 0.16) !important}
 ._3_xMyCJAh_Dv99KgZ54P3j:hover{background-color: rgba(219, 55, 118, 0.16) !important}
+._2blKXMjN1grBZyqm_j5_0I._2blKXMjN1grBZyqm_j5_0I{border-top-color:rgb(232, 90, 146) !important;border-right-color:rgb(232, 90, 146) !important;border-bottom-color:rgb(232, 90, 146) !important;border-left-color:rgb(232, 90, 146) !important}
 ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC:hover ._8YrRmy_c6O0FCxFT8gjqo, ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC._2YsY_x7hLyKlUqjX9bhn0R ._8YrRmy_c6O0FCxFT8gjqo, .WYgDg9NyCcMIVuMyZ_NBC.gpfocus ._8YrRmy_c6O0FCxFT8gjqo{background-color: rgba(219, 55, 118, 0.16) !important}
 ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC:hover ._8YrRmy_c6O0FCxFT8gjqo._1pvlnhvtB1Th8xS9GzDjvt, ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC._2YsY_x7hLyKlUqjX9bhn0R ._8YrRmy_c6O0FCxFT8gjqo._1pvlnhvtB1Th8xS9GzDjvt, .WYgDg9NyCcMIVuMyZ_NBC.gpfocus ._8YrRmy_c6O0FCxFT8gjqo._1pvlnhvtB1Th8xS9GzDjvt{background-color: rgba(219, 55, 118, 0.16) !important}
 ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC:hover ._8YrRmy_c6O0FCxFT8gjqo:not(._1pvlnhvtB1Th8xS9GzDjvt):hover, ._54PuCatl_tYG836TOs4Mv .WYgDg9NyCcMIVuMyZ_NBC._2YsY_x7hLyKlUqjX9bhn0R ._8YrRmy_c6O0FCxFT8gjqo:not(._1pvlnhvtB1Th8xS9GzDjvt):hover, .WYgDg9NyCcMIVuMyZ_NBC.gpfocus ._8YrRmy_c6O0FCxFT8gjqo:not(._1pvlnhvtB1Th8xS9GzDjvt):hover{background-color: rgba(219, 55, 118, 0.16) !important}
@@ -1274,120 +1319,3 @@ svg._2Hphxk564S5yQHog-MFXfN .Outline{stroke:rgb(0, 0, 0) !important;fill:rgb(0, 
 ._2EspjUGvVbAC5UqXtS_G8F{background-color:rgb(0, 0, 0) !important}
 ._1GCZAht_W2I3Elndk5cU0-:hover{background-color: rgba(219, 55, 118, 0.16) !important}
 ._2RtE4QeKjPlWH1cqQFUfH3:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-[class*="contextMenuItem"]:hover, [class*="ContextMenuItem"]:hover, [class*="selectableItem"]:hover, [class*="MenuItem"]:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.DesktopUI .title-area-icon:hover, .friendsui-container .title-area-icon:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q._3hmGW9wIxNIoPPu1aS7rFm, .HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q._3hmGW9wIxNIoPPu1aS7rFm:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-button.cXzBZxhPBl7fZs9LODEnc.DialogButton._28cXJKe4jqDnSsP9HO7yYm, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled._28cXJKe4jqDnSsP9HO7yYm, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active._28cXJKe4jqDnSsP9HO7yYm, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover._28cXJKe4jqDnSsP9HO7yYm{background-color: rgba(219, 55, 118, 0.16) !important}
-button.cXzBZxhPBl7fZs9LODEnc.DialogButton.gpfocus.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled.gpfocus.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active.gpfocus.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active:active.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover.gpfocus.Primary, button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:active.Primary{background-color: rgba(219, 55, 118, 0.16) !important}
-.eKmEXJCm_lgme24Fp_HWt:not(._2QgNsvFPYTZ5yRiTm7mUyu)._2HFrmMgB38Ike5w4rVxzEX.gpfocus, .eKmEXJCm_lgme24Fp_HWt:not(._2QgNsvFPYTZ5yRiTm7mUyu)._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-.eKmEXJCm_lgme24Fp_HWt._2QgNsvFPYTZ5yRiTm7mUyu._2HFrmMgB38Ike5w4rVxzEX.gpfocus, .eKmEXJCm_lgme24Fp_HWt._2QgNsvFPYTZ5yRiTm7mUyu._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin, .eKmEXJCm_lgme24Fp_HWt._2QgNsvFPYTZ5yRiTm7mUyu._2HuzvKQ2QMUJ-JJOeApaF1:not(.aIeh3X5T2M074RLW1qn6_):hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .FriendVoiceChat, .FriendVoiceChat.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .GroupVoiceChatFriend, .GroupVoiceChatFriend.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > :not(.chatUploadContainer), .GamepadMode .chatWindow .chatEntry.gpfocuswithin > :not(.chatUploadContainer){background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .GamepadMode .FriendPicker_Suggestions, .GamepadMode .FriendPicker_Suggestions.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .GamepadMode .DialogSpanningTable td.friendCell .friend, .GamepadMode .DialogSpanningTable td.friendCell .friend.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._464mFQmvIW2e9TQypXX7W ._2ltn2BK4fnrPEGzNwxx6bx button.DialogButton:enabled:active.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus ._3RPaPwdCZoCW6eX8k9QyRj ._2Uf-0Z6C7U0MMzWK80PYzJ, ._3RPaPwdCZoCW6eX8k9QyRj ._2Uf-0Z6C7U0MMzWK80PYzJ.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._2XZq-_f6npaQdAgeRzKIkz.Yd-DsWkYiFiYwpci--Yk_.GamepadMode.gpfocus, .GamepadMode ._2XZq-_f6npaQdAgeRzKIkz.Yd-DsWkYiFiYwpci--Yk_.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._3JmF6tWRZoWygynJdLp7p ._3Pp8Leu5OcBHtt7QkPKigO:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3HlFdzSugz6fcC7sEZOwT9.gpfocus ._3ZoWp7Y8lWJ-FfLEeip2Ec{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus ._1JZstfJ6jCBChXx0ZDwfpR, ._1JZstfJ6jCBChXx0ZDwfpR.gpfocus, .gpfocus ._2_QSE1Nit6wrabY5ZgDZOz, ._2_QSE1Nit6wrabY5ZgDZOz.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._10UNx2XXsFmsHb86RCyofu ._2Qsf4rHzNzK6Z3UYN7tOFx:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._1-SwyZw8fv8r23--767UPK.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-._2588puX-Qf7adPWiHLcRbW.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .friendGroup .groupName, .friendGroup .groupName.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.FriendsListContent.gpfocus .friendlistListContainer{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .friendsContainer, .friendsContainer.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .msg div.ChatMessageOpenGraph, .msg div.ChatMessageOpenGraph.gpfocus, .gpfocus .msg div.SteamPublishedFile, .msg div.SteamPublishedFile.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .ChatMessageInvite, .ChatMessageInvite.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.inviteLinkContainer .DialogDropDown._DialogInputContainer:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .msg, .msg.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.general_btn.voteUp:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.general_btn.voteDown:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.gpfocus .FriendPicker .FriendPickerFriendList.GamepadMode, .FriendPicker .FriendPickerFriendList.GamepadMode.gpfocus, .gpfocus .GamepadMode .FriendPicker .FriendPickerFriendList, .GamepadMode .FriendPicker .FriendPickerFriendList.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.rolePriorityButton.Disabled:active, .rolePriorityButton.Disabled:hover, .rolePriorityButton.Disabled{background-color: rgba(219, 55, 118, 0.16) !important}
-._3TvBVwaH8eIBabTdki35oe .QAVElkR0V7KPXLjPVsvl-:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI button.DialogButton._3Cdin80d-hVsakHUZboheb._3nJyYxGQ3kdwwabPmxNnMe:not(.gpfocus){background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._170Npw5h84elypMSQ8zNDI ._1axoiZsC1RBp22JQmxiBIc.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-.LclHwcOfHFpwObYMD1HLa ._2aHnQT0gTQ5KIsi5omK93w ._134yW7SKfZYwmvwlUElGx- ._3DEhfTvEKwgLd4smd6QdaU:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-button.hv-G3_Xz3omcDCoQsrn2S.DialogButton._28xxolg4RA8Wj7httVm5UR, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled._28xxolg4RA8Wj7httVm5UR, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:active._28xxolg4RA8Wj7httVm5UR, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled:active:hover._28xxolg4RA8Wj7httVm5UR{background-color: rgba(219, 55, 118, 0.16) !important}
-button.hv-G3_Xz3omcDCoQsrn2S.DialogButton.gpfocus.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:active.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled.gpfocus.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled:active.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:active.gpfocus.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:active:active.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled:active:hover.gpfocus.Primary, button.hv-G3_Xz3omcDCoQsrn2S.DialogButton:enabled:active:hover:active.Primary{background-color: rgba(219, 55, 118, 0.16) !important}
-._1LWDAthWNhS7CyjQqjbeoS:not(._2CqKBxs5RwnwEA_GrC6CrL).YgnZYhUBZBiUJwuMUvxYw.gpfocus, ._1LWDAthWNhS7CyjQqjbeoS:not(._2CqKBxs5RwnwEA_GrC6CrL).YgnZYhUBZBiUJwuMUvxYw.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-._1LWDAthWNhS7CyjQqjbeoS._2CqKBxs5RwnwEA_GrC6CrL.YgnZYhUBZBiUJwuMUvxYw.gpfocus, ._1LWDAthWNhS7CyjQqjbeoS._2CqKBxs5RwnwEA_GrC6CrL.YgnZYhUBZBiUJwuMUvxYw.gpfocuswithin, ._1LWDAthWNhS7CyjQqjbeoS._2CqKBxs5RwnwEA_GrC6CrL._15S9pg9Y-g9PGES94IuSQA:not(.hBJA7sc7szpcoeOdRRfsP):hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._17CvBVp1rwECBn2FRb4oMA:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3glxw5rYlV6DTRgH3dHWPD:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-._17SQWViInfB-hmYYLoK4Yw:hover, ._17SQWViInfB-hmYYLoK4Yw:active{background-color: rgba(219, 55, 118, 0.16) !important}
-button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton._2ACrKFdpKOMqF1_y00alJv, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled._2ACrKFdpKOMqF1_y00alJv, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:active._2ACrKFdpKOMqF1_y00alJv, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled:active:hover._2ACrKFdpKOMqF1_y00alJv{background-color: rgba(219, 55, 118, 0.16) !important}
-button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton.gpfocus.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:active.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled.gpfocus.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled:active.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:active.gpfocus.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:active:active.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled:active:hover.gpfocus.Primary, button._1pqdnNXI2o4kBW6FVZDAvX.DialogButton:enabled:active:hover:active.Primary{background-color: rgba(219, 55, 118, 0.16) !important}
-._3m3_xgqnTKICMikWOA-NtG:not(._31_juXMQiMtKgqwdG60EyR).F_Vy1zVQmtHYlKsWndE4-.gpfocus, ._3m3_xgqnTKICMikWOA-NtG:not(._31_juXMQiMtKgqwdG60EyR).F_Vy1zVQmtHYlKsWndE4-.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-._3m3_xgqnTKICMikWOA-NtG._31_juXMQiMtKgqwdG60EyR.F_Vy1zVQmtHYlKsWndE4-.gpfocus, ._3m3_xgqnTKICMikWOA-NtG._31_juXMQiMtKgqwdG60EyR.F_Vy1zVQmtHYlKsWndE4-.gpfocuswithin, ._3m3_xgqnTKICMikWOA-NtG._31_juXMQiMtKgqwdG60EyR._2Cj1ImCIbczkbVLC69rJjP:not(._6Dt9tb8Pk5r78_GplsFr6):hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._30Cfa_RtfCcvNNH7_LcUON:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.KFjZFORv00KdmaEwjssuh:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-button._93UdZeArAzCLQTPIWH_2p.DialogButton.EJmnkn0grg6W-bt0xs4Z-, button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled.EJmnkn0grg6W-bt0xs4Z-, button._93UdZeArAzCLQTPIWH_2p.DialogButton:active.EJmnkn0grg6W-bt0xs4Z-, button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled:active:hover.EJmnkn0grg6W-bt0xs4Z-{background-color: rgba(219, 55, 118, 0.16) !important}
-button._93UdZeArAzCLQTPIWH_2p.DialogButton.gpfocus.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:active.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled.gpfocus.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled:active.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:active.gpfocus.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:active:active.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled:active:hover.gpfocus.Primary, button._93UdZeArAzCLQTPIWH_2p.DialogButton:enabled:active:hover:active.Primary{background-color: rgba(219, 55, 118, 0.16) !important}
-.CvwbUUfbX04pDRqpUvc_x:not(.HS6Z2KzSIqPb7XTzz1dNL).O4oQTHYDZaQfcENjHC8aO.gpfocus, .CvwbUUfbX04pDRqpUvc_x:not(.HS6Z2KzSIqPb7XTzz1dNL).O4oQTHYDZaQfcENjHC8aO.gpfocuswithin{background-color: rgba(219, 55, 118, 0.16) !important}
-.CvwbUUfbX04pDRqpUvc_x.HS6Z2KzSIqPb7XTzz1dNL.O4oQTHYDZaQfcENjHC8aO.gpfocus, .CvwbUUfbX04pDRqpUvc_x.HS6Z2KzSIqPb7XTzz1dNL.O4oQTHYDZaQfcENjHC8aO.gpfocuswithin, .CvwbUUfbX04pDRqpUvc_x.HS6Z2KzSIqPb7XTzz1dNL._3MaTU7sbCAsKy-swFfgYs-:not(.BnxpdLzcXhMYc68w5MR1K):hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3Gj2wOUvSdrsCfUf7w3k1i:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._2mNAvz8KGNwL-uvTDeezNP:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-._3hS8NFdPTrUehJGNVT0PtV ._3lJb_YN8uykqLcm4eG1jRF._8XjrTFzaSA8ubHvHCu44L, ._3hS8NFdPTrUehJGNVT0PtV ._3lJb_YN8uykqLcm4eG1jRF:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.zhaKeChn9HPNSMtk0ami_ ._1cXzMrhKqoTeIK_bPpNLIC:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._2LyGIHuQ8SFKb5T262YUvg._3TgL3aJ2hUdLP2stFZ2wZv:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._7EGqd8bdiXJBd2fj5Hh8r:hover, ._7EGqd8bdiXJBd2fj5Hh8r.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._2T45kYJmyvQWyxytQeohuY._3JYigpIF46lZDATkhxHZmZ:hover, ._2T45kYJmyvQWyxytQeohuY._3JYigpIF46lZDATkhxHZmZ:active{background-color: rgba(219, 55, 118, 0.16) !important}
-._1rhLTraGkRDOPJslCL3i9C:hover, ._1rhLTraGkRDOPJslCL3i9C._2_K-vDkSsSw6FxrfZL-ScT{background-color: rgba(219, 55, 118, 0.16) !important}
-._3Rk61GMptJMR1oaiUCjLyL:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3ixlq8K1YVBNIk7rw190aK ._2eqwm-fL9OYKl0X03c1q_a ._2Jhopz5mqnwHwBUX9sMIGY:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3eJZ4fur1aqy1ebzHlGfaW._2VMPXXql5oP3XDeGTVd9Lk, ._3eJZ4fur1aqy1ebzHlGfaW:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._12aBP1DmpEKuMxfFuCMbiN:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-._12aBP1DmpEKuMxfFuCMbiN:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._2n6FNLKyb6al_YPk13xS7S ._2RCSUgg2X_uF_C0e1lrcqc:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._2n6FNLKyb6al_YPk13xS7S ._2RCSUgg2X_uF_C0e1lrcqc:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-._2IWpfqj8UL5hUs7n-pxnUy ._3sqYFYR9Cl3T6Iy-0a3EJ2:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3jYltbvkgQtLaooGJYcjJY ._2CKq4dAZDTlb7svd2NHxi6:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._34o03-8cUc3fQX1u650c0L:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._1X1hrBwjvWglwgv2oIo0zr.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._2AzIX5kl9k6JnxLfR5H4kX.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-:not(._1Pb6PMh_3L5p5NzuUz0Pp9) > .BasicUI ._2AzIX5kl9k6JnxLfR5H4kX:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._14LCw9xDY_zO1iEK07vkRg.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-:not(._2L_o4bH4BMiXc3lAxC8u29) > .BasicUI ._14LCw9xDY_zO1iEK07vkRg:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a.Focusable:focus{background-color: rgba(219, 55, 118, 0.16) !important}
-:not(._1z325vU83sYraLYJ00JlPq) > .BasicUI ._1bq4x9pa4-9RLY-dXWUZTp ._1XjtfRHLm0-7aFDsMlcIl- .FmfZJt_PKB2p0mdDnNZ1a:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._21P7c4MWmsU2QSZeL-uyZo.gpfocus:not(._74yh4KBx-CqtDEw0dDxpH) ._1VNuYHM6BPBOJspC6zPf5r.IbePLaw-vSvhG1GTenYFg{background-color: rgba(219, 55, 118, 0.16) !important}
-._1VNuYHM6BPBOJspC6zPf5r:hover, ._1VNuYHM6BPBOJspC6zPf5r._3-SbBb63lDnu6LzKV-q3Cg{background-color: rgba(219, 55, 118, 0.16) !important}
-._1VNuYHM6BPBOJspC6zPf5r ._3oavRVhIS9tC3vBsFT4Ggi, ._1VNuYHM6BPBOJspC6zPf5r ._3oavRVhIS9tC3vBsFT4Ggi:enabled, ._1VNuYHM6BPBOJspC6zPf5r ._3oavRVhIS9tC3vBsFT4Ggi:active, ._1VNuYHM6BPBOJspC6zPf5r ._3oavRVhIS9tC3vBsFT4Ggi:hover, ._1VNuYHM6BPBOJspC6zPf5r ._3oavRVhIS9tC3vBsFT4Ggi:enabled:active:hover, ._1VNuYHM6BPBOJspC6zPf5r ._3oavRVhIS9tC3vBsFT4Ggi.DialogButton:enabled{background-color: rgba(219, 55, 118, 0.16) !important}
-._3Tfp8-wTAttW3WVa_X9JVC._3Tfp8-wTAttW3WVa_X9JVC, ._3Tfp8-wTAttW3WVa_X9JVC._3Tfp8-wTAttW3WVa_X9JVC:enabled, ._3Tfp8-wTAttW3WVa_X9JVC._3Tfp8-wTAttW3WVa_X9JVC:active, ._3Tfp8-wTAttW3WVa_X9JVC._3Tfp8-wTAttW3WVa_X9JVC:hover, ._3Tfp8-wTAttW3WVa_X9JVC._3Tfp8-wTAttW3WVa_X9JVC:enabled:active:hover, ._3Tfp8-wTAttW3WVa_X9JVC._3Tfp8-wTAttW3WVa_X9JVC.DialogButton:enabled{background-color: rgba(219, 55, 118, 0.16) !important}
-._1sc-BFvGe6huemAE5yVozQ .pPqm0Cd3nTDM56emaoNIW ._1NaHmfjaZE79y_QkdOATIe ._11rvbhmzxd98nsRtYKNg58 ._1zPEmUpnj5uN_s1mkw5os0 button.DialogButton:enabled:active.gpfocus, ._1sc-BFvGe6huemAE5yVozQ .HdqevXhfe5oON8S7byE-A ._1NaHmfjaZE79y_QkdOATIe ._11rvbhmzxd98nsRtYKNg58 ._1zPEmUpnj5uN_s1mkw5os0 button.DialogButton:enabled:active.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.s1FCUcjnu-HHPONgHERgk.DYcT9Hk_Qd-MbERu69fdN.Ps3xdItIImyoQOT3zsuqU:not(:hover){background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._1hFrV3_0BponiGRcGE_jg3:hover, .BasicUI ._1hFrV3_0BponiGRcGE_jg3.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._5HZT7qE6px0VNOBQ7q6Nz.gpfocus, ._1X-O1ANz_xeB1j0CZRNFeA.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-.jD4XY_gqDiLlX0jZqK1MA._1X5wHQgKhsyFOBfnka56DP:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._2yhmcyeUOyM8lt__Skbk9O:hover, .BasicUI ._2yhmcyeUOyM8lt__Skbk9O.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._3-H47wPl1Ng3lh7xGZOPIg.gpfocus, ._3V6804k2yutEiF6IWg8axH.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._1GcAugE5c4nbBUwrA4_xwS._1YAQHDHv4hsPaauccvAFtn:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._30fVm4Rsel-4nUKEiPJgz9:hover, .BasicUI ._30fVm4Rsel-4nUKEiPJgz9.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._2h6KD6p6y4vIgO2Toxx-_K.gpfocus, ._3oKFhPrh1lbp-WtA72Q2Yi.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._3B8wRA4H7e_oSksYNqpSPv._1B1XTNsfuwOaDPAkkr8M42:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.BasicUI ._1lqXpJpRlYvyM2fBx6beHd:hover, .BasicUI ._1lqXpJpRlYvyM2fBx6beHd.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._1k275cE1gk-jpZE5r-37zl.gpfocus, ._4egmnB1wTrDll5Mc_eal8.gpfocus{background-color: rgba(219, 55, 118, 0.16) !important}
-._2uW9K6fqc6jZX1XBjnLjw._2kLHZTRgRl0POZfXPcfxks:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._23IDiI-F_FxXotrgpY71r8._1ABsh9UL8DKM0rWJXep1tc._3I23qeyanGptsMyU2bKr8w:not(:hover){background-color: rgba(219, 55, 118, 0.16) !important}
-._17M8gvakqjyaw_cLo6ntdl input[type="search"]::-webkit-search-cancel-button:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.fi6UDkxJq66MLo2z9wabQ ._2uM3ouyTdzAtXR3ffa7oRg ._2LJMRr1_5XUK4wlt7YMyPi .mh8m9p4PBg_Qrev1bfTzc:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3OzkVrQFFPv0aV41N4MrHV .fbu3l7kPiBeb3EKCjIb8n ._3ZLaTxSHxeGcoKlIy_-Z0L:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._27m9Qbg4ShilOgwvYZWV8l ._1vG-vFfwpDeNStVbyo1Qy6 ._2fYjCJSwdJxdjbi7ysISdL ._2NLwfYHr9KUJZ7LD9nkyva:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._27m9Qbg4ShilOgwvYZWV8l ._1vG-vFfwpDeNStVbyo1Qy6 ._1zaACxBAyMqq2MspuISjix .nzZlhFJAzKTdsKCWil0F9:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._5wILZhsLODVwGfcJ0hKmJ:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.RtSv39ZoBOySnb8XQ5hJf._9YK5IY219Pm_F53DAxyYp:not(._1QQWjaXmb1eTHZpeIhQA_5):hover, .RtSv39ZoBOySnb8XQ5hJf._3qhGkQ5qLVNQQ-J2-uPoHt:not(._1QQWjaXmb1eTHZpeIhQA_5):hover{background-color: rgba(219, 55, 118, 0.16) !important}
-.Utdt7JrpIm5JlpQmqyj1v:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3lRfTo8Wo3phXfE1DvK6QW:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3LKQ3S_yqrebeNLF6aeiog:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._13vrqU6oOqmmxrsZSW5O39:hover, ._3arz-hc3FJ0QKXLPRUSaah:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._3zfQA8bEKpisPtsyT4SovP:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._2rxrVvbku0AC8Qbequ4-z9 ._2SvsKGOQeIoV8laKj5Ql5s ._2X_ZpO2X_CIOIEfml3ZTcX ._2KYMMVVayBKt9_rEg88mBZ.B0KOfNkg7hq7nxHumDWOJ:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._2rxrVvbku0AC8Qbequ4-z9 ._2SvsKGOQeIoV8laKj5Ql5s ._2YSm1vJtLeKb9BbihsLY1F ._2_4_nZy-T2C3pHa81tGH76 .c8HfPY9sQZdSZtTna_qYB:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._2-p7shAZYrRijpaTU9bAFR:hover > div{background-color: rgba(219, 55, 118, 0.16) !important}
-._28dkcmodlp5Ooe1EJDdzUs ._2b5Wr4EPgFV-0TlrAIea5- .XBOPCwP2Bo8up1QjGtUiI ._15gxV6Q8_KW_-utK740dEf:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._10T2j3nynZSKnIKIRrTLr4 ._33DvvaAAsKaD30JrKzcL38 ._2xqwHms_kkW3jPhfsUTa8:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._1xeg0ZFm1DNPKbA9uOjFlT ._2U0q8iFEUZp8KxE3zz1C26 ._3hpEn4H6tjIGLbf8GKA0vS ._2TsagsVi0bFDnNztolUHP4:hover{background-color: rgba(219, 55, 118, 0.16) !important}
-._1xeg0ZFm1DNPKbA9uOjFlT ._2U0q8iFEUZp8KxE3zz1C26 ._1Hz4oAP9fiba9H98tjnior ._3a1Y1FB5NkaJJ0iV5-qUbJ:hover{background-color: rgba(219, 55, 118, 0.16) !important}

@@ -41,19 +41,30 @@ const EXTRACT_JS: &str = r##"
     [/\b61,\s*68,\s*80\b/g, '28, 28, 28'], [/\b14,\s*20,\s*27\b/g, '0, 0, 0'],
     [/\b23,\s*29,\s*37\b/g, '10, 10, 10'], [/\b27,\s*40,\s*56\b/g, '0, 0, 0'],
     [/\b42,\s*71,\s*94\b/g, '20, 20, 20'],
+    // web store / community blues (store.steampowered.com, steamcommunity.com)
+    [/\b6,\s*191,\s*255\b/g, '232, 90, 146'], [/\b43,\s*116,\s*255\b/g, '176, 42, 94'],
+    [/\b71,\s*191,\s*255\b/g, '232, 90, 146'], [/\b26,\s*68,\s*194\b/g, '142, 33, 72'],
+    [/\b84,\s*165,\s*212\b/g, '232, 90, 146'], [/\b65,\s*122,\s*155\b/g, '159, 179, 194'],
+    [/\b22,\s*32,\s*45\b/g, '10, 10, 10'],
   ];
   var HEX = [
     [/#1a9fff/gi, '#db3776'], [/#1999ff/gi, '#db3776'], [/#67c1f5/gi, '#e85a92'],
     [/#66c0f4/gi, '#e85a92'], [/#3d4450/gi, '#1c1c1c'], [/#0e141b/gi, '#000000'],
     [/#171d25/gi, '#0a0a0a'], [/#1b2838/gi, '#000000'], [/#2a475e/gi, '#141414'],
+    // web store / community
+    [/#06bfff/gi, '#e85a92'], [/#2b74ff/gi, '#b02a5e'], [/#47bfff/gi, '#e85a92'],
+    [/#1a44c2/gi, '#8e2148'], [/#54a5d4/gi, '#e85a92'], [/#417a9b/gi, '#9fb3c2'],
+    [/#16202d/gi, '#0a0a0a'],
   ];
-  var GREY = /3d4450|61,\s*68,\s*80|0e141b|14,\s*20,\s*27|171d25|23,\s*29,\s*37|1b2838|27,\s*40,\s*56|2a475e|42,\s*71,\s*94/i;
-  var BLUE = /1a9fff|1999ff|67c1f5|66c0f4|26,\s*159,\s*255|25,\s*153,\s*255|103,\s*193,\s*245|102,\s*192,\s*244/i;
+  var GREY = /3d4450|61,\s*68,\s*80|0e141b|14,\s*20,\s*27|171d25|23,\s*29,\s*37|1b2838|27,\s*40,\s*56|2a475e|42,\s*71,\s*94|16202d|22,\s*32,\s*45/i;
+  var BLUE = /1a9fff|1999ff|67c1f5|66c0f4|06bfff|2b74ff|47bfff|1a44c2|54a5d4|417a9b|26,\s*159,\s*255|25,\s*153,\s*255|103,\s*193,\s*245|102,\s*192,\s*244|6,\s*191,\s*255|43,\s*116,\s*255|71,\s*191,\s*255|26,\s*68,\s*194|84,\s*165,\s*212|65,\s*122,\s*155/i;
   var GREY_OK = /^(background|border|box-shadow|outline|fill|stroke|--)/;
   var STATE = /:hover|:focus|\.gpfocus/i;   // interaction states -> pink wash
   function remap(v){TRIPLETS.forEach(function(p){v=v.replace(p[0],p[1]);});HEX.forEach(function(p){v=v.replace(p[0],p[1]);});return v;}
   var out=[], seen={}, nBlue=0, nGrey=0, nState=0;
   for(var i=0;i<document.styleSheets.length;i++){
+    var node=document.styleSheets[i].ownerNode;
+    if(node&&node.id==='blossom-skin')continue;   // never re-harvest our own inject
     var rules; try{rules=document.styleSheets[i].cssRules;}catch(e){continue;}
     if(!rules)continue;
     for(var j=0;j<rules.length;j++){
@@ -161,7 +172,7 @@ fn ws_eval(ws_url: &str, expr: &str, want: bool) -> Option<String> {
 
 fn skin_css() -> String {
     let read = |f: &str| fs::read_to_string(format!("{CSS_DIR}/{f}")).unwrap_or_default();
-    format!("{}\n{}", read("webkit.css"), read("generated.css"))
+    format!("{}\n{}\n{}", read("webkit.css"), read("generated.css"), read("store.css"))
 }
 
 fn inject_all() -> usize {
@@ -182,12 +193,28 @@ fn inject_all() -> usize {
         .count()
 }
 
-fn main_page_ws() -> Option<String> {
-    let ps = pages();
-    ps.iter()
-        .find(|p| p["title"] == "Steam" && p["url"].as_str().unwrap_or("").contains("minwidth=1010"))
-        .or_else(|| ps.iter().find(|p| p["url"].as_str().unwrap_or("").contains("steamloopback")))
-        .and_then(|p| p["webSocketDebuggerUrl"].as_str().map(str::to_string))
+/// Walk every open page (client windows AND web store/community frames), run the
+/// extractor in each, and merge the rules — first page to emit a line wins.
+fn gen_all() -> String {
+    let (mut out, mut seen, mut n) = (String::new(), HashSet::new(), 0usize);
+    for p in pages() {
+        if p["type"] != "page" { continue; }
+        let Some(ws) = p["webSocketDebuggerUrl"].as_str() else { continue };
+        let Some(css) = ws_eval(ws, EXTRACT_JS, true) else { continue };
+        let url = p["url"].as_str().unwrap_or("?");
+        let mut fresh: Vec<&str> = Vec::new();
+        for line in css.lines() {
+            if line.starts_with("/*") || line.is_empty() { continue; }
+            if seen.insert(line.to_string()) { fresh.push(line); }
+        }
+        if !fresh.is_empty() {
+            out.push_str(&format!("\n/* == {} rules from {} == */\n", fresh.len(), url));
+            out.push_str(&fresh.join("\n"));
+            out.push('\n');
+            n += fresh.len();
+        }
+    }
+    format!("/* blossom-steam gen: {n} rules across all open pages. Regenerate after Steam updates. */\n{out}")
 }
 
 /// Event-driven theming: attach to the browser target, discover every page the
@@ -283,8 +310,7 @@ fn main() {
         "enable" => enable_and_restart(),
         "gen" => {
             if !debugger_up() { eprintln!("debugger down — run: blossom-steam enable"); std::process::exit(1); }
-            let ws = main_page_ws().expect("no main Steam window page");
-            let css = ws_eval(&ws, EXTRACT_JS, true).expect("extract failed");
+            let css = gen_all();
             let path = format!("{CSS_DIR}/generated.css");
             fs::write(&path, &css).unwrap();
             println!("✓ wrote {path}\n  {}", css.lines().next().unwrap_or(""));
@@ -292,6 +318,17 @@ fn main() {
         "once" => {
             if !debugger_up() { eprintln!("debugger down — run: blossom-steam enable"); std::process::exit(1); }
             println!("✓ injected into {} page(s)", inject_all());
+        }
+        // eval '<js>' [url-substring] — run JS in a page (default: the web store).
+        // Debug aid for skinning: inspect computed styles, find class names, etc.
+        "eval" => {
+            let js = std::env::args().nth(2).expect("usage: blossom-steam eval '<js>' [url-substring]");
+            let filt = std::env::args().nth(3).unwrap_or_else(|| "store.steampowered.com".into());
+            let ws = pages().into_iter()
+                .find(|p| p["type"] == "page" && p["url"].as_str().unwrap_or("").contains(&filt))
+                .and_then(|p| p["webSocketDebuggerUrl"].as_str().map(str::to_string))
+                .expect("no page matches that url substring");
+            println!("{}", ws_eval(&ws, &js, true).unwrap_or_else(|| "(no string result)".into()));
         }
         "live" => live_event(),
         _ => eprintln!("usage: blossom-steam [live|once|gen|enable]"),

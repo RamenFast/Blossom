@@ -11,6 +11,7 @@
   },
   "inject": {
     "webkit.css": ["all"],
-    "generated.css": ["all"]
+    "generated.css": ["all"],
+    "store.css": ["all"]
   }
 }

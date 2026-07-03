@@ -355,6 +355,14 @@ input:focus, textarea:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(var(--blossom-pink), var(--blossom-pink-hi)) !important;
 }
+/* …but a full-width HORIZONTAL pink bar (store pages overflow a few px) reads
+ * as a glitch, not an accent. Horizontal thumbs stay void; pink only in hand. */
+::-webkit-scrollbar-thumb:horizontal {
+  background: var(--blossom-raise-4) !important;
+}
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: var(--blossom-pink) !important;
+}
 
 /* Primary action: a soft pink gradient, lit from above */
 .DialogButton.Primary, button.DialogButton.Primary, .basicdialogbutton.Primary {
@@ -374,6 +382,19 @@ a:hover { box-shadow: inset 0 -1px 0 0 var(--blossom-pink-hi); }
 
 /* A hairline pink seam under the title-bar/header, tying the window together */
 .title-bar-actions { box-shadow: inset 0 -1px 0 0 rgba(var(--blossom-pink-rgb), 0.22); }
+
+/* ---------------------------------------------------------------------------
+ *  11b. Web store polish — one-off promo art the store.css remap can't reach
+ *       (store.css only re-emits rules that use Steam's standard palette).
+ * ------------------------------------------------------------------------- */
+/* "Send a Gift Card": void→pink sweep instead of navy→steam-blue */
+a.home_gift_card_link {
+  background-image: linear-gradient(to right, #0a0a0a 0%, #db3776 100%) !important;
+  color: #eaf6ff !important;
+}
+a.home_gift_card_link:hover {
+  background-image: linear-gradient(to right, #1c1c1c 0%, #e85a92 100%) !important;
+}
 
 /* ---------------------------------------------------------------------------
  *  12. Legibility safeguards — never recolour game art or media

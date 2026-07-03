@@ -1,0 +1,544 @@
+/* gen-store.py: 302 rules — the Blossom remap for Steam's web store/community CSS.
+   Regenerate with `python3 gen-store.py` if store accents revert to blue. */
+
+/* == 21 rules from https://store.fastly.steamstatic.com/public/shared/css/shared_global.css == */
+:root{--gpSystemDarkGrey:#1c1c1c !important;--gpSystemDarkerGrey:#101010 !important;--gpSystemDarkestGrey:#000000 !important;--gpStoreDarkGrey:#141414 !important;--gpStoreDarkerGrey:#000000 !important;--gpGradient-LibraryBackground:radial-gradient(farthest-corner at 40px 40px,#1c1c1c 0%, #101010 80%) !important;/* Colours */
+	--gpColor-Blue:#db3776 !important;--gpColor-DustyBlue:#b02a5e !important;--gpColor-ChalkyBlue:#e85a92 !important;--gpBackground-DarkSofter:#00000033 !important;--gpBackground-DarkSoft:#00000066 !important;--gpBackground-DarkMedium:#00000099 !important;--gpBackground-DarkHard:#000000cc !important}
+#admin_drop{color:#e85a92 !important !important;background:rgba( 232, 90, 146, 0.2 ) !important}
+#admin_drop:hover{background:#b02a5e !important;background:-webkit-linear-gradient( 150deg, #b02a5e 5%,#e85a92 95%) !important;background:linear-gradient( -60deg, #b02a5e 5%,#e85a92 95%) !important}
+.popup_block_new .popup_body{border:1px solid #1c1c1c !important;background-color:#1c1c1c !important}
+div#global_header{background:#0a0a0a !important}
+div#global_header .content{background:#0a0a0a !important}
+.supernav_content{background:#1c1c1c !important}
+div#global_header .menuitem.supernav_active{color:#db3776 !important;background:#db3776 !important}
+.pagebtn:not(.disabled):hover,
+a.pagebtn:not(.disabled):hover,
+.pagelink:hover{background-color:#e85a92 !important}
+.header_notification_btn.header_notification_bell{background:url( 'https://store.fastly.steamstatic.com/public/shared/images/header/notification_bell.png' ) no-repeat #1c1c1c !important}
+.header_parental_btn.partial.password:hover{background-color:#1c1c1c !important}
+.ugc.has_adult_content .ugc_warning .ugc_inline_option:hover{color:#e85a92 !important}
+.ugc_options:hover > div{background-color:#e85a92 !important}
+.ugc_options_tooltip > .option:hover{background-color:#e85a92 !important}
+/* V6 */
+
+body.v6 .store_nav .popup_block_new .popup_body, body.v6 #footer_nav .popup_block_new .popup_body{background:#b02a5e !important}
+.v_scrollbar > .handle{background:#8e2148 !important;/* Old browsers */
+	background:-moz-linear-gradient(-45deg,  #8e2148 0%, #6b1a38 100%) !important;/* FF3.6+ */
+	background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#8e2148), color-stop(100%,#6b1a38)) !important;/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(-45deg,  #8e2148 0%,#6b1a38 100%) !important;/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(-45deg,  #8e2148 0%,#6b1a38 100%) !important;/* Opera 11.10+ */
+	background:-ms-linear-gradient(-45deg,  #8e2148 0%,#6b1a38 100%) !important;/* IE10+ */
+	background:linear-gradient(135deg,  #8e2148 0%,#6b1a38 100%) !important;/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e2148', endColorstr='#6b1a38',GradientType=1 ) !important}
+.LoadingWrapper .LoadingThrobber .Bar{background-color:#e85a92 !important}
+.shared_game_rating .game_rating_allages{color:#e85a92 !important;border:2px solid #e85a92 !important}
+.community_award_count{color:#e85a92 !important}
+.community_award_ctn_hover .community_award .community_award_count{color:#e85a92 !important}
+.shared_autocollapse_readmore{color:#e85a92 !important}
+
+/* == 20 rules from https://store.fastly.steamstatic.com/public/shared/css/buttons.css == */
+.btn_darkblue_white_innerfade{color:#f09bbd !important !important}
+.btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover{background:rgba(232, 90, 146,1) !important;background:-webkit-linear-gradient( top, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important}
+.btn_grey_black{color:#e85a92 !important !important}
+.btn_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover{background:rgba( 232, 90, 146, 0.4 ) !important}
+.btn_grey_black.btn_active, btn_grey_black.active{background:rgba( 232, 90, 146, 0.2 ) !important}
+.btnv6_blue_hoverfade{color:#e85a92 !important !important;background:rgba( 232, 90, 146, 0.2 ) !important}
+.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover{background:#b02a5e !important;background:-webkit-linear-gradient( 150deg, #b02a5e 5%,#e85a92 95%) !important;background:linear-gradient( -60deg, #b02a5e 5%,#e85a92 95%) !important}
+.btnv6_blue_hoverfade.btn_active, btnv6_blue_hoverfade.active{background:rgba( 232, 90, 146, 0.6 ) !important}
+.btnv6_lightblue_blue:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover{background:rgba(232, 90, 146,1) !important;background:-webkit-linear-gradient( top, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important}
+.btnv6_blue_blue_innerfade{color:#f09bbd !important !important}
+.btnv6_blue_blue_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover{background:rgba(232, 90, 146,1) !important;background:-webkit-linear-gradient( top, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important}
+.btnv6_grey_black{color:#e85a92 !important !important}
+.btnv6_grey_black:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover{background:#e85a92 !important}
+.btnv6_grey_black.btn_active, btnv6_grey_black.active{background:rgba( 232, 90, 146, 0.4 ) !important}
+.btn_teal{color:#f09bbd !important !important}
+.btn_royal_blue{color:#f09bbd !important !important}
+.btn_plum{color:#f09bbd !important !important}
+.btn_grey_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span{background:linear-gradient( to right, #262626 5%, #262626 95%) !important}
+.btn_blue_steamui > span{background:linear-gradient( to right, #e85a92 5%, #8e2148 60%) !important}
+.btn_blue_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span{background:linear-gradient( to right, #e85a92 5%, #8e2148 60%) !important}
+
+/* == 23 rules from https://store.fastly.steamstatic.com/public/css/v6/store.css == */
+a:hover{color:#e85a92 !important}
+body.v6.game_bg{background:#000000 !important}
+body.v6 h2 a{color:#e85a92 !important}
+body.v6 h2 .header_inline a:hover{color:#e85a92 !important}
+#store_nav_area .store_nav_bg{background:rgba( 232, 90, 146, 0.4 ) !important}
+.tab_page_link_prev a, .tab_page_link_next a{color:#e85a92 !important}
+.tab_page_link_prev a:hover, .tab_page_link_next a:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.store_nav .tab.focus{background-color:#e85a92 !important}
+.store_nav .tab:hover > span, .store_nav .tab:hover, .store_nav .tab.focus > span, .store_nav .tab.focus{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+body.v6 .store_nav .popup_block_new .popup_body.search_v2{background:#1c1c1c !important}
+.slider_ctn .slider_left:hover, .slider_ctn .slider_right:hover, .slider .handle:hover{background:#8e2148 !important;/* Old browsers */
+    background:-moz-linear-gradient(-45deg,  #8e2148 0%, #6b1a38 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#8e2148), color-stop(100%,#6b1a38)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-45deg,  #8e2148 0%,#6b1a38 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-45deg,  #8e2148 0%,#6b1a38 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-45deg,  #8e2148 0%,#6b1a38 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #8e2148 0%,#6b1a38 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e2148', endColorstr='#6b1a38',GradientType=1 ) !important}
+.friend_game_block .friend_activity:hover{background:rgba( 232, 90, 146, 0.1 ) !important}
+.game_review_summary.positive{color:#e85a92 !important}
+#v6takeover .avatar{border:5px solid #e85a92 !important;box-shadow:0 0 5px #e85a92 !important}
+#v6takeover .title > div{color:#e85a92 !important}
+#v6takeover{background:-webkit-linear-gradient( top, rgba(0,0,0,0) 5%, rgba(232, 90, 146,0.2) 95%) !important;background:linear-gradient( to bottom, rgba(0,0,0,0) 5%, rgba(232, 90, 146,0.2) 95%) !important}
+/* END TEMPORARY */
+
+
+.dropcontainer ul{background:#b02a5e !important}
+.dselect_container button.trigger, .dselect_container button.activetrigger{color:#e85a92 !important}
+.dselect_container button.trigger{background:rgba( 232, 90, 146, 0.1 ) !important}
+.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover{background:#e85a92 !important}
+.dselect_container button.trigger:hover,
+.dselect_container .dropcontainer a.highlighted_selection{background-color:#e85a92 !important;/* Old browsers */
+	background:-webkit-linear-gradient( 150deg, #b02a5e 5%,#e85a92 95%) !important;background:linear-gradient( -60deg, #b02a5e 5%,#e85a92 95%) !important}
+.main_cluster_ctn .home_btn.home_customize_btn:hover{background:#e85a92 !important;/* Old browsers */
+	background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+	background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+	background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+	background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+@media screen and (max-width: 910px){html.responsive .live_streams_ctn .store_capsule:not(:last-child){}
+
+.ds_options:hover > div {
+	background-color: #e85a92 !important;background-color:#262626 !important;color:#e85a92 !important;background-color:#1c1c1c !important;background-color:#262626 !important;}
+
+.color_recommended{
+	color:#e85a92 !important;}
+
+.content_consumer_rights_notice a:hover {
+	color: #e85a92 !important;background:#e85a92 !important;border:0 solid #e85a92 !important;background:#e85a92 !important;border:0 solid #e85a92 !important;border:0 solid #e85a92 !important;}
+
+.range_input::-ms-fill-upper {
+	background: #e85a92 !important;border:0 solid #e85a92 !important;}
+
+.range_input:focus::-ms-fill-lower {
+	background: #e85a92 !important;color:#e85a92 !important}}
+
+/* == 3 rules from https://store.fastly.steamstatic.com/public/css/home.css == */
+/* Color variables for normal use */
+:root{--blue:#db3776 !important}
+.responsive_giant_curator_capsule .recommendation_status.recommended{color:#e85a92 !important}
+.curator_giant_capsule .screenshots, .curator_giant_capsule .capsule{border-bottom:3px solid #db3776 !important}
+
+/* == 1 rules from https://store.fastly.steamstatic.com/public/shared/css/shared_responsive.css == */
+.mainmenu_contents .menuitem.submenu_active{background-color:#1c1c1c !important}
+
+/* == 72 rules from https://store.fastly.steamstatic.com/public/css/applications/store/main.css == */
+.GreenEnvelopeMenu{box-shadow:inset rgba(28, 28, 28,.75) 1px 1px 1px 0px,inset rgba(28, 28, 28,.25) -1px -1px 1px 0px !important}
+.DesktopUI .PP7LM0Ow1K5qkR8WElLpt,._3qIuY9S_vXm3IQS-uE9SRS .PP7LM0Ow1K5qkR8WElLpt{background:#1c1c1c !important}
+._34o03-8cUc3fQX1u650c0L{background:#101010 !important}
+._34o03-8cUc3fQX1u650c0L.Stream,._34o03-8cUc3fQX1u650c0L.Connect,._34o03-8cUc3fQX1u650c0L.Launch,._34o03-8cUc3fQX1u650c0L.PlayMusic,._34o03-8cUc3fQX1u650c0L.Play,._34o03-8cUc3fQX1u650c0L.Resume,._34o03-8cUc3fQX1u650c0L.BorrowApp,._34o03-8cUc3fQX1u650c0L.Download,._34o03-8cUc3fQX1u650c0L.Update,._34o03-8cUc3fQX1u650c0L.PreLoad,._34o03-8cUc3fQX1u650c0L.Install,._34o03-8cUc3fQX1u650c0L.Pause,._34o03-8cUc3fQX1u650c0L.Stop,._34o03-8cUc3fQX1u650c0L.Cancel{background:#101010 !important}
+._34o03-8cUc3fQX1u650c0L:hover{background:#1c1c1c !important}
+._34o03-8cUc3fQX1u650c0L._3fVa8M_7D9Vjz28uYnahhd{background:#1c1c1c !important}
+._34o03-8cUc3fQX1u650c0L._2XVTVAadkIvrBujZYN5jbL._2awU7ejQ3Qs_g0XnuSmgOP,._34o03-8cUc3fQX1u650c0L._2XVTVAadkIvrBujZYN5jbL.Download,._34o03-8cUc3fQX1u650c0L._2XVTVAadkIvrBujZYN5jbL.Update,._34o03-8cUc3fQX1u650c0L._2XVTVAadkIvrBujZYN5jbL.PreLoad,._34o03-8cUc3fQX1u650c0L._2XVTVAadkIvrBujZYN5jbL.Install,._34o03-8cUc3fQX1u650c0L._2XVTVAadkIvrBujZYN5jbL.Pause{background:#db3776 !important}
+.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q,.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q:hover{background:radial-gradient(rgba(219, 55, 118, 0.7333333333) 0%, #db3776 100%) !important}
+@media(prefers-contrast: more){.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q,.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q:hover{background:radial-gradient(rgba(219, 55, 118, 0.7333333333) 0%, #db3776 100%) !important}}
+.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q._3hmGW9wIxNIoPPu1aS7rFm,.HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q._3hmGW9wIxNIoPPu1aS7rFm:hover{background-color:#1c1c1c !important}
+.HijmccPB1BKyhOwhX1EVl:not(._3hmGW9wIxNIoPPu1aS7rFm):hover{background-color:#262626 !important}
+.HijmccPB1BKyhOwhX1EVl:not(._3-_jME_xsuvgT3Dvq4bw_q)+.HijmccPB1BKyhOwhX1EVl:not(._3-_jME_xsuvgT3Dvq4bw_q)::before{background:#1c1c1c !important}
+._3D14Gr6XaDtndRA8ojG443{fill:#000000 !important}
+._3D14Gr6XaDtndRA8ojG443._19WwgHXljoThfByC7B-MLW{fill:#db3776 !important}
+._2Jn2RR1yUV9GJ6u9HN1dER{stroke:#000000 !important}
+._2Jn2RR1yUV9GJ6u9HN1dER._19WwgHXljoThfByC7B-MLW{stroke:#db3776 !important}
+.CFTLX2wIKOK3hNV-fS7_V{background:radial-gradient(201.11% 137.71% at 0.9% -3.76%, #343941 0%, #000000 40%) !important}
+.CFTLX2wIKOK3hNV-fS7_V.DesktopUI,.DesktopUI .CFTLX2wIKOK3hNV-fS7_V{background:#0a0a0a !important}
+._2rjVTGz8aLvqOdz5v2gq5C{color:#db3776 !important}
+._1-vlriAtKYDViAEunue4VO.oUzYn48NLkHPRjiT8W86M,._1-vlriAtKYDViAEunue4VO.oUzYn48NLkHPRjiT8W86M:hover,._1-vlriAtKYDViAEunue4VO.oUzYn48NLkHPRjiT8W86M:not(._2DpXjzK3WWsOtUWUrcuOG7):hover{background-color:#101010 !important}
+._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7{background-color:#1c1c1c !important}
+._1Hye7o1wYIfc9TE9QKRW4T{background:#1c1c1c !important}
+._3LLH_F43MTu6UtG4Z3kudv,._1cWmu5TUWFAVHlv1EVaF8e{background-color:#1c1c1c !important}
+._3LLH_F43MTu6UtG4Z3kudv:hover,._1cWmu5TUWFAVHlv1EVaF8e:hover{background:#262626 !important}
+._16sYNwqxz6giarbVaRUl7R .DialogControlsSectionHeader{border-bottom:solid 1px #101010 !important}
+button.cXzBZxhPBl7fZs9LODEnc.DialogButton._28cXJKe4jqDnSsP9HO7yYm,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled._28cXJKe4jqDnSsP9HO7yYm,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active._28cXJKe4jqDnSsP9HO7yYm,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover._28cXJKe4jqDnSsP9HO7yYm{background:#000000 !important}
+button.cXzBZxhPBl7fZs9LODEnc.DialogButton.gpfocus.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled.gpfocus.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active.gpfocus.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active:active.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover.gpfocus.Primary,button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:active.Primary{background:#db3776 !important}
+.eKmEXJCm_lgme24Fp_HWt._2CCdODv0vfzOMrEBUzZwfI{background:#101010 !important}
+.eKmEXJCm_lgme24Fp_HWt:not(._2QgNsvFPYTZ5yRiTm7mUyu)._2HFrmMgB38Ike5w4rVxzEX.gpfocus,.eKmEXJCm_lgme24Fp_HWt:not(._2QgNsvFPYTZ5yRiTm7mUyu)._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin{background:#1c1c1c !important}
+.eKmEXJCm_lgme24Fp_HWt._2QgNsvFPYTZ5yRiTm7mUyu._2HFrmMgB38Ike5w4rVxzEX.gpfocus,.eKmEXJCm_lgme24Fp_HWt._2QgNsvFPYTZ5yRiTm7mUyu._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin,.eKmEXJCm_lgme24Fp_HWt._2QgNsvFPYTZ5yRiTm7mUyu._2HuzvKQ2QMUJ-JJOeApaF1:not(.aIeh3X5T2M074RLW1qn6_):hover{background:#1c1c1c !important}
+._3A5ujtARm6atH4phJ5i1i6>._16sYNwqxz6giarbVaRUl7R{background-color:#000000 !important;border:2px solid #101010 !important}
+._3ZR32BdxJUNwAA6Fu6n00p,._3ZR32BdxJUNwAA6Fu6n00p:not(.disabled):not(.gpfocus):hover{background:#101010 !important}
+.eKmEXJCm_lgme24Fp_HWt.gpfocuswithin ._2bl0iQ9xigbq4Zd1NI6NZl{background:#101010 !important}
+._2bl0iQ9xigbq4Zd1NI6NZl::before{background:#db3776 !important}
+._33vqr13-jdnjTkKKTh414f{background:#000000 !important}
+._2mL2HfT5AkDXRi1YBnRWKa._1ELdDY5kb5jxjXe-FpWBo5{background:linear-gradient(90deg, rgba(219, 55, 118, 0.22) 0%, rgba(219, 55, 118, 0) 100%) !important}
+._2mL2HfT5AkDXRi1YBnRWKa:focus{background:linear-gradient(90deg, rgba(219, 55, 118, 0.4) 0%, rgba(219, 55, 118, 0) 100%) !important;border-left:2px solid #db3776 !important}
+._2_vG6TwMW2XtyLlTEaODH9{--left-track-color:#db3776 !important}
+.u8QEaEpjqBM8RuPzRLjMy.j418S4TEV2LS3JHn6an4s{background-color:#db3776 !important}
+._3aMlipGagTx2AjSsMP_yZj,._1iWWSmS4pDD1vKNDTkghbh{background:#101010 !important}
+._38VX50q_XUUeqEdEgxC5no{color:#db3776 !important}
+@media screen and (max-width: 730px){html.responsive ._16jZ3HEbtaJTl80pQINN2Y{background:#101010 !important}}
+@media screen and (max-width: 730px){html.responsive ._1Zsv2NkXHxE5LTvs92Jqvd ._16jZ3HEbtaJTl80pQINN2Y{background:radial-gradient(100% 100% at 5% 100%, rgba(24, 37, 53, 0.5215686275) 0%, rgba(24, 37, 53, 0.6196078431) 5%, rgba(24, 37, 53, 0.8509803922) 20%, #101010 60%, #171a21 100%) !important}}
+a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5,button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5{background:#db3776 !important}
+a._175B12uOwmeGBNcSaQFe-Z .vj9hwW9u0MpjH7MVjjNw0 ._1-hPfsxjynE3demuqGmqf0 ._3gaaE-cRfFWJdZcC8XMi0x,button._175B12uOwmeGBNcSaQFe-Z .vj9hwW9u0MpjH7MVjjNw0 ._1-hPfsxjynE3demuqGmqf0 ._3gaaE-cRfFWJdZcC8XMi0x{background:#db3776 !important}
+._1PuyX9P-ZPobFUE_2scw0_{color:var(--Colors-blue, #db3776) !important}
+._1UkrDgMhl-oqKXXt9KXc4N ._2ovPL35Q1O7gq-DbxmP4cs ._2oz62CVNbwTn7KrUUwRdRw{background:rgba(219, 55, 118,.2) !important;color:#e85a92 !important}
+._1UkrDgMhl-oqKXXt9KXc4N ._2ovPL35Q1O7gq-DbxmP4cs ._2oz62CVNbwTn7KrUUwRdRw:hover,._1UkrDgMhl-oqKXXt9KXc4N ._2ovPL35Q1O7gq-DbxmP4cs ._2oz62CVNbwTn7KrUUwRdRw.gpfocus{background:linear-gradient(135deg, #e85a92 0%, #b02a5e 100%) !important}
+@media screen and (max-width: 500px){._3CCxBBbZTQS6eTjcQD5W-D ._23ZVj5bpOrPKV-d5CWG7lu:nth-child(1),._3CCxBBbZTQS6eTjcQD5W-D ._23ZVj5bpOrPKV-d5CWG7lu:nth-child(2),._3CCxBBbZTQS6eTjcQD5W-D ._23ZVj5bpOrPKV-d5CWG7lu:nth-child(3),._3CCxBBbZTQS6eTjcQD5W-D ._23ZVj5bpOrPKV-d5CWG7lu:nth-child(4){background-color:#db3776 !important}}
+._23dSXPnMLAqirY-XNeEJ-r._3YhUrzz0wbuwkRosba0Mso{background:linear-gradient(90deg, var(--gpBackground-LightSoft) 0%, rgba(219, 55, 118, 0.6117647059) 100%) !important}
+._1IkX8ZzZ1M29wQNN_NlGIh{background-color:#101010 !important}
+._1IkX8ZzZ1M29wQNN_NlGIh._3YhUrzz0wbuwkRosba0Mso{background-color:#1c1c1c !important}
+._3Z1skIYVoqLbYiP2wy46Ce{background:linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(163, 186, 211, 0.2) 100%) !important}
+._3Z1skIYVoqLbYiP2wy46Ce.tHXw2oCZIXQZPrZvcoSPB,._3Z1skIYVoqLbYiP2wy46Ce.sEmReCdwylgRBuJtn0A1G:hover,._3Z1skIYVoqLbYiP2wy46Ce.gpfocus{background:linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(163, 186, 211, 0.6) 100%) !important}
+._2SuTwoGRq7L6D8hZByqE62 ._3MacNs6QCQ7GzBJWv7LNxa ._1PSb462Tg4S8M046QIk4PM{background:var(--Blue-gredient, linear-gradient(90deg, #e85a92 0%, #2D73FF 100%)) !important}
+._2tlUAG6WNyYFlk9caIiLj5:focus-visible{border:1px solid #db3776 !important}
+._1Yo-ZsBr-KbVMyAMXEYszd{background:#db3776 !important}
+._2GxMhpm7OC2WWXN_wjgA78 ._1XK1v4pD2FgxJn9Nxovpup ._3DOcONbchITbAuaF30dduG a._3HgV0usLjzxByxBF2zvGYj{color:#db3776 !important}
+._2tdhUFMMsjGr_BI7uMcoWy ._2dRxpZNISTpHLewxzJ7o9r{background:linear-gradient(269deg, rgba(0, 0, 0, 0.2) 50%, rgba(163, 186, 211, 0.2) 100%) !important}
+:root{--color-greyneutral-2:#000000 !important;--color-greyneutral-4:#0a0a0a !important;--color-greyneutral-6:#101010 !important;--color-greyneutral-8:#1c1c1c !important;--color-blue-8:#db3776 !important}
+::selection{background:#e85a92 !important}
+.react-select-container .react-select__control:hover{background:#262626 !important}
+button.DialogButton{background:#1c1c1c !important}
+.DeckVerifiedModalDialogClient .DialogContent,.DeckVerifiedModalDialog .DialogContent{background:#000000 !important !important;border:2px solid #101010 !important}
+.DesktopUI .DialogTextInputBase:focus,.DialogTextInputBase:focus-within{background:#101010 !important}
+button.DialogButton.Primary{background:linear-gradient(to right, #e85a92 0%, #8e2148 60%) !important}
+button.DialogButton.Primary:hover,button.DialogButton.Primary.gpfocus{background:linear-gradient(to right, #e85a92 0%, #8e2148 60%) !important}
+button.DialogButton.Primary:enabled:active,button.DialogButton.Primary:enabled:hover:active,button.DialogButton.Primary:enabled:active.gpfocus{background:linear-gradient(to right, #e85a92 0%, #8e2148 60%) !important}
+button.DialogButton:hover,button.DialogButton.gpfocus{background:#262626 !important}
+.DialogToggleField_Option:hover:not(.Active){background:#262626 !important}
+.throbber>div{background-color:#e85a92 !important}
+.DesktopUI .title-area-icon:hover,.friendsui-container .title-area-icon:hover{background:#1c1c1c !important}
+
+/* == 1 rules from https://store.fastly.steamstatic.com/public/shared/css/user_reviews.css == */
+.saved_hardware:hover{color:#e85a92 !important}
+
+/* == 14 rules from https://store.fastly.steamstatic.com/public/shared/css/store_game_shared.css == */
+.sysreq_tab.active,
+.discselect_tab.active{color:#e85a92 !important}
+.game_area_details_specs_ctn .label{background:rgba( 232, 90, 146, 0.1 ) !important}
+a.game_area_details_specs_ctn .label{color:#e85a92 !important}
+a.game_area_details_specs_ctn:hover .label{background:#e85a92 !important;background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important}
+.game_area_details_specs a.name{background:rgba( 232, 90, 146, 0.1 ) !important;color:#e85a92 !important}
+.game_area_details_specs a.name:hover{background:#e85a92 !important;/* Old browsers */
+	background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+	background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+	background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+	background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.game_area_details_specs div.name{background:rgba( 232, 90, 146, 0.1 ) !important;color:#e85a92 !important}
+.game_area_details_specs.learning_about a.name:hover{background:rgba( 232, 90, 146, 0.1 ) !important}
+.block a.linkbar{background:rgba( 232, 90, 146, 0.1 ) !important;color:#e85a92 !important}
+.block div.linkbar{background:rgba( 232, 90, 146, 0.1 ) !important}
+.block a.linkbar:hover{background:#e85a92 !important;/* Old browsers */
+	background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+	background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+	background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+	background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.game_language_options td span{color:#e85a92 !important}
+.all_languages{color:#e85a92 !important}
+.widestore .game_page_autocollapse_readmore{color:#e85a92 !important}
+
+/* == 60 rules from https://store.fastly.steamstatic.com/public/css/v6/game.css == */
+:where(#game_highlights) a{color:#e85a92 !important}
+.glance_ctn .more_btn{color:#e85a92 !important;background-color:rgba( 232, 90, 146, 0.2 ) !important}
+.glance_ctn .more_btn:hover{background:-webkit-linear-gradient( 150deg, #e85a92 5%,#b02a5e 95%) !important;background:linear-gradient( -60deg, #e85a92 5%,#b02a5e 95%) !important}
+.glance_details img:hover{border:1px solid rgba( 232, 90, 146, 0.5 ) !important}
+.game_area_comingsoon{background:-moz-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%, rgba(232, 90, 146,0.4) 100%) !important;background:-webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(64,120,152,0.4)), color-stop(100%,rgba(232, 90, 146,0.4))) !important;background:-webkit-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%,rgba(232, 90, 146,0.4) 100%) !important;background:-o-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%,rgba(232, 90, 146,0.4) 100%) !important;background:-ms-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%,rgba(232, 90, 146,0.4) 100%) !important;background:linear-gradient(135deg, rgba(64,120,152,0.4) 10%,rgba(232, 90, 146,0.4) 100%) !important}
+.game_area_comingsoon p,{color:#e85a92 !important}
+.notice_box_content_blue_box{color:#e85a92 !important}
+.game_area_purchase_game_wrapper.bundle .bundleTag,
+.game_area_purchase_game.bundle .bundleTag{color:#f09bbd !important}
+.game_area_purchase_game_wrapper.bundle .game_area_purchase_game b{color:#f09bbd !important}
+.game_description_column .block .block_header .right a{background-color:rgba( 232, 90, 146, 0.2 ) !important;color:#e85a92 !important}
+.game_description_column .block .block_header .right a:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.game_description_column .block .block_content a:hover{border:1px solid rgba( 232, 90, 146, 0.5 ) !important}
+.game_area_dlc_row.even:hover, .game_area_dlc_row.odd:hover{background-color:#b02a5e !important}
+#dlc_footer #dlc_show_all_link{background:rgba( 232, 90, 146, 0.1 ) !important}
+#dlc_footer #dlc_show_all_link:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.details_block a{/* light */
+
+		    color:#e85a92 !important}
+a.communitylink_achievement.communitylink_achivement_plusmore,
+a.communitylink_points_shop_item.communitylink_achivement_plusmore{background-color:rgba( 232, 90, 146, 0.2 ) !important;/* normal */
+
+			color:#e85a92 !important}
+a.communitylink_achievement.communitylink_achivement_plusmore:hover,
+a.communitylink_points_shop_item.communitylink_achivement_plusmore:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.friend_blocks_twoxtwo .friend_block_holder:hover{background:rgba( 232, 90, 146, 0.1 ) !important}
+#agegate_box select{color:#e85a92 !important;background-color:rgba( 232, 90, 146, 0.2 ) !important}
+#agegate_box select option{background-color:#b02a5e !important}
+.got_steam_ctn{background:-webkit-linear-gradient( top, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important}
+.gotsteam_buttons a.btn_blue h3, .gotsteam_buttons a.btn_blue h5{color:#e85a92 !important}
+.gotsteam_buttons a.btn_blue{background:-webkit-linear-gradient( top, rgba(232, 90, 146,0.2) 5%, rgba(47,137,188,0.2) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,0.2) 5%, rgba(47,137,188,0.2) 95%) !important}
+.gotsteam_buttons a.btn_blue:hover{background:-webkit-linear-gradient( top, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important}
+.rightcol.game_meta_data .action_btn{color:#e85a92 !important;background:rgba( 232, 90, 146, 0.2 ) !important}
+.rightcol.game_meta_data .action_btn:hover{background:#e85a92 !important;/* Old browsers */
+        background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+        background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+        background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+        background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+        background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+        background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+        filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.anticheat_nonkernel_notice{color:#e85a92 !important;background:rgba( 232, 90, 146, 0.1 ) !important}
+.game_area_demo_btn, .game_area_wishlist_btn{color:#e85a92 !important;background:rgba( 232, 90, 146, 0.2 ) !important}
+.game_area_demo_btn:hover, .game_area_wishlist_btn:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.game_area_wishlist_btn.disabled, .btnv6_blue_hoverfade.queue_btn_active{background-color:rgba( 232, 90, 146, 0.6 ) !important}
+.queue_btn_menu > .queue_menu_arrow{color:#e85a92 !important !important;background:rgba(232, 90, 146, 0.2) !important}
+.queue_btn_menu > .queue_menu_arrow.queue_btn_active{background:rgba( 232, 90, 146, 0.2 ) !important;background-color:rgba( 232, 90, 146, 0.6 ) !important}
+.package_totals_row.highlight, .package_totals_row.highlight .price{color:#e85a92 !important}
+.queue_ctn .queue_reason_description a:hover{color:#e85a92 !important}
+div.early_access_header .devnotes .morebutton{background:-moz-linear-gradient(left,  rgba(0, 0, 0,0) 0%, rgba(0, 0, 0,1) 15%, rgba(0, 0, 0,1) 100%) !important;color:#e85a92 !important}
+div.early_access_announcements .post .more{color:#e85a92 !important}
+.app_tag{color:#e85a92 !important;background-color:rgba( 232, 90, 146, 0.2 ) !important}
+.app_tag.user_defined{background-color:rgba( 232, 90, 146, 0.4 ) !important}
+.app_tag:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.app_tag.add_your_own, .app_tag.previous_tag{background-color:rgba( 232, 90, 146, 0.2 ) !important}
+.app_tag.add_your_own:hover, .app_tag.previous_tag:hover{background-color:#e85a92 !important}
+.dq_settings_checkrow{background-color:#1c1c1c !important}
+.steam_curator_followed_text{color:#e85a92 !important}
+.game_area_purchase_game_wrapper.playtest .game_area_purchase_game{border-top:2px solid #000000 !important}
+.item_store_overlay_link:hover{border:2px solid #e85a92 !important}
+.bundle_label{color:#f09bbd !important}
+.agegate_content_descriptors > span.content_descriptor{border-bottom:1px dotted #e85a92 !important}
+.agegate_tags .app_tag{border-bottom:1px dotted #e85a92 !important}
+#app_agegate select{color:#e85a92 !important;background-color:rgba(232, 90, 146, 0.2) !important}
+#app_agegate select option{background-color:#b02a5e !important}
+.series_episode.active{background:-moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(232, 90, 146,0.4) 100%) !important;/* FF3.6-15 */
+	background:-webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(232, 90, 146,0.4) 100%) !important;/* Chrome10-25,Safari5.1-6 */
+	background:linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(232, 90, 146,0.4) 100%) !important}
+.series_seasons .season_name .tab_content:hover{background:#e85a92 !important;/* Old browsers */
+	background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+	background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+	background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+	background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.series_seasons .season_name.active{background:-moz-linear-gradient(top,  rgba(232, 90, 146,1) 0%, rgba(232, 90, 146,0) 100%) !important;/* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232, 90, 146,1)), color-stop(100%,rgba(232, 90, 146,0))) !important;/* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* Opera 11.10+ */
+	background:-ms-linear-gradient(top,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* IE10+ */
+	background:linear-gradient(to bottom,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#0067c1f5',GradientType=0 ) !important}
+.block.recommendation_reasons a{color:#e85a92 !important}
+.discussion_button_ctn>span,
+.readmore_button_ctn>span{background:#000000 !important}
+.color_recommended{color:#e85a92 !important}
+.dlc_highlight_reason{background-color:#b02a5e !important}
+@media screen and ( max-width: 500px ){html.responsive .newux_optin_banner.optin{background:linear-gradient(90deg, #e85a92 0%, #2D73FF 100%) !important}}
+.package_in_library_flag.in_family_library{background:linear-gradient(to right, #e85a92 5%, #8e2148 60%) !important}
+
+/* == 37 rules from https://store.fastly.steamstatic.com/public/css/v6/recommended.css == */
+.friendplaytime_plusmore .friend_block_avatar a{color:#e85a92 !important}
+.friendplaytime_plusmore.friend_status_offline .friend_block_avatar{background-color:rgba( 232, 90, 146, 0.2 ) !important}
+.friendplaytime_plusmore.friend_status_offline .friend_block_avatar:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.view_inactive{background-color:rgba( 232, 90, 146, 0.2 ) !important}
+a.view_inactive{color:#e85a92 !important}
+.view_active{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+#review_create h2, .reviewDate{color:#e85a92 !important}
+.review_create_vote_controls .btn_darkblue_white_innerfade.btn_active > span{background:rgba( 232, 90, 146, 0.6 ) !important}
+.review_create_vote_controls .btn_darkblue_white_innerfade > span{background:rgba( 232, 90, 146, 0.2 ) !important;color:#e85a92 !important}
+.review_create_vote_controls .btn_darkblue_white_innerfade > span:hover{background:#e85a92 !important;/* Old browsers */
+	background:-webkit-linear-gradient( 150deg, #e85a92 5%,#b02a5e 95%) !important;background:linear-gradient( -60deg, #e85a92 5%,#b02a5e 95%) !important}
+#review_create .content .controls .dselect_container button.trigger:hover,
+#review_create .content .controls .dselect_container button.activetrigger,
+#review_create .content .controls .dselect_container button.activetrigger:hover{background-color:#e85a92 !important}
+.user_reviews_summary_bar .game_review_summary.positive{color:#e85a92 !important}
+.user_reviews_summary_details_btn{color:#e85a92 !important}
+.user_reviews_summary_breakdowns{border-top:5px solid rgba( 232, 90, 146, 0.2 ) !important}
+.user_reviews_language_breakdown{border-top:5px solid rgba( 232, 90, 146, 0.2 ) !important}
+.language_header{border-top:2px solid #000000 !important}
+.user_reviews_header .user_reviews_see_all a{background-color:rgba( 232, 90, 146, 0.2 ) !important;color:#e85a92 !important}
+.user_reviews_header .user_reviews_see_all a:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+/*
+.review_box .header, .recommendation_row .header{border-bottom:1px solid #000000 !important}
+.review_box .header .commentCount a{color:#e85a92 !important}
+.review_box .vote_info .commentCount a{color:#e85a92 !important}
+.review_box a.vote_header .reviewSeeDetails{color:#e85a92 !important}
+.review_box .num_reviews a:hover,
+.review_box .num_owned_games a:hover{color:#e85a92 !important}
+.review_box.partial .view_more a{color:#e85a92 !important}
+.review_box.partial .content .gradient{background:-webkit-linear-gradient( top, rgba( 10, 10, 10,0) 5%, rgba( 10, 10, 10,.95) 95%) !important;background:linear-gradient( to bottom, rgba( 10, 10, 10,0) 5%, rgba( 10, 10, 10,.95) 95%) !important}
+.rightcol .review_box.partial .content .gradient{background:-webkit-linear-gradient( top, rgba( 0, 0, 0,0) 5%, rgba( 0, 0, 0,.95) 95%) !important;background:linear-gradient( to bottom, rgba( 0, 0, 0,0) 5%, rgba( 0, 0, 0,.95) 95%) !important}
+.review_box .noReviewsYetTitle{color:#e85a92 !important}
+.review_controls .controlblock .dselect_container{background:rgba( 232, 90, 146, 0.1 ) !important}
+/* filter */
+.user_reviews_filter_bar{background-color:#141414 !important}
+.user_reviews_tab a{color:#e85a92 !important}
+.user_reviews_tab.active a{color:#e85a92 !important}
+body.recommendgame #review_create{box-shadow:0 0 30px rgba(232, 90, 146, 0.4) !important}
+.histogram_title{color:#e85a92 !important}
+.review_histogram .flot-x-axis{color:#e85a92 !important}
+body.v6 h2.morelike_section_divider{border-bottom:1px solid #e85a92 !important}
+.morelikethis_border{border-top:1px solid #e85a92 !important}
+.morelikethis_border:after{border-bottom-color:#e85a92 !important}
+
+/* == 1 rules from https://store.fastly.steamstatic.com/public/css/v6/user_reviews_rewards.css == */
+.review_award_count{color:#e85a92 !important}
+
+/* == 3 rules from https://store.fastly.steamstatic.com/public/shared/css/apphub.css == */
+body{background:#000000 !important}
+.apphub_sectionTab.active, .apphub_sectionTab.active:hover, .apphub_responsive_tab .responsive_tab_control{border-bottom:3px solid #db3776 !important}
+.review_award_ctn_hover .review_award_count{color:#e85a92 !important}
+
+/* == 8 rules from https://store.fastly.steamstatic.com/public/css/v6/game_mob.css == */
+@media screen and (max-width: 500px){html.responsive .details_block a.linkbar,
+	html.responsive .responsive_banner_link,
+	html.responsive .game_area_details_specs,
+	html.responsive .user_reviews,
+	html.responsive .purchase_options_banners,
+	html.responsive .glance_tags_ctn .glance_tags .app_tag{background-color:#000000 !important !important}}
+@media screen and (max-width: 500px){html.responsive .game_area_dlc_row.ds_flagged{background-color:#b02a5e !important}}
+@media screen and (max-width: 500px){html.responsive .responsive_banner_link{color:#e85a92 !important}}
+@media screen and (max-width: 500px){/* Reviews filters are moved into a popup */
+	html.responsive .review_settings_popup_header{background-color:#000000 !important}}
+@media screen and (max-width: 500px){html.responsive .review_settings_popup_content{background-color:#000000 !important}}
+@media screen and (max-width: 500px){/* top of the review details section showing the active filters */
+	html.responsive .user_reviews_active_filters{background-color:#000000 !important !important}}
+@media screen and (max-width: 500px){html.responsive .review_box .review_award{background-color:#000000 !important}}
+@media screen and (max-width: 500px){html.responsive .review_box .rightcol .vote_header{background-color:#000000 !important}}
+
+/* == 9 rules from https://store.fastly.steamstatic.com/public/css/v6/browse.css == */
+.tabarea .tab .tab_browse_option_label:hover,
+.tabarea .tab .tab_content:hover{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.tabarea .tab.active{background:-moz-linear-gradient(top,  rgba(232, 90, 146,1) 0%, rgba(232, 90, 146,0) 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232, 90, 146,1)), color-stop(100%,rgba(232, 90, 146,0))) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(top,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(top,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(top,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* IE10+ */
+    background:linear-gradient(to bottom,  rgba(232, 90, 146,1) 0%,rgba(232, 90, 146,0) 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#0067c1f5',GradientType=0 ) !important}
+a.linkbar_active, a.linkbar_active:hover, a.linkbar_active:active, a.linkbar_active:visited{background-color:#e85a92 !important}
+.tab_filter_control.checked,
+.tab_filter_control_row:not(.disabled).checked{background:#e85a92 !important;/* Old browsers */
+    background:-moz-linear-gradient(-60deg,  #e85a92 0%, #b02a5e 100%) !important;/* FF3.6+ */
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#e85a92), color-stop(100%,#b02a5e)) !important;/* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* Opera 11.10+ */
+    background:-ms-linear-gradient(-60deg,  #e85a92 0%,#b02a5e 100%) !important;/* IE10+ */
+    background:linear-gradient(135deg,  #e85a92 0%,#b02a5e 100%) !important;/* W3C */
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85a92', endColorstr='#b02a5e',GradientType=1 ) !important}
+.see_all_expander{color:#e85a92 !important}
+.paged_items_paging_pagelink:hover, .paged_items_paging_controls .commentthread_pagelink:hover{color:#e85a92 !important}
+.paged_items_paging_size_item:not(.size_selected):hover{color:#e85a92 !important}
+/* paging buttons */
+.pagebtn, a.pagebtn{background-color:rgba( 232, 90, 146, 0.2 ) !important;color:#e85a92 !important}
+body.v6 .header_early_access h2 a{color:#e85a92 !important}
+
+/* == 5 rules from https://store.fastly.steamstatic.com/public/css/v6/search.css == */
+.searchtag{color:#e85a92 !important}
+#term{background-color:rgba( 232, 90, 146, 0.2 ) !important;box-shadow:1px 1px 0px rgba( 232, 90, 146, 0.15 ) !important}
+.search_result_row .search_reviewscore .game_review_summary.positive{color:#e85a92 !important}
+.search_pagination_right .pagebtn{color:#e85a92 !important}
+.search_pagination_right a:hover{color:#e85a92 !important}
+
+/* == 1 rules from https://community.fastly.steamstatic.com/public/shared/css/shared_global.css == */
+.header_notification_btn.header_notification_bell{background:url( 'https://community.fastly.steamstatic.com/public/shared/images/header/notification_bell.png' ) no-repeat #1c1c1c !important}
+
+/* == 6 rules from https://community.fastly.steamstatic.com/public/css/globalv2.css == */
+a.whiteLink:hover, .whiteLink:hover, a.linkStandard:hover, a.linkTitle:hover, a.underlinedLink:hover, span.underlinedLink:hover{color:#e85a92 !important}
+.commentthread_subscribe_hint .commentthread_subscribe_hint_q{color:#e85a92 !important}
+.commentthread_prepopulate_prompt{color:#e85a92 !important}
+.modal_box{background:-webkit-linear-gradient( top, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important;background:linear-gradient( to bottom, rgba(232, 90, 146,1) 5%, rgba(47,137,188,1) 95%) !important}
+@media screen and (max-width: 910px){html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control{border:1px solid #e85a92 !important;border-image:linear-gradient(#e85a92, #417B9c) !important}}
+.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control{/* Old browsers */
+	background:-webkit-linear-gradient( top, #e85a92 5%, #417B9C 95%) !important;background:linear-gradient( to bottom, #e85a92 5%, #417B9C 95%) !important}
+
+/* == 1 rules from https://community.fastly.steamstatic.com/public/css/skin_1/apphubs.css == */
+/* override the background for now */
+body{background:#000000 !important}
+
+/* == 6 rules from https://community.fastly.steamstatic.com/public/css/skin_1/apphub_home.css == */
+body.apphub_blue{background:#000000 !important}
+div.filterselect{color:#e85a92 !important;background:rgba( 232, 90, 146, 0.2 ) !important}
+div.filterselect:hover{background:rgba( 232, 90, 146, 1 ) !important}
+div.filterselect_options{background-color:#b02a5e !important}
+.reported_item a:hover{color:#e85a92 !important}
+.reported_item_details_hover_row .reported_items_details{border:1px solid #e85a92 !important}
+
+/* == 10 rules from https://community.fastly.steamstatic.com/public/css/applications/community/main.css == */
+._1ABCOz8DSrl-YJdh1xD-m0{background:#1c1c1c !important}
+._1ABCOz8DSrl-YJdh1xD-m0:hover{background:#262626 !important}
+._1ABCOz8DSrl-YJdh1xD-m0._1dDpSuaJBGZzS41s0SPk4c{background:#1c1c1c !important}
+._1ABCOz8DSrl-YJdh1xD-m0._1dDpSuaJBGZzS41s0SPk4c:hover{background:#262626 !important}
+span._3nqxIgL0a0DbPZHRZRzWsp{background:#1c1c1c !important}
+._2tqpD1Hr0c3LCAUSe4r3Yp{background-color:#1c1c1c !important}
+.ovujKSqZqv7MmjE0upPcI>div input._1PFmi6hYnRJ7C8r3naWGJw:hover{background:#101010 !important}
+._14GZWzJgooP0mbfTvEQnjA>span{background:linear-gradient(to right, #e85a92 5%, #8e2148 60%) !important}
+._14GZWzJgooP0mbfTvEQnjA:hover>span{background:linear-gradient(to right, #e85a92 5%, #8e2148 60%) !important}
+._15dbpkIdbzeDJlZYQEhn1d:hover>span{background:linear-gradient(to right, #262626 5%, #262626 95%) !important}
