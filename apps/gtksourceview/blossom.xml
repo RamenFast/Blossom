@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Blossom — a GtkSourceView style scheme for the Blossom desktop.
+  AMOLED void, pink primary, gold secondary, light-blue text.
+  pink = what you're acting on · gold = the reference · red = danger
+-->
+<style-scheme id="blossom" name="Blossom" version="1.0">
+  <author>Ben</author>
+  <description>AMOLED void — pink keywords, gold strings, light-blue text</description>
+
+  <!-- Palette -->
+  <color name="void"        value="#000000"/>
+  <color name="raise1"      value="#0a0a0a"/>
+  <color name="raise2"      value="#1c1c1c"/>
+  <color name="raise3"      value="#2a2a2a"/>
+  <color name="raise4"      value="#3b3b3b"/>
+  <color name="text"        value="#eaf6ff"/>
+  <color name="text-dim"    value="#9fb3c2"/>
+  <color name="text-faint"  value="#56707f"/>
+  <color name="pink"        value="#db3776"/>
+  <color name="pink-hi"     value="#e85a92"/>
+  <color name="pink-deep"   value="#b02a5e"/>
+  <color name="gold"        value="#f1bf40"/>
+  <color name="gold-hi"     value="#ffd666"/>
+  <color name="red"         value="#ec4e53"/>
+  <color name="green"       value="#52a462"/>
+  <color name="sky"         value="#5da3d6"/>
+  <color name="sky-hi"      value="#8cc3ea"/>
+
+  <!-- Editor chrome -->
+  <style name="text"                 foreground="text" background="void"/>
+  <style name="selection"            foreground="void" background="pink"/>
+  <style name="selection-unfocused"  foreground="text" background="raise3"/>
+  <style name="cursor"               foreground="pink"/>
+  <style name="secondary-cursor"     foreground="pink-deep"/>
+  <style name="current-line"         background="raise1"/>
+  <style name="current-line-number"  foreground="pink" background="raise1" bold="true"/>
+  <style name="line-numbers"         foreground="text-faint" background="void"/>
+  <style name="right-margin"         foreground="raise4" background="raise2"/>
+  <style name="bracket-match"        foreground="gold" background="raise3" bold="true"/>
+  <style name="bracket-mismatch"     foreground="text" background="red" bold="true"/>
+  <style name="search-match"         foreground="void" background="gold"/>
+  <style name="draw-spaces"          foreground="raise3"/>
+  <style name="background-pattern"   background="raise1"/>
+
+  <!-- Syntax: pink acts (keywords/operators), gold is literal reference
+       (strings/values), sky names things, light-blue is the body copy -->
+  <style name="def:comment"          foreground="text-faint" italic="true"/>
+  <style name="def:shebang"          foreground="text-faint" bold="true"/>
+  <style name="def:doc-comment-element" foreground="text-dim" italic="true"/>
+  <style name="def:note"             foreground="void" background="gold" bold="true"/>
+
+  <style name="def:string"           foreground="gold"/>
+  <style name="def:special-char"     foreground="gold-hi" bold="true"/>
+  <style name="def:character"        foreground="gold"/>
+  <style name="def:number"           foreground="gold-hi"/>
+  <style name="def:floating-point"   foreground="gold-hi"/>
+  <style name="def:base-n-integer"   foreground="gold-hi"/>
+  <style name="def:boolean"          foreground="pink-hi" bold="true"/>
+  <style name="def:constant"         foreground="pink-hi"/>
+  <style name="def:special-constant" foreground="pink-hi" bold="true"/>
+
+  <style name="def:keyword"          foreground="pink" bold="true"/>
+  <style name="def:operator"         foreground="pink-hi"/>
+  <style name="def:statement"        foreground="pink" bold="true"/>
+  <style name="def:reserved"         foreground="pink"/>
+
+  <style name="def:type"             foreground="sky-hi" bold="true"/>
+  <style name="def:builtin"          foreground="sky"/>
+  <style name="def:identifier"       foreground="sky"/>
+  <style name="def:function"         foreground="sky"/>
+  <style name="def:preprocessor"     foreground="pink-deep"/>
+
+  <style name="def:error"            foreground="text" background="red" bold="true"/>
+  <style name="def:warning"          foreground="void" background="gold"/>
+  <style name="def:underlined"       foreground="pink-hi" underline="single"/>
+  <style name="def:link-destination" foreground="pink-hi" underline="single"/>
+  <style name="def:link-text"        foreground="sky"/>
+  <style name="def:list-marker"      foreground="pink" bold="true"/>
+  <style name="def:emphasis"         italic="true"/>
+  <style name="def:strong-emphasis"  foreground="gold" bold="true"/>
+  <style name="def:heading"          foreground="pink-hi" bold="true"/>
+  <style name="def:inline-code"      foreground="gold"/>
+  <style name="def:deletion"         foreground="red" strikethrough="true"/>
+  <style name="def:insertion"        foreground="green"/>
+
+  <!-- Diffs read as semantics: added green, removed red, changed gold -->
+  <style name="diff:added-line"      foreground="green"/>
+  <style name="diff:removed-line"    foreground="red"/>
+  <style name="diff:changed-line"    foreground="gold"/>
+  <style name="diff:diff-file"       foreground="sky-hi" bold="true"/>
+  <style name="diff:location"        foreground="pink"/>
+  <style name="diff:special-case"    foreground="pink-hi"/>
+</style-scheme>

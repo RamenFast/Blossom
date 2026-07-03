@@ -1,0 +1,67 @@
+/* Blossom for Obsidian — a CSS snippet, not a full theme.
+   AMOLED void, pink primary, gold secondary, light-blue text.
+   Install: symlink into <vault>/.obsidian/snippets/ and enable in
+   Settings → Appearance → CSS snippets. Built on Obsidian's stable
+   CSS variables so it survives app updates. */
+
+.theme-dark {
+  /* accent (Obsidian derives hovers/gradients from these) — pink #db3776 */
+  --accent-h: 337;
+  --accent-s: 70%;
+  --accent-l: 54%;
+
+  /* the void */
+  --background-primary: #000000;
+  --background-primary-alt: #0a0a0a;
+  --background-secondary: #0a0a0a;
+  --background-secondary-alt: #141414;
+  --background-modifier-border: #2a2a2a;
+  --background-modifier-border-hover: #3b3b3b;
+  --background-modifier-border-focus: #db3776;
+  --background-modifier-hover: rgba(219, 55, 118, 0.10);
+  --background-modifier-active-hover: rgba(219, 55, 118, 0.18);
+
+  /* text: light blue, receding through the ramp */
+  --text-normal: #eaf6ff;
+  --text-muted: #9fb3c2;
+  --text-faint: #56707f;
+  --text-on-accent: #000000;
+  --text-selection: rgba(219, 55, 118, 0.35);
+  --text-highlight-bg: rgba(241, 191, 64, 0.30);   /* highlights are the gold reference */
+
+  /* links act -> pink */
+  --link-color: #e85a92;
+  --link-color-hover: #f09bbd;
+  --link-external-color: #e85a92;
+  --link-external-color-hover: #f09bbd;
+  --link-unresolved-color: #b02a5e;
+
+  /* headings walk the palette: what structures the page */
+  --h1-color: #e85a92;
+  --h2-color: #e85a92;
+  --h3-color: #f1bf40;
+  --h4-color: #f1bf40;
+  --h5-color: #9fb3c2;
+  --h6-color: #9fb3c2;
+
+  /* editor semantics */
+  --code-normal: #f1bf40;
+  --code-background: #0a0a0a;
+  --blockquote-border-color: #db3776;
+  --embed-border-left: 2px solid #db3776;
+  --tag-color: #e85a92;
+  --tag-background: rgba(219, 55, 118, 0.12);
+  --checkbox-color: #db3776;
+  --checkbox-color-hover: #e85a92;
+  --checkbox-marker-color: #000000;
+  --interactive-accent: #db3776;
+  --interactive-accent-hover: #e85a92;
+
+  /* today in the graph/calendar sense: gold marks the reference */
+  --color-accent: #db3776;
+  --color-yellow: #f1bf40;
+  --color-red: #ec4e53;
+  --color-green: #52a462;
+  --color-pink: #e85a92;
+  --color-blue: #5da3d6;
+}

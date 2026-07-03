@@ -33,6 +33,10 @@ A full Cinnamon "look", all driven from one palette:
 - **GTK 2** (`gtk-2.0/`) — legacy apps
 - **xfwm4 / openbox-3** — carried through for completeness
 - **Icons** (`icons/Blossom/`) — a matching icon pack (see below)
+- **Steam** (`steam/`) — the client *and* its embedded web store, injected at runtime
+- **Applications** (`apps/`) — kitty & ghostty, btop, xed/GtkSourceView, Qt apps
+  (qt5ct palette), flatpak GTK apps, Obsidian — plus ready-to-enable Discord and
+  Spotify themes. One installer: `apps/install.sh`.
 
 ## Icons
 

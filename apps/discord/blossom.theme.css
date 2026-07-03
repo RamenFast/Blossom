@@ -1,0 +1,70 @@
+/**
+ * @name Blossom
+ * @author Ben
+ * @description AMOLED void, pink primary, gold secondary, light-blue text — the Blossom desktop look for Discord.
+ * @version 1.0.0
+ * @source https://github.com/RamenFast/Blossom
+ */
+
+/* Needs a client that loads themes (Vencord: drop/symlink this file into
+   ~/.config/Vencord/themes and enable it in Settings → Themes).
+   Built on Discord's semantic CSS variables — the class names churn,
+   the variables don't. Game/media art is never recoloured. */
+
+.theme-dark, .theme-darker, .theme-midnight {
+  /* the void */
+  --background-primary: #000000;
+  --background-secondary: #0a0a0a;
+  --background-secondary-alt: #141414;
+  --background-tertiary: #0a0a0a;
+  --background-accent: #1c1c1c;
+  --background-floating: #0a0a0a;
+  --background-nested-floating: #141414;
+  --background-mobile-primary: #000000;
+  --background-mobile-secondary: #0a0a0a;
+  --channeltextarea-background: #1c1c1c;
+  --activity-card-background: #0a0a0a;
+  --background-modifier-hover: rgba(219, 55, 118, 0.08);
+  --background-modifier-active: rgba(219, 55, 118, 0.14);
+  --background-modifier-selected: rgba(219, 55, 118, 0.18);
+  --background-modifier-accent: #2a2a2a;
+  --scrollbar-thin-thumb: #2a2a2a;
+  --scrollbar-auto-thumb: #2a2a2a;
+  --scrollbar-auto-track: #000000;
+  --scrollbar-thin-track: transparent;
+
+  /* text: light blue, receding through the ramp */
+  --text-normal: #eaf6ff;
+  --text-muted: #9fb3c2;
+  --text-faint: #56707f;
+  --header-primary: #eaf6ff;
+  --header-secondary: #9fb3c2;
+  --interactive-normal: #9fb3c2;
+  --interactive-hover: #eaf6ff;
+  --interactive-active: #e85a92;
+  --interactive-muted: #56707f;
+  --channels-default: #9fb3c2;
+
+  /* pink is what you're acting on */
+  --text-link: #e85a92;
+  --brand-260: #f09bbd;
+  --brand-360: #e85a92;
+  --brand-500: #db3776;
+  --brand-560: #db3776;
+  --brand-600: #b02a5e;
+  --brand-660: #8e2148;
+  --mention-foreground: #eaf6ff;
+  --mention-background: rgba(219, 55, 118, 0.18);
+  --control-brand-foreground: #e85a92;
+  --focus-primary: #db3776;
+
+  /* semantics: gold = reference/warning, red = danger, green = success */
+  --status-warning: #f1bf40;
+  --status-danger: #ec4e53;
+  --status-positive: #52a462;
+  --button-danger-background: #ec4e53;
+  --button-positive-background: #52a462;
+  --info-warning-foreground: #f1bf40;
+  --info-danger-foreground: #ec4e53;
+  --info-positive-foreground: #52a462;
+}

@@ -1,0 +1,63 @@
+# Blossom for btop — AMOLED void, pink primary, gold secondary, light-blue text
+# pink = what you're acting on · gold = the reference · red = danger
+
+# Base
+theme[main_bg]="#000000"
+theme[main_fg]="#eaf6ff"
+theme[title]="#eaf6ff"
+theme[hi_fg]="#db3776"
+theme[selected_bg]="#db3776"
+theme[selected_fg]="#000000"
+theme[inactive_fg]="#3b3b3b"
+theme[graph_text]="#9fb3c2"
+theme[meter_bg]="#1c1c1c"
+theme[proc_misc]="#e85a92"
+
+# Box outlines recede into the void; content carries the colour
+theme[cpu_box]="#2a2a2a"
+theme[mem_box]="#2a2a2a"
+theme[net_box]="#2a2a2a"
+theme[proc_box]="#2a2a2a"
+theme[div_line]="#2a2a2a"
+
+# Temperature: success -> reference -> danger
+theme[temp_start]="#52a462"
+theme[temp_mid]="#f1bf40"
+theme[temp_end]="#ec4e53"
+
+# CPU load: the thing you're watching — a pink bloom that reddens at the top
+theme[cpu_start]="#6b1a38"
+theme[cpu_mid]="#db3776"
+theme[cpu_end]="#ec4e53"
+
+# Memory: used is the actor (pink); the rest recedes into the text family
+theme[used_start]="#8e2148"
+theme[used_mid]="#db3776"
+theme[used_end]="#e85a92"
+theme[available_start]="#2c4d66"
+theme[available_mid]="#5da3d6"
+theme[available_end]="#8cc3ea"
+theme[cached_start]="#7a6120"
+theme[cached_mid]="#f1bf40"
+theme[cached_end]="#ffd666"
+theme[free_start]="#2b5434"
+theme[free_mid]="#52a462"
+theme[free_end]="#74c584"
+
+# Network: download sky, upload pink
+theme[download_start]="#2c4d66"
+theme[download_mid]="#5da3d6"
+theme[download_end]="#8cc3ea"
+theme[upload_start]="#8e2148"
+theme[upload_mid]="#db3776"
+theme[upload_end]="#e85a92"
+
+# Processes: a quiet pink ramp
+theme[process_start]="#5f1834"
+theme[process_mid]="#b02a5e"
+theme[process_end]="#e85a92"
+
+# Battery: danger -> reference -> success
+theme[bat_start]="#ec4e53"
+theme[bat_mid]="#f1bf40"
+theme[bat_end]="#52a462"
