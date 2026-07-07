@@ -7,3 +7,7 @@ icons/*/icon-theme.cache
 
 # Rust build artifacts for the Steam tool (cargo build --release regenerates)
 steam/blossom-steam/target/
+
+# blob-emojis: upstream Blobmoji shallow clone (hundreds of MB of art sources;
+# the release Blobmoji.ttf next to it is the artifact that matters)
+blob-emojis/blobmoji/

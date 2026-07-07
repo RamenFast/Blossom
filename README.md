@@ -37,6 +37,8 @@ A full Cinnamon "look", all driven from one palette:
 - **Applications** (`apps/`) — kitty & ghostty, btop, xed/GtkSourceView, Qt apps
   (qt5ct palette), flatpak GTK apps, Obsidian — plus ready-to-enable Discord and
   Spotify themes. One installer: `apps/install.sh`.
+- **Emoji** (`blob-emojis/`) — Blobmoji, the blob emoji continuation, as the
+  desktop-wide emoji font (see below). One installer: `blob-emojis/install.sh`.
 
 ## Icons
 
@@ -62,6 +64,24 @@ gsettings set org.cinnamon.desktop.interface icon-theme 'Blossom'
 
 Want a different app-icon base? Change the `Inherits=` line in
 `icons/Blossom/index.theme` (e.g. to `Mint-Y`) and re-run the generator.
+
+## Emoji — blobs
+
+![Blobmoji in the Emote picker](blob-emojis/docs/emote-blobmoji.png)
+
+Google's blob emoji — the Android Lollipop-era gumdrops, continued by the
+community as [Blobmoji](https://github.com/C1710/blobmoji) — as the emoji font
+for the whole desktop: terminals (kitty, ghostty, VTE), GTK & Qt apps,
+Chromium/Electron, and **every flatpak**, including the Emote picker. Text
+fonts are untouched — fontconfig only reroutes emoji fallback — and Noto Color
+Emoji stays installed as the safety net for post-Unicode-15 additions.
+
+```bash
+cd blob-emojis && ./install.sh   # user level + every installed flatpak · --uninstall reverts
+```
+
+Re-run the installer after installing a new flatpak so it gets the config too.
+Details, verification probes and caveats: `blob-emojis/README.md`.
 
 ## How it's built
 
