@@ -1,8 +1,7 @@
 # Blossom
 
-A cohesive Cinnamon desktop theme: **AMOLED true-black**, soft **pink** (primary)
-and **gold** (secondary), with a light blue for text — built so the *look itself*
-carries information importance.
+An AMOLED desktop theme: **true black**, **pink** primary, **gold** secondary,
+light-blue text — built so importance reads through colour.
 
 ![Blossom across the desktop](docs/hero.png)
 
@@ -10,208 +9,129 @@ carries information importance.
 
 | | Colour | Role |
 | --- | --- | --- |
-| ⚫ | `#000000` | base — true black (AMOLED); raised surfaces lift to `#0a0a0a`–`#3b3b3b` |
-| 🌸 | pink `#db3776` | **primary** accent — selection, focus, links, sliders, the suggested/primary action, the active window, menu selection |
-| 🟡 | gold `#f1bf40` | **secondary / supporting** — marks *today* in the calendar (the reference point) and all *warnings* |
-| 🩵 | `#eaf6ff` | text & icons — the Phosphor vectorscope's light blue (dims toward `#9fb3c2` for secondary text) |
-| 🔴 | red `#ec4e53` | critical only — close button, log-out/shutdown, "remove", destructive actions, demands-attention |
-| 🟢 | green `#52a462` | kept (softened) purely for the *success* semantic |
+| ⚫ | `#000000` | base — true black; raised surfaces lift to `#0a0a0a`–`#3b3b3b` |
+| 🌸 | `#db3776` | **primary** — what you're acting on: selection, focus, links, active window |
+| 🟡 | `#f1bf40` | **secondary** — the reference you're acting against: *today* in the calendar, warnings |
+| 🩵 | `#eaf6ff` | text & icons (dims to `#9fb3c2` when secondary) |
+| 🔴 | `#ec4e53` | danger only — close, destructive actions, demands-attention |
+| 🟢 | `#52a462` | success only |
 
-The design rule: **pink is what you're acting on, gold is the reference you're
-acting against, red is danger.** Importance reads through colour — the bright
-accent lands on the one element that matters right now, everything else stays
-black-and-light-blue and recedes.
+**Pink is what you're acting on, gold is the reference, red is danger** — the
+bright accent lands on the one element that matters right now; everything else
+recedes into black and light blue.
+
+## Install
+
+Packages carry the desktop theme + icons ([latest release](../../releases/latest)):
+
+```bash
+sudo apt install ./blossom-theme_1.0.0_all.deb        # Mint / Ubuntu / Debian
+sudo dnf install ./blossom-theme-1.0.0-1.noarch.rpm   # Fedora
+```
+
+Or clone — which is also how you get the extras (apps, Steam, emoji, xmonad):
+
+```bash
+git clone https://github.com/RamenFast/Blossom.git ~/.themes/Blossom
+ln -sfn ~/.themes/Blossom/icons/Blossom ~/.icons/Blossom
+```
+
+Apply: pick **Blossom** in *System Settings → Themes*, or
+
+```bash
+gsettings set org.cinnamon.theme name 'Blossom'
+gsettings set org.cinnamon.desktop.interface gtk-theme 'Blossom'
+gsettings set org.cinnamon.desktop.wm.preferences theme 'Blossom'
+gsettings set org.cinnamon.desktop.interface icon-theme 'Blossom'
+```
 
 ## What's themed
 
-A full Cinnamon "look", all driven from one palette:
+One palette drives everything:
 
-- **Cinnamon shell** (`cinnamon/`) — panel, menu, calendar, applets, popups, OSD
-- **GTK 3** (`gtk-3.0/`) — application widgets + recoloured check/radio/switch assets
-- **GTK 4 / libadwaita** (`gtk-4.0/`, `libadwaita-1.5/`, `libadwaita-1.7/`) — incl. a forced pink accent
-- **Metacity** (`metacity-1/`) — window borders / title bars (true-black, light-blue title, red close)
-- **GTK 2** (`gtk-2.0/`) — legacy apps
-- **xfwm4 / openbox-3** — carried through for completeness
-- **Icons** (`icons/Blossom/`) — a matching icon pack (see below)
-- **Steam** (`steam/`) — the client *and* its embedded web store, injected at runtime
-- **Applications** (`apps/`) — kitty & ghostty, btop, xed/GtkSourceView, Qt apps
-  (qt5ct palette), flatpak GTK apps, Obsidian — plus ready-to-enable Discord and
-  Spotify themes. One installer: `apps/install.sh`.
-- **Emoji** (`blob-emojis/`) — Blobmoji, the blob emoji continuation, as the
-  desktop-wide emoji font (see below). One installer: `blob-emojis/install.sh`.
+- **Desktop** — Cinnamon shell, GTK 2/3/4 + libadwaita (accent forced pink), Metacity / xfwm4 / openbox borders
+- **Icons** (`icons/`) — matching icon pack, below
+- **Steam** (`steam/`) — client + embedded store, below
+- **Apps** (`apps/`) — kitty, ghostty, btop, xed, Qt, flatpak GTK, Obsidian, plus opt-in Discord & Spotify — `apps/install.sh`
+- **Emoji** (`blob-emojis/`) — Blobmoji desktop-wide, below
+- **xmonad** (`wm/`) — a full tiling session, below
 
 ## Icons
 
 ![Blossom icons](docs/icons.png)
 
-A small, high-impact icon pack in the same language: **void-dark folders under a
-pink header**, differentiated by a **light-blue line glyph**, with **gold** marking
-your *anchor* folders (home, recent, bookmarks). Trash, drives, computer and
-network are drawn the same way — dark body, light-blue lines, a pink accent.
+Void-dark folders under a pink header, light-blue line glyphs, gold marking your
+anchor folders (home, recent, bookmarks). Everything else inherits Papirus-Dark,
+so the set stays small and shows up exactly where it counts. Generated by
+`tools/blossom_icons.py` — a new folder variant is a one-line change.
 
 ![Blossom folders in Nemo](docs/icons-nemo.png)
-
-Everything else — application icons, mimetypes, the long tail — is **inherited from
-Papirus-Dark**, so the set stays small and consistent while showing up exactly
-where it counts: the Nemo sidebar, the desktop, file dialogs. It's a scalable SVG
-theme generated by `tools/blossom_icons.py` (folder template + a glyph dict), so
-adding a folder variant is a one-line change.
-
-```bash
-ln -sfn ~/.themes/Blossom/icons/Blossom ~/.icons/Blossom   # install
-gsettings set org.cinnamon.desktop.interface icon-theme 'Blossom'
-```
-
-Want a different app-icon base? Change the `Inherits=` line in
-`icons/Blossom/index.theme` (e.g. to `Mint-Y`) and re-run the generator.
 
 ## Emoji — blobs
 
 ![Blobmoji in the Emote picker](blob-emojis/docs/emote-blobmoji.png)
 
-Google's blob emoji — the Android Lollipop-era gumdrops, continued by the
-community as [Blobmoji](https://github.com/C1710/blobmoji) — as the emoji font
-for the whole desktop: terminals (kitty, ghostty, VTE), GTK & Qt apps,
-Chromium/Electron, and **every flatpak**, including the Emote picker. Text
-fonts are untouched — fontconfig only reroutes emoji fallback — and Noto Color
-Emoji stays installed as the safety net for post-Unicode-15 additions.
+[Blobmoji](https://github.com/C1710/blobmoji) — the community continuation of
+Google's blob emoji — as the emoji font everywhere: terminals, GTK & Qt apps,
+Electron, every flatpak. Text fonts are untouched; Noto Color Emoji stays as the
+fallback for newer Unicode.
 
 ```bash
-cd blob-emojis && ./install.sh   # user level + every installed flatpak · --uninstall reverts
+cd blob-emojis && ./install.sh   # --uninstall reverts; re-run after adding a flatpak
 ```
-
-Re-run the installer after installing a new flatpak so it gets the config too.
-Details, verification probes and caveats: `blob-emojis/README.md`.
 
 ## How it's built
 
-Rather than hand-edit ~1.5 MB of upstream CSS, the theme is **generated** by a
-small HSL colour engine, `tools/blossomize.py`, which forks Linux Mint's
-`Mint-Y-Dark-Aqua` (+ `Mint-L-Dark-Aqua` window borders) and routes every colour:
-
-- near-neutral **darks** → a black-anchored ramp (true-black base, gentle elevation)
-- near-neutral **lights** → tints of `#eaf6ff` (text / icons)
-- saturated **blue** (Mint's accent family) → **pink**
-- saturated **orange** → **gold**;  **red** kept (cleaned);  **green** kept (softened, success only)
-
-It also reconciles a few semantics the hue-router can't infer: the *suggested
-action* (green upstream) is pulled onto the pink accent ramp, libadwaita's accent
-is forced pink, and a small "Blossom polish" block paints menu/calendar selection.
+Generated, not hand-edited: `tools/blossomize.py` forks Mint's `Mint-Y-Dark-Aqua`
+through an HSL colour router — darks onto a black-anchored ramp, lights to
+`#eaf6ff` tints, Mint's blue → pink, orange → gold, red and green kept for their
+semantics. The generated files are committed; re-run only to re-tune the palette
+(knobs at the top: `PINK_HUE`, `PINK_L_LIFT`, `GOLD_HUE`, …).
 
 ```bash
-python3 tools/blossomize.py     # regenerates every theme subdir in place
+python3 tools/blossomize.py   # regenerates every theme dir in place
 ```
-
-The generated files are committed, so the theme is usable without running the
-engine — re-run it only to **re-tune the palette**. The knobs live at the top of
-`blossomize.py` (`PINK_HUE`, `PINK_SAT_MUL`, `PINK_L_LIFT`, `GOLD_HUE`, the dark
-ramp `DARK_KNEE`/`DARK_SLOPE`, …). Want a softer, more pastel pink? Nudge
-`PINK_L_LIFT` up and `PINK_SAT_MUL` down, then re-run.
-
-## Install & apply
-
-Clone into your user themes dir so Cinnamon loads it directly:
-
-```bash
-git clone https://github.com/RamenFast/Blossom.git ~/.themes/Blossom
-```
-
-Then apply with:
-
-```bash
-gsettings set org.cinnamon.theme name 'Blossom'                       # shell
-gsettings set org.cinnamon.desktop.interface gtk-theme 'Blossom'     # apps
-gsettings set org.cinnamon.desktop.wm.preferences theme 'Blossom'    # window borders
-gsettings set org.cinnamon.desktop.interface icon-theme 'Blossom'    # icons
-```
-
-…or pick **Blossom** in *System Settings → Themes*. Pairs well with the
-**Mint-Y-Sand** icon set (gold-leaning folders echo the secondary accent).
-Iterate live: edit → re-run the engine → re-select the theme (or `Ctrl+Alt+Esc`
-to reload Cinnamon).
 
 ## Control GUI & the panel
 
-Two panel touches tie the look together:
-
-- The **menu button** is a recoloured Linux Mint logo — a pink → gold → light-blue
-  gradient ring around a **mint-green LM** monogram
-  (`icons/Blossom/apps/scalable/blossom-logo.svg`).
-- A **Blossom Control** button — the pink flower — opens a small GTK app: apply
-  the look, and rotate / like icon packs, in one window. Being a GTK app it's
-  themed by Blossom itself, so the control surface looks like what it controls.
-  It's the pattern for any future one-off Blossom UI.
-
 ![Blossom Control](docs/control-gui.png)
+
+**Blossom Control** (`tools/blossom-control.py`) — apply/revert the look, taskbar
+accents, panel corner-glow, logo & flower variants, icon rotation, cursor — one
+GTK window, themed by the theme itself. It reopens where you last left it.
 
 ![panel: LM-ring menu + flower control](docs/panel-buttons.png)
 
-```bash
-# recoloured menu logo (per-applet setting wins over the global one):
-python3 - <<'PY'
-import json, glob
-for f in glob.glob(__import__("os").path.expanduser(
-        "~/.config/cinnamon/spices/menu@cinnamon.org/*.json")):
-    d = json.load(open(f)); d["menu-icon"]["value"] = "blossom-logo"
-    json.dump(d, open(f, "w"), indent=4)
-PY
-# launcher for the control app (flower icon):
-cat > ~/.local/share/applications/blossom-control.desktop <<EOF
-[Desktop Entry]
-Type=Application
-Name=Blossom Control
-Exec=python3 $HOME/.themes/Blossom/tools/blossom-control.py
-Icon=blossom-flower
-Terminal=false
-Categories=Settings;Utility;
-EOF
-```
-
-Then right-click the panel → *Add applets* → **Panel launchers**, or drag the
-menu entry onto the panel, to pin the flower. Remove any time with right-click →
-*Remove*. (Both need a Cinnamon reload — `Ctrl+Alt+Esc` — to repaint.)
-
-## Daily rotation — find your taste
-
-`tools/blossom-rotate.py` cycles the *icon* theme through a curated list of packs,
-one per day, and lets you mark the days you like — so over time a picture of your
-taste emerges (which packs you keep coming back to). Your Blossom GTK + Cinnamon
-look stays put; only the app/folder icons rotate.
+The menu button becomes the recoloured LM ring; the pink flower launches the app:
 
 ```bash
-python3 tools/blossom-rotate.py status     # current pack + your taste tally
-python3 tools/blossom-rotate.py like        # "today's pack is a keeper"
-python3 tools/blossom-rotate.py next        # try the next one now
-python3 tools/blossom-rotate.py install     # rotate once per login (autostart)
+bash tools/panel-setup.sh   # menu logo + launcher; then Ctrl+Alt+Esc to repaint
 ```
 
-It auto-discovers the icon themes you already have installed; edit
-`~/.local/share/blossom-rotate/state.json` to curate the rotation. `install` is
-opt-in — nothing changes your icons on a schedule until you ask for it.
+## Daily icon rotation
 
-## xmonad — Blossom as a tiling session
+`tools/blossom-rotate.py` cycles the *icon* theme through the packs you have,
+one per day, and tracks the ones you like — a taste profile over time. Opt-in:
+nothing rotates until you run `install`.
 
-The thesis, made *structural*: in a tiling WM the accent isn't paint on a widget —
-it's the **focused window's border**, and the gaps are the void showing through.
-`wm/` is a complete Blossom xmonad session you can hop into alongside Cinnamon (it
-touches nothing in your current setup — it's just a second door at the login screen).
+```bash
+python3 tools/blossom-rotate.py status|like|next|install
+```
+
+## xmonad — the thesis, structural
 
 ![Blossom xmonad — mockup](docs/xmonad-mockup.png)
 
-*A mockup (rendered from the real palette + the actual folder icons). The live
-session looks the same: pink border = focused, gold = a window that wants you,
-true-black gaps, xmobar up top.*
-
-**Install** — needs sudo for `apt` + the session file:
+In a tiling WM the accent isn't paint on a widget — it's the **focused window's
+border**, and the gaps are the void showing through. `wm/` is a complete session
+alongside Cinnamon: a second door at the login screen, nothing else touched.
+(The image is a palette-true mockup; the live session matches.)
 
 ```bash
-bash wm/install.sh        # installs xmonad/xmobar/dmenu/…, links the config, registers the session
+bash wm/install.sh   # apt-installs xmonad/xmobar/dmenu, links config, registers the session
 ```
 
-Then log out → pick **Blossom (xmonad)** from the session menu → log in. Cinnamon
-stays exactly as it was.
-
-**Keys** — mostly xmonad's defaults, which are already vim-shaped (Super = mod):
+Mostly stock xmonad keys (Super = mod), already vim-shaped:
 
 | key | action | | key | action |
 |---|---|---|---|---|
@@ -223,33 +143,31 @@ stays exactly as it was.
 | `Super+f` | fullscreen | | `Super+Shift+1..9` | send to workspace |
 | `Super+b` | toggle bar | | `Super+Shift+c` | close window |
 
-New windows join the **stack** to the right of the master — predictable, every
-time. Config: `wm/xmonad/xmonad.hs` · bar: `wm/xmobar/xmobarrc` · compositor:
-`wm/picom.conf`. The palette lives at the top of `xmonad.hs`.
+Config: `wm/xmonad/xmonad.hs` (palette at the top) · `wm/xmobar/xmobarrc` · `wm/picom.conf`.
 
-## Steam — the look, inside the client
-
-`steam/` carries Blossom into the **Steam client**: AMOLED true-black, pink
-accent (the blue Steam paints everywhere becomes pink), gold/red/green semantics
-kept — and **game art is never recoloured**.
+## Steam
 
 ![Blossom Steam — library](docs/steam-library.png)
 
-Modern Steam is a Chromium app that restores its own CSS on every launch, so the
-skin is **injected at runtime over Steam's built-in CEF debugger** — *no sudo, no
-Millennium*. A small **Rust** binary (`steam/blossom-steam/`) paints every window
-in <0.2 s and re-applies at login; the colour remap is **generated** from Steam's
-live stylesheets (`blossom-steam gen`) and committed, exactly like the rest of
-Blossom. A Millennium path is provided too.
+AMOLED + pink inside the Steam client — **game art is never recoloured**. Steam
+restores its own CSS every launch, so a small Rust binary injects the skin at
+runtime over Steam's CEF debugger — no sudo, no Millennium (a Millennium path is
+provided too). The colour remap is generated from Steam's live stylesheets,
+exactly like the rest of Blossom. Details: `steam/README.md`.
 
 ```bash
-cd steam && ./install.sh        # builds the binary, themes Steam now + at every login
+cd steam && ./install.sh   # builds the binary, themes Steam now + at every login
 ```
-
-See `steam/README.md` for the palette mapping, the generator, and the Millennium
-option.
 
 ## Environment
 
-Built and tested on Linux Mint · Cinnamon 6.6.7 · X11 · 40 px panel.
-The xmonad session targets xmonad 0.17 (Mint/Ubuntu `apt`).
+Built and tested on **Linux Mint · Cinnamon 6.6.7 · X11**. Other desktops can
+take the GTK theme, icons and emoji; the shell theme is Cinnamon's.
+
+## License & credits
+
+GPLv3. Icons inherit [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme);
+emoji are [Blobmoji](https://github.com/C1710/blobmoji) (OFL); the palette engine
+forks Linux Mint's Mint-Y.
+
+🌸 Built with Claude (Fable 5) at Ben's side.

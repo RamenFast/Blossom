@@ -34,6 +34,7 @@ STATE = os.path.expanduser("~/.local/share/blossom-rotate/state.json")
 BACKUP = os.path.expanduser("~/.local/share/blossom/look-backup.json")
 FOCUS_BACKUP = os.path.expanduser("~/.local/share/blossom/focus-backup.json")
 GLOW_CFG = os.path.expanduser("~/.local/share/blossom/glow.json")
+WIN_STATE = os.path.expanduser("~/.local/share/blossom/control-window.json")
 
 ICON_DIRS = [os.path.expanduser("~/.icons"),
              os.path.expanduser("~/.local/share/icons"), "/usr/share/icons"]
@@ -272,6 +273,8 @@ class Control(Gtk.Window):
         self.set_default_size(480, -1)
         self.set_position(Gtk.WindowPosition.NONE)
         self._loading = True
+        self._last_pos = None
+        self.connect("configure-event", self._on_configure)
         try:
             self.set_icon_from_file(LOGO)
         except Exception:
@@ -611,6 +614,29 @@ class Control(Gtk.Window):
         _w, win_h = self.get_size()
         self.move(wa.x + 56, wa.y + wa.height - win_h - 56)
 
+    def _on_configure(self, _w, _ev):
+        self._last_pos = self.get_position()
+        return False
+
+    def save_position(self):
+        if self._last_pos:
+            os.makedirs(os.path.dirname(WIN_STATE), exist_ok=True)
+            json.dump({"x": self._last_pos[0], "y": self._last_pos[1]},
+                      open(WIN_STATE, "w"))
+
+    def restore_position(self):
+        try:
+            p = json.load(open(WIN_STATE))
+            x, y = int(p["x"]), int(p["y"])
+        except Exception:
+            return self.position_lower_left()
+        disp = Gdk.Display.get_default()
+        for i in range(disp.get_n_monitors()):
+            g = disp.get_monitor(i).get_geometry()
+            if g.x <= x < g.x + g.width and g.y <= y < g.y + g.height:
+                return self.move(x, y)
+        self.position_lower_left()      # saved spot is on a monitor that's gone
+
     # -- actions: look --------------------------------------------------
     def on_apply(self, _):
         os.makedirs(os.path.dirname(BACKUP), exist_ok=True)
@@ -776,9 +802,13 @@ class Control(Gtk.Window):
 def main():
     GLib.set_prgname("blossom-control")
     win = Control()
-    win.connect("destroy", Gtk.main_quit)
+
+    def quit_(*_a):
+        win.save_position()
+        Gtk.main_quit()
+    win.connect("destroy", quit_)
     win.show_all()
-    win.position_lower_left()
+    win.restore_position()
     Gtk.main()
 
 

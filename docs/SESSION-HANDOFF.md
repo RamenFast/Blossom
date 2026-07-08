@@ -60,6 +60,16 @@ Cinnamon caches aggressively, so every change needs a reload. The app uses dbus:
   (Bottom / Top / full-L).
 - `refresh_icons()` flashes through a real installed theme instead of blank hicolor.
 
+## v1.0.0 era (2026-07-07)
+- Released on GitHub as **v1.0.0** — deb + rpm + source tarball + SHA256SUMS,
+  built by `packaging/build-packages.sh` (keep its `VERSION` == the tag).
+- **Window position memory added**: `configure-event` tracks, close saves to
+  `~/.local/share/blossom/control-window.json`, launch restores (validated
+  against current monitors; lower-left fallback). Verified on Xvfb+openbox:
+  exact round-trip, off-screen state falls back cleanly.
+- Panel setup (menu logo + launcher) extracted from the README into
+  `tools/panel-setup.sh` (idempotent, verified against Ben's live config).
+
 ## Window identity / "why does it behave differently than other buttons"
 - The **bloom button is a `panel-launchers@cinnamon.org` launcher** — a *static
   shortcut*. Panel-launchers **never show a running indicator**; that's a
